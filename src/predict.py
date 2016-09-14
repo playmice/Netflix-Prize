@@ -1,4 +1,4 @@
-import numpy as N
+import numpy as np
 
 
 def readtestfile(probefile):
@@ -35,11 +35,11 @@ def predict(probefile, U, M):
     mids, uids = readtestfile(probefile)
 
     numratings = mids.shape[0]
-    ratings = N.zeros(numratings, dtype='float32')
+    ratings = np.zeros(numratings, dtype='float32')
 
     for i in range(numratings):
         if i % 100000 == 0: print('Rating %d' % i)
-        ratings[i] = N.sum(U[uids[i]] * M[mids[i]])
+        ratings[i] = np.sum(U[uids[i]] * M[mids[i]])
 
     return ratings
 

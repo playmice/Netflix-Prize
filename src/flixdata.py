@@ -1,4 +1,4 @@
-import numpy as N
+import numpy as np
 
 """
 A convenient class for loading in
@@ -45,11 +45,11 @@ class FlixData(object):
 
     def getMovieIndexedData(self):
         ratingsFile = open(self.moviearrayfolder + 'ratings', 'rb')
-        self.movieRatings = N.fromfile(ratingsFile, dtype='int8')
+        self.movieRatings = np.fromfile(ratingsFile, dtype='int8')
         ratingsFile.close()
 
         movieIndexFile = open(self.moviearrayfolder + 'movieindex_BOUNDS')
-        self.movieIndex = N.load(movieIndexFile)
+        self.movieIndex = np.load(movieIndexFile)
         movieIndexFile.close()
 
         self.getMovieIDsForSortedMovies()
@@ -59,11 +59,11 @@ class FlixData(object):
 
     def getUserIndexedData(self):
         ratingsFile = open(self.userarrayfolder + 'ratings', 'rb')
-        self.userRatings = N.fromfile(ratingsFile, dtype='int8')
+        self.userRatings = np.fromfile(ratingsFile, dtype='int8')
         ratingsFile.close()
 
         userIndexFile = open(self.userarrayfolder + 'userindex_BOUNDS')
-        self.userIndex = N.load(userIndexFile)
+        self.userIndex = np.load(userIndexFile)
         userIndexFile.close()
 
         self.getMovieIDsForSortedUsers()
@@ -73,12 +73,12 @@ class FlixData(object):
 
     def getJustUserIndex(self):
         userIndexFile = open(self.userarrayfolder + 'userindex_BOUNDS')
-        self.userIndex = N.load(userIndexFile)
+        self.userIndex = np.load(userIndexFile)
         userIndexFile.close()
 
     def getJustMovieIndex(self):
         movieIndexFile = open(self.moviearrayfolder + 'movieindex_BOUNDS')
-        self.movieIndex = N.load(movieIndexFile)
+        self.movieIndex = np.load(movieIndexFile)
         movieIndexFile.close()
 
     def getJustBothIndexes(self):
@@ -91,7 +91,7 @@ class FlixData(object):
 
     def getUserIDsForSortedMovies(self):
         userIDsFile = open(self.moviearrayfolder + 'userids', 'rb')
-        self.userIDs = N.fromfile(userIDsFile, dtype='int32')
+        self.userIDs = np.fromfile(userIDsFile, dtype='int32')
         userIDsFile.close()
 
     def getUserIDsForSortedUsers(self):
@@ -100,7 +100,7 @@ class FlixData(object):
         is a bit redundant with faster bounds-based indexing
         (that are loaded in with getUserIndexedData)"""
         userIDsFile = open(self.userarrayfolder + 'userids', 'rb')
-        self.userIDsForUsers = N.fromfile(userIDsFile, dtype='int32')
+        self.userIDsForUsers = np.fromfile(userIDsFile, dtype='int32')
         userIDsFile.close()
 
     def getOriginalUserIDs(self):
@@ -110,12 +110,12 @@ class FlixData(object):
         IDs.
         """
         originalUserIDFile = open(self.arrayfolder + 'originalUserIDs', 'rb')
-        self.originalUserIDs = N.fromfile(originalUserIDFile, dtype='int32')
+        self.originalUserIDs = np.fromfile(originalUserIDFile, dtype='int32')
         originalUserIDFile.close()
 
     def getMovieIDsForSortedUsers(self):
         movieIDsFile = open(self.userarrayfolder + 'movieids', 'rb')
-        self.movieIDs = N.fromfile(movieIDsFile, dtype='int16')
+        self.movieIDs = np.fromfile(movieIDsFile, dtype='int16')
         movieIDsFile.close()
 
     def getMovieIDsForSortedMovies(self):
@@ -124,7 +124,7 @@ class FlixData(object):
         is a bit redundant with faster bounds-based indexing
         (that are loaded in with getMovieIndexedData)"""
         movieIDsFile = open(self.moviearrayfolder + 'movieids', 'rb')
-        self.movieIDsForMovies = N.fromfile(movieIDsFile, dtype='int16')
+        self.movieIDsForMovies = np.fromfile(movieIDsFile, dtype='int16')
         movieIDsFile.close()
 
     def getOppositeIDsForSortedArrays(self):
@@ -137,12 +137,12 @@ class FlixData(object):
 
     def getDatesSortedByUser(self):
         datesByUserFile = open(self.userarrayfolder + 'dates', 'rb')
-        self.datesByUser = N.fromfile(datesByUserFile, dtype='int32')
+        self.datesByUser = np.fromfile(datesByUserFile, dtype='int32')
         datesByUserFile.close()
 
     def getDatesSortedByMovie(self):
         datesByMovieFile = open(self.moviearrayfolder + 'dates', 'rb')
-        self.datesByMovie = N.fromfile(datesByMovieFile, dtype='int32')
+        self.datesByMovie = np.fromfile(datesByMovieFile, dtype='int32')
         datesByMovieFile.close()
 
     def getUserInfoWithoutRatings(self):
@@ -156,25 +156,25 @@ class FlixData(object):
 
     def getUserAverages(self):
         averageUserRatingFile = open(self.arrayfolder + 'useraverages', 'rb')
-        self.userAverages = N.load(averageUserRatingFile)
+        self.userAverages = np.load(averageUserRatingFile)
         averageUserRatingFile.close()
 
     def getMovieAverages(self):
         averageMovieRatingFile = open(self.arrayfolder + 'movieaverages', 'rb')
-        self.movieAverages = N.load(averageMovieRatingFile)
+        self.movieAverages = np.load(averageMovieRatingFile)
         averageMovieRatingFile.close()
 
     def getUserVariances(self):
         if not hasattr(self, 'userAverages'): self.getUserAverages()
-        self.userVariances = N.zeros((self.numusers,), dtype=N.float32)
+        self.userVariances = np.zeros((self.numusers,), dtype=np.float32)
         for i in range(self.numusers):
-            self.userVariances[i] = N.var(self.userRatings[fd.ui(i)])
+            self.userVariances[i] = np.var(self.userRatings[fd.ui(i)])
 
     def getMovieVariances(self):
         if not hasattr(self, 'movieAverages'): self.getMovieAverages()
-        self.movieVariances = N.zeros((self.nummovies,), dtype=N.float32)
+        self.movieVariances = np.zeros((self.nummovies,), dtype=np.float32)
         for i in range(self.nummovies):
-            self.movieVariances[i] = N.var(self.movieRatings[fd.mi(i)])
+            self.movieVariances[i] = np.var(self.movieRatings[fd.mi(i)])
 
     def sortUserRatingsByDate(self):
         """
@@ -188,7 +188,7 @@ class FlixData(object):
         for i in range(self.numusers):
             if i % 10000 == 0: print('Resorting ratings by date for user %d...' % i)
             uidx = self.ui(i)
-            didx = N.argsort(self.datesByUser[uidx])
+            didx = np.argsort(self.datesByUser[uidx])
             self.userRatings[uidx] = self.userRatings[uidx][didx]
             self.userIDsForUsers[uidx] = self.userIDsForUsers[uidx][didx]
             self.movieIDs[uidx] = self.movieIDs[uidx][didx]
@@ -204,7 +204,7 @@ class FlixData(object):
         for i in range(self.numusers):
             if i % 10000 == 0: print('Resorting ratings by movie for user %d...' % i)
             uidx = self.ui(i)
-            didx = N.argsort(self.movieIDs[uidx])
+            didx = np.argsort(self.movieIDs[uidx])
             self.userRatings[uidx] = self.userRatings[uidx][didx]
             self.userIDsForUsers[uidx] = self.userIDsForUsers[uidx][didx]
             self.movieIDs[uidx] = self.movieIDs[uidx][didx]
@@ -218,7 +218,7 @@ class FlixData(object):
         for i in range(self.nummovies):
             if i % 1000 == 0: print('Resorting ratings by date for movie %d...' % i)
             midx = self.mi(i)
-            didx = N.argsort(self.datesByMovie[midx])
+            didx = np.argsort(self.datesByMovie[midx])
             self.movieRatings[midx] = self.movieRatings[midx][didx]
             self.movieIDsForMovies[midx] = self.movieIDsForMovies[midx][didx]
             self.userIDs[midx] = self.userIDs[midx][didx]
@@ -232,7 +232,7 @@ class FlixData(object):
         for i in range(self.nummovies):
             if i % 1000 == 0: print('Resorting ratings by date for movie %d...' % i)
             midx = self.mi(i)
-            didx = N.argsort(self.userIDs[midx])
+            didx = np.argsort(self.userIDs[midx])
             self.movieRatings[midx] = self.movieRatings[midx][didx]
             self.movieIDsForMovies[midx] = self.movieIDsForMovies[midx][didx]
             self.userIDs[midx] = self.userIDs[midx][didx]
@@ -244,7 +244,7 @@ class FlixData(object):
 
     def loadProbe(self, probename='probe10'):
         probeFile = open(self.arrayfolder + probename, 'rb')
-        self.probe = N.load(probeFile)
+        self.probe = np.load(probeFile)
         probeFile.close()
 
     def identifyProbeData(self, probename='probe10'):
@@ -255,8 +255,8 @@ class FlixData(object):
         """
         if not hasattr(self, 'probe'): self.loadProbe(probename)
         probelength = len(self.probe)
-        userIndexedProbes = N.zeros(probelength, dtype='int32')
-        movieIndexedProbes = N.zeros(probelength, dtype='int32')
+        userIndexedProbes = np.zeros(probelength, dtype='int32')
+        movieIndexedProbes = np.zeros(probelength, dtype='int32')
 
         for i in range(probelength):
             if i % 1000 == 0: print('Analyzing probe rating %d...' % i)
@@ -264,8 +264,8 @@ class FlixData(object):
             user = self.probe[i, 1]
             uidx = self.ui(user)
             midx = self.mi(movie)
-            userIndexedProbes[i] = N.argwhere(self.movieIDs[uidx] == movie) + uidx[0]
-            movieIndexedProbes[i] = N.argwhere(self.userIDs[midx] == user) + midx[0]
+            userIndexedProbes[i] = np.argwhere(self.movieIDs[uidx] == movie) + uidx[0]
+            movieIndexedProbes[i] = np.argwhere(self.userIDs[midx] == user) + midx[0]
 
         return userIndexedProbes, movieIndexedProbes
 
@@ -296,8 +296,8 @@ class FlixData(object):
 
         # Make sure the data is properly sorted
         print('Sorting the probe indices...')
-        uip = N.sort(uip)
-        mip = N.sort(mip)
+        uip = np.sort(uip)
+        mip = np.sort(mip)
 
         print('Creating the new probe FlixData instance...')
         td = FlixData(arrayfolder='/home/alex/workspace/flix/data/probe10/', loaddata=False)
@@ -343,8 +343,8 @@ class FlixData(object):
 
         # delete the entries from fd
         print('Indexing the probe entries to be removed...')
-        self.uip = N.sort(self.uip)
-        self.mip = N.sort(self.mip)
+        self.uip = np.sort(self.uip)
+        self.mip = np.sort(self.mip)
         uiRemove = invertSet(0, self.userRatings.size, self.uip)
         miRemove = invertSet(0, self.userRatings.size, self.mip)
 
@@ -452,23 +452,23 @@ class FlixData(object):
         # The getUserIndex functions should be called only if you're really lazy.
         # It results in a lot of overhead. There's usually no sense using it
         # in production. I use it in testing, to make my life easier.
-        return N.r_[self.userIndex[userid, 0]:self.userIndex[userid, 1]]
+        return np.r_[self.userIndex[userid, 0]:self.userIndex[userid, 1]]
 
     def getMovieIndex(self, movieid):
-        return N.r_[self.movieIndex[movieid, 0]:self.movieIndex[movieid, 1]]
+        return np.r_[self.movieIndex[movieid, 0]:self.movieIndex[movieid, 1]]
 
     def ui(self, userid):
         """convenience function for making a user index"""
-        return N.r_[self.userIndex[userid, 0]:self.userIndex[userid, 1]]
+        return np.r_[self.userIndex[userid, 0]:self.userIndex[userid, 1]]
 
     def mi(self, movieid):
         """convenience function for making a movie index"""
-        return N.r_[self.movieIndex[movieid, 0]:self.movieIndex[movieid, 1]]
+        return np.r_[self.movieIndex[movieid, 0]:self.movieIndex[movieid, 1]]
 
     def zeroIndexUserIDs(self, uids):
         self.getOriginalUserIDs()
-        convert = N.r_[0:N.max(self.originalUserIDs) + 1]
-        convert[self.originalUserIDs] = N.r_[0:self.numusers]
+        convert = np.r_[0:np.max(self.originalUserIDs) + 1]
+        convert[self.originalUserIDs] = np.r_[0:self.numusers]
         return convert[uids]
 
 
@@ -485,7 +485,7 @@ def saveMiniset(fd, index, outputdir):
     """
     from os import mkdir
 
-    index = N.asarray(index)
+    index = np.asarray(index)
 
     # Make movie-indexed subset
     moviedir = outputdir + 'movie_indexed/'
@@ -517,7 +517,7 @@ def saveMiniset(fd, index, outputdir):
 
     # Make user-indexed subset
     print('Sorting the index by user...')
-    uindex = N.argsort(fd.userIDsForUsers[index])
+    uindex = np.argsort(fd.userIDsForUsers[index])
     userdir = outputdir + 'user_indexed/'
     try:
         mkdir(userdir)
@@ -553,12 +553,12 @@ def makeMinisets(fd, numsets, index=None, setsize=5000000,
     Wrapper function for creating multiple minisets.
     """
     if index == None:
-        index = N.arange(fd.numratings)
+        index = np.arange(fd.numratings)
     else:
         assert len(index) == len(fd.movieRatings)
 
     print('Shuffling the ratings...')
-    N.random.shuffle(index)
+    np.random.shuffle(index)
 
     print('Gathering all extra information...')
     if not hasattr(fd, 'datesByMovie'):
@@ -593,11 +593,11 @@ def makeBoundedIndex(arrayToIndex):
     redundancy)
     """
 
-    uniqueItems = N.unique(arrayToIndex)
+    uniqueItems = np.unique(arrayToIndex)
     numItems = uniqueItems.size
-    tmp = N.searchsorted(arrayToIndex, uniqueItems)
-    tmp = N.r_[tmp, len(arrayToIndex)]
-    index = N.zeros((numItems, 2), dtype='int32')
+    tmp = np.searchsorted(arrayToIndex, uniqueItems)
+    tmp = np.r_[tmp, len(arrayToIndex)]
+    index = np.zeros((numItems, 2), dtype='int32')
 
     for i in range(numItems):
         index[i] = (tmp[i], tmp[i + 1])
@@ -654,10 +654,10 @@ def readProbeFile(probefileloc):
             info.append(testdata[i])
             movieid.append(tmpmovieid)
 
-    info = N.vstack(info)
-    movieid = N.vstack(movieid)
-    info = N.hstack((movieid, info))
-    return info.astype(N.uint32)
+    info = np.vstack(info)
+    movieid = np.vstack(movieid)
+    info = np.hstack((movieid, info))
+    return info.astype(np.uint32)
 
 
 def invertSet(minval, maxval, origset):
@@ -669,18 +669,18 @@ def invertSet(minval, maxval, origset):
     origset must be sorted, and fit between minval and maxval
 
     """
-    newset = N.zeros(maxval - minval - origset.size, dtype=N.int64)
+    newset = np.zeros(maxval - minval - origset.size, dtype=np.int64)
 
-    insert = N.arange(minval, origset[0])
+    insert = np.arange(minval, origset[0])
     newset[minval:origset[0]] = insert
     count = insert.size
 
-    for i in N.arange(len(origset) - 1) + 1:
-        insert = N.arange(origset[i - 1] + 1, origset[i])
+    for i in np.arange(len(origset) - 1) + 1:
+        insert = np.arange(origset[i - 1] + 1, origset[i])
         newset[count:insert.size + count] = insert
         count += insert.size
 
-    insert = N.arange(origset[i] + 1, maxval)
+    insert = np.arange(origset[i] + 1, maxval)
     newset[count:insert.size + count] = insert
 
     return newset

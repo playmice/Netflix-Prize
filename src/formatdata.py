@@ -1,7 +1,7 @@
 """
 Make binary data from the raw rating data
 """
-import numpy as N
+import numpy as np
 
 
 def txtdata2bin(dataloc):
@@ -23,10 +23,10 @@ def makearrays(dataloc):
     numusers = 480189
     numratings = 100480507
 
-    movieratings = N.zeros(numratings, dtype=N.int8)
-    movieids = N.zeros(numratings, dtype=N.int16)
-    userids = N.zeros(numratings, dtype=N.int32)
-    dates = N.zeros(numratings, dtype=N.int32)
+    movieratings = np.zeros(numratings, dtype=np.int8)
+    movieids = np.zeros(numratings, dtype=np.int16)
+    userids = np.zeros(numratings, dtype=np.int32)
+    dates = np.zeros(numratings, dtype=np.int32)
     counter = 0
 
     for i in range(nummovies):
@@ -49,12 +49,12 @@ def makearrays(dataloc):
             counter += 1
 
     print('Finding unique users')
-    allusers = N.unique(userids)
+    allusers = np.unique(userids)
 
     print('Zero-indexing users and movies')
     movieids -= 1
-    convertusers = N.zeros(N.max(allusers) + 1, dtype=N.int32)
-    convertusers[allusers] = N.r_[0:numusers]
+    convertusers = np.zeros(np.max(allusers) + 1, dtype=np.int32)
+    convertusers[allusers] = np.r_[0:numusers]
     userids = convertusers[userids]
 
     return movieratings, movieids, userids, dates, allusers
@@ -114,7 +114,7 @@ def savearrays(savedir, movieratings, movieids, userids, dates, allusers, index=
 
 
 def reindexmoviearrays(movieratings, movieids, userids, dates):
-    newindex = N.argsort(userids)
+    newindex = np.argsort(userids)
     return movieratings[newindex], movieids[newindex], userids[newindex], dates[newindex]
 
 
@@ -126,9 +126,9 @@ def makeQuizArrays(qualfile):
     qualdata = readProbeFile(qualfile)
     qualdata[:, 0] -= 1
     # get the original user IDs
-    origUserIDs = N.fromfile(origuserIDfile, dtype='int32')
-    convert = N.r_[0:N.max(origUserIDs) + 1]
-    convert[origUserIds] = N.r_[0:480189]
+    origUserIDs = np.fromfile(origuserIDfile, dtype='int32')
+    convert = np.r_[0:np.max(origUserIDs) + 1]
+    convert[origUserIds] = np.r_[0:480189]
     qualdata[:, 1] = convert[qualdata[:, 1]]
 
     # etc etc

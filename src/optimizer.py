@@ -4,7 +4,7 @@ Optimizers.
 Todo:
 as more predictors are finished, add optimizers for them (e.g. kNN, RBM)
 """
-import numpy as N
+import numpy as np
 
 
 def sequentialSVDOptimizer(s, paramsearchdist=0.003, boundarysearchdist=0.01,
@@ -30,7 +30,7 @@ def sequentialSVDOptimizer(s, paramsearchdist=0.003, boundarysearchdist=0.01,
     print('Getting a baseline RMSE')
     print('=========================================================')
     s.svd()
-    baselineRMSE = N.min(s.RMSEhistory)
+    baselineRMSE = np.min(s.RMSEhistory)
     print('\n\nBaseline RMSE: %f' % baselineRMSE)
     os.chdir(curdir)
 
@@ -43,11 +43,11 @@ def sequentialSVDOptimizer(s, paramsearchdist=0.003, boundarysearchdist=0.01,
             if param not in boundaryparams:
                 # build a search range
                 if direction[i] == 0:  # no direction picked yet
-                    paramrange = N.r_[currentvalue - paramsearchdist, currentvalue + paramsearchdist]
+                    paramrange = np.r_[currentvalue - paramsearchdist, currentvalue + paramsearchdist]
                 elif direction[i] == -1:  # searching down
-                    paramrange = N.r_[currentvalue - paramsearchdist, currentvalue - 2 * paramsearchdist]
+                    paramrange = np.r_[currentvalue - paramsearchdist, currentvalue - 2 * paramsearchdist]
                 elif direction[i] == 1:  # searching up
-                    paramrange = N.r_[currentvalue + paramsearchdist, currentvalue + 2 * paramsearchdist]
+                    paramrange = np.r_[currentvalue + paramsearchdist, currentvalue + 2 * paramsearchdist]
 
                 # make sure it's all positive
                 paramrange = paramrange[paramrange > 0]
@@ -59,11 +59,11 @@ def sequentialSVDOptimizer(s, paramsearchdist=0.003, boundarysearchdist=0.01,
             else:
                 # build a search range
                 if direction[i] == 0:  # no direction picked yet
-                    paramrange = N.r_[currentvalue - boundarysearchdist, currentvalue + boundarysearchdist]
+                    paramrange = np.r_[currentvalue - boundarysearchdist, currentvalue + boundarysearchdist]
                 elif direction[i] == -1:  # searching down
-                    paramrange = N.r_[currentvalue - boundarysearchdist, currentvalue - 2 * boundarysearchdist]
+                    paramrange = np.r_[currentvalue - boundarysearchdist, currentvalue - 2 * boundarysearchdist]
                 elif direction[i] == 1:  # searching up
-                    paramrange = N.r_[currentvalue + boundarysearchdist, currentvalue + 2 * boundarysearchdist]
+                    paramrange = np.r_[currentvalue + boundarysearchdist, currentvalue + 2 * boundarysearchdist]
 
             print('\n\nOptimizing parameter %s, currently set at %f.\nBaseline RMSE: %f' % (
             param, currentvalue, baselineRMSE))
@@ -81,18 +81,18 @@ def sequentialSVDOptimizer(s, paramsearchdist=0.003, boundarysearchdist=0.01,
                 s.svd()
                 os.chdir(
                     curdir)  # always go back to the directory we started in, or there's a risk of weird file placement
-                tmpError.append(N.min(s.RMSEhistory))
+                tmpError.append(np.min(s.RMSEhistory))
 
             # Let's see how well the different parameters did.
             # If none are less than the baseline
-            if N.min(tmpError) > baselineRMSE:
+            if np.min(tmpError) > baselineRMSE:
                 print('\n\nCurrent value %f for parameter %s is the optimum! Moving on...' % (currentvalue, param))
                 setattr(s, param, currentvalue)  # restore the old value
                 finished[i] = True  # we're done here...
             else:
-                bestvalue = paramrange[N.argmin(tmpError)]
+                bestvalue = paramrange[np.argmin(tmpError)]
                 setattr(s, param, bestvalue)  # stick in the new best value
-                baselineRMSE = N.min(tmpError)  # update the baselineRMSE with the new best RMSE
+                baselineRMSE = np.min(tmpError)  # update the baselineRMSE with the new best RMSE
                 print('Found a new optimum for parameter %s! Value: %f\n. New baseline RMSE: %f' % (
                 param, bestvalue, baselineRMSE))
                 # If we haven't yet picked a direction, PICK ONE

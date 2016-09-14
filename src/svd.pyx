@@ -1,13 +1,13 @@
 cimport cython
-cimport numpy as N
-import numpy as N
+cimport numpy as np
+import numpy as np
 
-ctypedef N.float64_t f64_t
-ctypedef N.float32_t f32_t
-ctypedef N.int8_t i8_t
-ctypedef N.int16_t i16_t
-ctypedef N.int32_t i32_t
-ctypedef N.int64_t i64_t
+ctypedef np.float64_t f64_t
+ctypedef np.float32_t f32_t
+ctypedef np.int8_t i8_t
+ctypedef np.int16_t i16_t
+ctypedef np.int32_t i32_t
+ctypedef np.int64_t i64_t
 
 cdef extern from "stdlib.h":
     ctypedef unsigned long size_t
@@ -151,14 +151,14 @@ class SVD(object):
         updateFeatures = getattr(self, self.algorithm)
 
         # Give names and types to the user and movie arrays
-        cdef N.ndarray[f32_t, ndim=2] U
-        cdef N.ndarray[f32_t, ndim=2] M
+        cdef np.ndarray[f32_t, ndim=2] U
+        cdef np.ndarray[f32_t, ndim=2] M
 
         if not havemats:
-            U = N.zeros((self.numusers, self.numfeatures), dtype='float32')
-            M = N.zeros((self.nummovies, self.numfeatures), dtype='float32')
+            U = np.zeros((self.numusers, self.numfeatures), dtype='float32')
+            M = np.zeros((self.nummovies, self.numfeatures), dtype='float32')
             print('Initializing user and movie feature arrays...')
-            rs = N.random.RandomState(self.seed)
+            rs = np.random.RandomState(self.seed)
             # We fill up the arrays with with random numbers sampled from a uniform distribution described
             # by either umin and umax or mmin and mmax. We fill them up column-by-column to avoid
             # a whole-array memory copy. Kind of hacky, but it works. No help from the NumPy message boards on an alternative.
@@ -166,15 +166,15 @@ class SVD(object):
                 U[:, i] = rs.uniform(low=self.umin, high=self.umax, size=self.numusers).astype('float32')
                 M[:, i] = rs.uniform(low=self.mmin, high=self.mmax, size=self.nummovies).astype('float32')
             if updateFeatures == self.nsvd1 or updateFeatures == self.hybrid:
-                self.W = N.zeros((self.nummovies, self.numfeatures), dtype='float32')
+                self.W = np.zeros((self.nummovies, self.numfeatures), dtype='float32')
                 for i in range(self.numfeatures):
                     self.W[:, i] = rs.uniform(low=self.mmin, high=self.mmax, size=self.nummovies).astype('float32')
             elif updateFeatures == self.nsvd2 or updateFeatures == self.hybrid2:
-                self.W = N.zeros((self.numusers, self.numfeatures), dtype='float32')
+                self.W = np.zeros((self.numusers, self.numfeatures), dtype='float32')
                 for i in range(self.numfeatures):
                     self.W[:, i] = rs.uniform(low=self.umin, high=self.umax, size=self.numusers).astype('float32')
             elif updateFeatures == self.snmf:
-                self.W = N.zeros((self.numnodes, self.numfeatures), dtype='float32')
+                self.W = np.zeros((self.numnodes, self.numfeatures), dtype='float32')
                 for i in range(self.numfeatures):
                     self.W[:, i] = rs.uniform(low=self.umin, high=self.umax, size=self.numnodes).astype('float32')
         else:
@@ -262,10 +262,10 @@ class SVD(object):
                         done = True
                     continue
                 elif RMSE > self.minimprovement:
-                    N.save(self.outnameU, U)
-                    N.save(self.outnameM, M)
+                    np.save(self.outnameU, U)
+                    np.save(self.outnameM, M)
                     if hasattr(self, 'W'):
-                        N.save('w' + self.outnameU[1:], self.W)
+                        np.save('w' + self.outnameU[1:], self.W)
 
                 if epoch == self.maxepochs:
                     done = True
@@ -274,10 +274,10 @@ class SVD(object):
                     counter = 0
 
         # If the run was successful, load the models in,
-        self.U = N.load(self.outnameU + '.npy')
-        self.M = N.load(self.outnameM + '.npy')
+        self.U = np.load(self.outnameU + '.npy')
+        self.M = np.load(self.outnameM + '.npy')
         if hasattr(self, 'W'):
-            self.W = N.load('w' + self.outnameU[1:] + '.npy')
+            self.W = np.load('w' + self.outnameU[1:] + '.npy')
         # close the logfile,
         self.logfile.close()
         # and spit out a probe10 prediction
@@ -289,15 +289,15 @@ class SVD(object):
             quizRatings = self.makeProbePrediction(self.qd.userIDsForUsers, self.qd.movieIDs, 'quiz')
             quizRatings.dump('quizratings')
 
-    def makeProbePrediction(self, N.ndarray[i32_t, ndim=1] userIDsForUsers, N.ndarray[i16_t, ndim=1] movieIDs,
+    def makeProbePrediction(self, np.ndarray[i32_t, ndim=1] userIDsForUsers, np.ndarray[i16_t, ndim=1] movieIDs,
                             predicttype='probe'):
         """
         Make predictions for the probe data based on the loaded model.
         It's not very efficient code, because it doesn't particularly need to be.
         """
 
-        cdef N.ndarray[f32_t, ndim=2] U = self.U
-        cdef N.ndarray[f32_t, ndim=2] M = self.M
+        cdef np.ndarray[f32_t, ndim=2] U = self.U
+        cdef np.ndarray[f32_t, ndim=2] M = self.M
 
         if predicttype is 'probe':
             tmp = self.td.numratings
@@ -311,7 +311,7 @@ class SVD(object):
         cdef int uid, mid, i, k
         cdef float prediction
 
-        cdef N.ndarray[f32_t, ndim=1] probeRatings = N.zeros(numratings, dtype='float32')
+        cdef np.ndarray[f32_t, ndim=1] probeRatings = np.zeros(numratings, dtype='float32')
 
         for i from 0 <= i < numratings:
             uid = userIDsForUsers[i]
@@ -328,8 +328,8 @@ class SVD(object):
         probeRatings[probeRatings > 5.0] = 5.0
         return probeRatings
 
-    def checkError(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \
-                   N.ndarray[i32_t, ndim=1] userIDsForUsers, N.ndarray[i16_t, ndim=1] movieIDs):
+    def checkError(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] userRatings, \
+                   np.ndarray[i32_t, ndim=1] userIDsForUsers, np.ndarray[i16_t, ndim=1] movieIDs):
 
         cdef float error, prediction
         cdef int uid, mid, i, k
@@ -347,7 +347,7 @@ class SVD(object):
                 prediction += U[uid, k] * M[mid, k]
             error += (userRatings[i] - prediction) * (userRatings[i] - prediction)
 
-        return N.sqrt(error / N.float(numratings))
+        return np.sqrt(error / np.float(numratings))
 
     #~ def nmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \
     #~ N.ndarray[i32_t, ndim=1] userIDsForUsers, N.ndarray[i16_t, ndim=1] movieIDs):
@@ -389,8 +389,8 @@ class SVD(object):
     # BEHOLD, THE MATRIX FACTORIZATION ALGORITHMS
     # ============================================================
 
-    def snmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \
-             N.ndarray[i16_t, ndim=1] movieIDs):
+    def snmf(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] userRatings, \
+             np.ndarray[i16_t, ndim=1] movieIDs):
         """
         The beginning of an experiment in generalizing Arek paterek's NSVD1.
         The rows of the W matrix in NSVD1 each represent movies.
@@ -405,7 +405,7 @@ class SVD(object):
         """
 
         # This is the special, extra item matrix that NSVD1 requires.
-        cdef N.ndarray[f32_t, ndim=2] W = self.W
+        cdef np.ndarray[f32_t, ndim=2] W = self.W
 
         cdef unsigned int i, k, uid, mid, nid, inumRatings, istart
         cdef unsigned int u0 = <unsigned int> 0  # to speed up access of bias features.
@@ -420,10 +420,10 @@ class SVD(object):
         # WARNING ALERT WA WA WA: HARD-WIRED 0.5 CONNECTION PROBABILITY
         cdef unsigned int numconnectednodes = <unsigned int> self.numconnectednodes
 
-        cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
-        cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:, 1] - userIndex[:, 0]
-        cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')
-        cdef N.ndarray[i64_t, ndim=1] nodelist
+        cdef np.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
+        cdef np.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:, 1] - userIndex[:, 0]
+        cdef np.ndarray[f32_t, ndim=1] userFeatureCache = np.zeros(numfeatures, dtype='float32')
+        cdef np.ndarray[i64_t, ndim=1] nodelist
 
         cdef float lrateU = self.lrateU
         cdef float lrateM = self.lrateM
@@ -445,8 +445,8 @@ class SVD(object):
             # Make a nodelist, and shuffle it using the userID as a seed.
             # This way, we get a replicable shuffle for each user, and
             # we don't have to store the giant connection matrix in memory.
-            nodelist = N.arange(numnodes)
-            rs = N.random.RandomState(N.int(uid))
+            nodelist = np.arange(numnodes)
+            rs = np.random.RandomState(np.int(uid))
             rs.shuffle(nodelist)
 
             # construct the user vector from movie vectors
@@ -456,7 +456,7 @@ class SVD(object):
                     userFeatureCache[k] += W[nid, k]
 
             # normalize based on movie support
-            usernorm = 1 / N.sqrt(numnodes)
+            usernorm = 1 / np.sqrt(numnodes)
             userFeatureCache *= usernorm
 
             # put the user vector into the user matrix
@@ -495,8 +495,8 @@ class SVD(object):
         return
 
     @cython.boundscheck(False)
-    def nsvd0(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \
-              N.ndarray[i16_t, ndim=1] movieIDs):
+    def nsvd0(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] userRatings, \
+              np.ndarray[i16_t, ndim=1] movieIDs):
         """
         Arek Paterek's NSVD1 algorithm, implemented a la Gravity's suggestion, from
         Takacs et al., "A Unified Approach of Factor Models and Neighbor Based Methods for Large Recommender Systems"
@@ -512,9 +512,9 @@ class SVD(object):
         cdef unsigned int numfeatures = <unsigned int> self.numfeatures
         cdef unsigned int numusers = <unsigned int> self.fd.numusers
 
-        cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
-        cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:, 1] - userIndex[:, 0]
-        cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')
+        cdef np.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
+        cdef np.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:, 1] - userIndex[:, 0]
+        cdef np.ndarray[f32_t, ndim=1] userFeatureCache = np.zeros(numfeatures, dtype='float32')
 
         cdef float lrateU = self.lrateU
         cdef float lrateM = self.lrateM
@@ -532,7 +532,7 @@ class SVD(object):
 
             inumRatings = <unsigned int> numRatingsForUser[uid]
             istart = <unsigned int> userIndex[uid, u0]
-            usernorm = 1 / N.sqrt(inumRatings)
+            usernorm = 1 / np.sqrt(inumRatings)
 
             # zero the user vector
             for k from 0 <= k < numfeatures:
@@ -588,8 +588,8 @@ class SVD(object):
         return
 
     @cython.boundscheck(False)
-    def nsvd1(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \
-              N.ndarray[i16_t, ndim=1] movieIDs):
+    def nsvd1(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] userRatings, \
+              np.ndarray[i16_t, ndim=1] movieIDs):
         """
         Arek Paterek's NSVD1 algorithm, implemented a la Gravity's suggestion, from
         Takacs et al., "A Unified Approach of Factor Models and Neighbor Based Methods for Large Recommender Systems"
@@ -597,7 +597,7 @@ class SVD(object):
         """
 
         # This is the special, extra item matrix that NSVD1 requires.
-        cdef N.ndarray[f32_t, ndim=2] W = self.W
+        cdef np.ndarray[f32_t, ndim=2] W = self.W
 
         cdef unsigned int i, k, uid, mid, inumRatings, istart
         cdef unsigned int u0 = <unsigned int> 0  # to speed up access of bias features.
@@ -608,9 +608,9 @@ class SVD(object):
         cdef unsigned int numfeatures = <unsigned int> self.numfeatures
         cdef unsigned int numusers = <unsigned int> self.fd.numusers
 
-        cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
-        cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:, 1] - userIndex[:, 0]
-        cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')
+        cdef np.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
+        cdef np.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:, 1] - userIndex[:, 0]
+        cdef np.ndarray[f32_t, ndim=1] userFeatureCache = np.zeros(numfeatures, dtype='float32')
 
         cdef float lrateU = self.lrateU
         cdef float lrateM = self.lrateM
@@ -628,7 +628,7 @@ class SVD(object):
 
             inumRatings = <unsigned int> numRatingsForUser[uid]
             istart = <unsigned int> userIndex[uid, u0]
-            usernorm = 1 / N.sqrt(inumRatings)
+            usernorm = 1 / np.sqrt(inumRatings)
 
             # zero the user vector
             for k from 0 <= k < numfeatures:
@@ -679,8 +679,8 @@ class SVD(object):
         return
 
     @cython.boundscheck(False)
-    def nsvd2(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] movieRatings, \
-              N.ndarray[i32_t, ndim=1] userIDs):
+    def nsvd2(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] movieRatings, \
+              np.ndarray[i32_t, ndim=1] userIDs):
         """
         Arek Paterek's NSVD1 algorithm, implemented a la Gravity's suggestion, from
         Takacs et al., "A Unified Approach of Factor Models and Neighbor Based Methods for Large Recommender Systems"
@@ -689,7 +689,7 @@ class SVD(object):
         """
 
         # This is the special, extra user matrix that NSVD2 requires.
-        cdef N.ndarray[f32_t, ndim=2] W = self.W
+        cdef np.ndarray[f32_t, ndim=2] W = self.W
 
         cdef unsigned int i, k, uid, mid, inumRatings, istart
         cdef unsigned int u0 = <unsigned int> 0  # to speed up access of bias features.
@@ -700,9 +700,9 @@ class SVD(object):
         cdef unsigned int numfeatures = <unsigned int> self.numfeatures
         cdef unsigned int nummovies = <unsigned int> self.fd.nummovies
 
-        cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
-        cdef N.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:, 1] - movieIndex[:, 0]
-        cdef N.ndarray[f32_t, ndim=1] movieFeatureCache = N.zeros(numfeatures, dtype='float32')
+        cdef np.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
+        cdef np.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:, 1] - movieIndex[:, 0]
+        cdef np.ndarray[f32_t, ndim=1] movieFeatureCache = np.zeros(numfeatures, dtype='float32')
 
         cdef float lrateU = self.lrateU
         cdef float lrateM = self.lrateM
@@ -720,7 +720,7 @@ class SVD(object):
 
             inumRatings = <unsigned int> numRatingsForMovie[mid]
             istart = <unsigned int> movieIndex[mid, u0]
-            movienorm = 1 / N.sqrt(inumRatings)
+            movienorm = 1 / np.sqrt(inumRatings)
 
             # zero the movie vector
             for k from 0 <= k < numfeatures:
@@ -770,8 +770,8 @@ class SVD(object):
         return
 
     @cython.boundscheck(False)
-    def nsvd3(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] movieRatings, \
-              N.ndarray[i32_t, ndim=1] userIDs):
+    def nsvd3(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] movieRatings, \
+              np.ndarray[i32_t, ndim=1] userIDs):
         """
         Movie-oriented version of NSVD0
         """
@@ -785,9 +785,9 @@ class SVD(object):
         cdef unsigned int numfeatures = <unsigned int> self.numfeatures
         cdef unsigned int nummovies = <unsigned int> self.fd.nummovies
 
-        cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
-        cdef N.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:, 1] - movieIndex[:, 0]
-        cdef N.ndarray[f32_t, ndim=1] movieFeatureCache = N.zeros(numfeatures, dtype='float32')
+        cdef np.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
+        cdef np.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:, 1] - movieIndex[:, 0]
+        cdef np.ndarray[f32_t, ndim=1] movieFeatureCache = np.zeros(numfeatures, dtype='float32')
 
         cdef float lrateU = self.lrateU
         cdef float lrateM = self.lrateM
@@ -805,7 +805,7 @@ class SVD(object):
 
             inumRatings = <unsigned int> numRatingsForMovie[mid]
             istart = <unsigned int> movieIndex[mid, u0]
-            movienorm = 1 / N.sqrt(inumRatings)
+            movienorm = 1 / np.sqrt(inumRatings)
 
             # zero the movie vector
             for k from 0 <= k < numfeatures:
@@ -855,8 +855,8 @@ class SVD(object):
         return
 
     @cython.boundscheck(False)
-    def hybrid(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \
-               N.ndarray[i16_t, ndim=1] movieIDs):
+    def hybrid(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] userRatings, \
+               np.ndarray[i16_t, ndim=1] movieIDs):
         """
         Hybrid NMF + BRISMF, a la Gravity in
         Takacs et al., "A Unified Approach of Factor Models and Neighbor Based Methods for Large Recommender Systems"
@@ -864,7 +864,7 @@ class SVD(object):
         self.numfeaturesmf - number of features for just the MF, the rest belong to NSVD1
         """
         # This is the special, extra item matrix that NSVD1 requires.
-        cdef N.ndarray[f32_t, ndim=2] W = self.W
+        cdef np.ndarray[f32_t, ndim=2] W = self.W
 
         cdef unsigned int i, k, uid, mid, inumRatings, istart
         cdef unsigned int u0 = <unsigned int> 0  # to speed up access of bias features.
@@ -876,9 +876,9 @@ class SVD(object):
         cdef unsigned int numfeaturesmf = <unsigned int> self.numfeaturesmf
         cdef unsigned int numusers = <unsigned int> self.fd.numusers
 
-        cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
-        cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:, 1] - userIndex[:, 0]
-        cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')
+        cdef np.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
+        cdef np.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:, 1] - userIndex[:, 0]
+        cdef np.ndarray[f32_t, ndim=1] userFeatureCache = np.zeros(numfeatures, dtype='float32')
 
         cdef float lrateU = self.lrateU
         cdef float lrateM = self.lrateM
@@ -962,8 +962,8 @@ class SVD(object):
         return
 
     @cython.boundscheck(False)
-    def hybrid2(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] movieRatings, \
-                N.ndarray[i32_t, ndim=1] userIDs):
+    def hybrid2(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] movieRatings, \
+                np.ndarray[i32_t, ndim=1] userIDs):
         """
         Hybrid NMF + BRISMF, a la Gravity in
         Takacs et al., "A Unified Approach of Factor Models and Neighbor Based Methods for Large Recommender Systems"
@@ -971,7 +971,7 @@ class SVD(object):
         self.numfeaturesmf - number of features for just the MF, the rest belong to NSVD1
         """
         # This is the special, extra user matrix that NSVD1 requires.
-        cdef N.ndarray[f32_t, ndim=2] W = self.W
+        cdef np.ndarray[f32_t, ndim=2] W = self.W
 
         cdef unsigned int i, k, uid, mid, inumRatings, istart
         cdef unsigned int u0 = <unsigned int> 0  # to speed up access of bias features.
@@ -983,9 +983,9 @@ class SVD(object):
         cdef unsigned int numfeaturesmf = <unsigned int> self.numfeaturesmf
         cdef unsigned int nummovies = <unsigned int> self.fd.nummovies
 
-        cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
-        cdef N.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:, 1] - movieIndex[:, 0]
-        cdef N.ndarray[f32_t, ndim=1] movieFeatureCache = N.zeros(numfeatures, dtype='float32')
+        cdef np.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
+        cdef np.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:, 1] - movieIndex[:, 0]
+        cdef np.ndarray[f32_t, ndim=1] movieFeatureCache = np.zeros(numfeatures, dtype='float32')
 
         cdef float lrateU = self.lrateU
         cdef float lrateM = self.lrateM
@@ -1068,8 +1068,8 @@ class SVD(object):
         return
 
     @cython.boundscheck(False)
-    def rmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \
-            N.ndarray[i32_t, ndim=1] userIDsForUsers, N.ndarray[i16_t, ndim=1] movieIDs):
+    def rmf(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] userRatings, \
+            np.ndarray[i32_t, ndim=1] userIDsForUsers, np.ndarray[i16_t, ndim=1] movieIDs):
         """Regularized Matrix Factorization.
         Adds a damping constant to keep feature values low."""
         cdef unsigned int i, k, uid, mid
@@ -1103,8 +1103,8 @@ class SVD(object):
         return
 
     @cython.boundscheck(False)
-    def brismf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \
-               N.ndarray[i32_t, ndim=1] userIDsForUsers, N.ndarray[i16_t, ndim=1] movieIDs):
+    def brismf(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] userRatings, \
+               np.ndarray[i32_t, ndim=1] userIDsForUsers, np.ndarray[i16_t, ndim=1] movieIDs):
         """Biased Regularized Incremental Simultaneous Matrix Factorization, a la
         "Investigation of Various Matrix Factorization Methods for
         Large Recommender Systems", as seen in KDD 2008"""
@@ -1150,8 +1150,8 @@ class SVD(object):
         return
 
     @cython.boundscheck(False)
-    def bpmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \
-             N.ndarray[i32_t, ndim=1] userIDsForUsers, N.ndarray[i16_t, ndim=1] movieIDs):
+    def bpmf(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] userRatings, \
+             np.ndarray[i32_t, ndim=1] userIDsForUsers, np.ndarray[i16_t, ndim=1] movieIDs):
         """
         Biased Positive matrix factorization.
         Keep either user and movie features positive, depending on if
@@ -1210,8 +1210,8 @@ class SVD(object):
         return
 
     @cython.boundscheck(False)
-    def pmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \
-            N.ndarray[i32_t, ndim=1] userIDsForUsers, N.ndarray[i16_t, ndim=1] movieIDs):
+    def pmf(self, np.ndarray[f32_t, ndim=2] U, np.ndarray[f32_t, ndim=2] M, np.ndarray[i8_t, ndim=1] userRatings, \
+            np.ndarray[i32_t, ndim=1] userIDsForUsers, np.ndarray[i16_t, ndim=1] movieIDs):
         """Positive matrix factorization.
         Keep either user and movie features positive, depending on if
         keepUpositive and keepMpositive are 1 or 0."""
@@ -1263,7 +1263,7 @@ class SVD(object):
         # Make sure that the last user is in the probe set.
         done = False
         while done is False:
-            numproberatings = N.argwhere(self.td.userIDsForUsers == newnumusers)
+            numproberatings = np.argwhere(self.td.userIDsForUsers == newnumusers)
             if len(numproberatings) == 0:
                 newnumusers += 1
             else:
