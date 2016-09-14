@@ -1,2 +1,4 @@
 *.pyc
 .DS_Store
+.idea/
+netflix_prize.iml
