@@ -32,7 +32,7 @@ class KNN(object):
     and also to make predictions from them using
     either raw ratings or residuals from other models.
     """
-    def __init__(self, mode, knndir='/home/alex/workspace/flix/results/knn/'):
+    def __init__(self, mode, knndir='/home/playmice/ML/Projects/Netflix/netflix_prize/results/knn/'):
         super(KNN, self).__init__()
         self.knndir = knndir
 
@@ -182,7 +182,7 @@ class KNN(object):
         self.sharedsupport = np.load(join(self.knndir, 'sharedsupport'))
 
     def makeSimsFromSVD(self, knnmodelname, svdmodelname, simtype='normeuclidean',
-                        resultdir='/home/alex/workspace/flix/results/'):
+                        resultdir='/home/playmice/ML/Projects/Netflix/netflix_prize/results/'):
         """
         Using the movie-matrix from an SVD model, creating a similarity matrix.
         The similarity matrix can be used for kNN predictions later.

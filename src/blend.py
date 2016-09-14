@@ -2,7 +2,7 @@
 import numpy as np
 
 
-def simpleblend(modellist, td, qd, param=5, resultdir='/home/alex/workspace/flix/results/'):
+def simpleblend(modellist, td, qd, param=5, resultdir='/home/playmice/ML/Projects/Netflix/netflix_prize/results/'):
     """
     USAGE:
     modellist = ['12featureBRISMF', '40featureSPUMF']
@@ -63,7 +63,7 @@ def simpleblend(modellist, td, qd, param=5, resultdir='/home/alex/workspace/flix
     logfile.close()
 
 
-def getModelPredictions(modellist, resultdir='/home/alex/workspace/flix/results/', loadquiz=True):
+def getModelPredictions(modellist, resultdir='/home/playmice/ML/Projects/Netflix/netflix_prize/results/', loadquiz=True):
     """
     # For a list of models,
     modellist = ['12featureBRISMF', '40featureSPUMF', '1000featureBRISMF']

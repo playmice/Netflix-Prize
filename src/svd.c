@@ -367,7 +367,7 @@ static PyObject *__pyx_k_35;
 
 /* Implementation of svd */
 static char __pyx_k_23[] = "\n\tSVD is a class wrapping functionality implementing various matrix factorization algorithms,\n\tcurrently all of which are flavors of singular-value decompositions. They differ mostly in\n\thard constraints of feature values (e.g. non-negativity) and the inclusion of bias features.\n\t\n\tUsage:\n\t# first, build FlixData class data containers. \n\t# These are described and implemented in flixdata.py\n\t> modelname = '40fBRISMF'\n\ts = svd.SVD(fd, td, modelname)\n\t# Then, set the various parameters of the model\n\t> s.numfeatures = 40; s.lrateU = 0.007; s.lrateM = 0.005 #... etc\n\t\n\tThe matrices and logging information will be saved into a folder at the current directory,\n\tnamed after modelname.\n\t";
-static char __pyx_k_36[] = "/home/alex/workspace/flix/results/";
+static char __pyx_k_36[] = "/home/playmice/ML/Projects/Netflix/netflix_prize/results/";
 static PyObject *__pyx_int_17770;
 static PyObject *__pyx_int_12;
 static PyObject *__pyx_int_2;
@@ -923,7 +923,7 @@ static char __pyx_k_20[] = "unknown dtype code in numpy.pxd (%d)";
 static char __pyx_k_21[] = "Format string allocated too short.";
 static char __pyx_k_22[] = "unknown dtype code in numpy.pxd (%d)";
 
-/* "/home/alex/workspace/flix/src/svd.pyx":39
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":39
  * 	"""
  * 
  * 	def __init__(self, fd, td, qd=None, modelname='untitled_model'):             # <<<<<<<<<<<<<<
@@ -1010,7 +1010,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   return NULL;
   __pyx_L4_argument_unpacking_done:;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":40
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":40
  * 
  * 	def __init__(self, fd, td, qd=None, modelname='untitled_model'):
  * 		self.fd = fd # Full data FlixData class             # <<<<<<<<<<<<<<
@@ -1019,7 +1019,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_fd, __pyx_v_fd) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":41
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":41
  * 	def __init__(self, fd, td, qd=None, modelname='untitled_model'):
  * 		self.fd = fd # Full data FlixData class
  * 		self.td = td # Test data FlixData class (Gravity's probe10)             # <<<<<<<<<<<<<<
@@ -1028,7 +1028,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_td, __pyx_v_td) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":42
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":42
  * 		self.fd = fd # Full data FlixData class
  * 		self.td = td # Test data FlixData class (Gravity's probe10)
  * 		if qd is not None:             # <<<<<<<<<<<<<<
@@ -1038,7 +1038,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   __pyx_1 = (__pyx_v_qd != Py_None);
   if (__pyx_1) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":43
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":43
  * 		self.td = td # Test data FlixData class (Gravity's probe10)
  * 		if qd is not None:
  * 			self.qd = qd # Quiz data FlixData class             # <<<<<<<<<<<<<<
@@ -1050,7 +1050,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   }
   __pyx_L6:;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":45
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":45
  * 			self.qd = qd # Quiz data FlixData class
  * 
  * 		self.numratings = fd.numratings             # <<<<<<<<<<<<<<
@@ -1061,7 +1061,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_numratings, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":46
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":46
  * 
  * 		self.numratings = fd.numratings
  * 		self.nummovies = 17770 # hard-coded for now...             # <<<<<<<<<<<<<<
@@ -1070,7 +1070,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_nummovies, __pyx_int_17770) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":47
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":47
  * 		self.numratings = fd.numratings
  * 		self.nummovies = 17770 # hard-coded for now...
  * 		self.numusers = fd.numusers             # <<<<<<<<<<<<<<
@@ -1081,7 +1081,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_numusers, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":48
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":48
  * 		self.nummovies = 17770 # hard-coded for now...
  * 		self.numusers = fd.numusers
  * 		self.modelname = modelname             # <<<<<<<<<<<<<<
@@ -1090,7 +1090,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_modelname, __pyx_v_modelname) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":52
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":52
  * 		self.parameters = ['lrateU', 'lrateM', 'lrateUb', 'lrateMb', 'dampfactU', \
  * 							'dampfactM',  'dampfactUb', 'dampfactMb', 'umin', 'umax', \
  * 							'mmin', 'mmax']             # <<<<<<<<<<<<<<
@@ -1123,7 +1123,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   Py_INCREF(__pyx_kp_48);
   PyList_SET_ITEM(__pyx_2, 11, __pyx_kp_48);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":50
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":50
  * 		self.modelname = modelname
  * 
  * 		self.parameters = ['lrateU', 'lrateM', 'lrateUb', 'lrateMb', 'dampfactU', \             # <<<<<<<<<<<<<<
@@ -1133,7 +1133,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_parameters, ((PyObject *)__pyx_2)) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(((PyObject *)__pyx_2)); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":53
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":53
  * 							'dampfactM',  'dampfactUb', 'dampfactMb', 'umin', 'umax', \
  * 							'mmin', 'mmax']
  * 		self.lrateU = 0.019             # <<<<<<<<<<<<<<
@@ -1144,7 +1144,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_lrateU, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":54
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":54
  * 							'mmin', 'mmax']
  * 		self.lrateU = 0.019
  * 		self.lrateM = 0.004             # <<<<<<<<<<<<<<
@@ -1155,7 +1155,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_lrateM, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":55
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":55
  * 		self.lrateU = 0.019
  * 		self.lrateM = 0.004
  * 		self.dampfactU = 0.019             # <<<<<<<<<<<<<<
@@ -1166,7 +1166,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_dampfactU, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":56
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":56
  * 		self.lrateM = 0.004
  * 		self.dampfactU = 0.019
  * 		self.dampfactM = 0.019             # <<<<<<<<<<<<<<
@@ -1177,7 +1177,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_dampfactM, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":57
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":57
  * 		self.dampfactU = 0.019
  * 		self.dampfactM = 0.019
  * 		self.lrateUb = 0.004             # <<<<<<<<<<<<<<
@@ -1188,7 +1188,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_lrateUb, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":58
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":58
  * 		self.dampfactM = 0.019
  * 		self.lrateUb = 0.004
  * 		self.lrateMb = 0.013             # <<<<<<<<<<<<<<
@@ -1199,7 +1199,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_lrateMb, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":59
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":59
  * 		self.lrateUb = 0.004
  * 		self.lrateMb = 0.013
  * 		self.dampfactUb = 0.019             # <<<<<<<<<<<<<<
@@ -1210,7 +1210,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_dampfactUb, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":60
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":60
  * 		self.lrateMb = 0.013
  * 		self.dampfactUb = 0.019
  * 		self.dampfactMb = 0.007             # <<<<<<<<<<<<<<
@@ -1221,7 +1221,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_dampfactMb, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":61
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":61
  * 		self.dampfactUb = 0.019
  * 		self.dampfactMb = 0.007
  * 		self.umin = -0.01             # <<<<<<<<<<<<<<
@@ -1232,7 +1232,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_umin, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":62
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":62
  * 		self.dampfactMb = 0.007
  * 		self.umin = -0.01
  * 		self.umax = 0.01             # <<<<<<<<<<<<<<
@@ -1243,7 +1243,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_umax, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":63
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":63
  * 		self.umin = -0.01
  * 		self.umax = 0.01
  * 		self.mmin = -0.01             # <<<<<<<<<<<<<<
@@ -1254,7 +1254,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_mmin, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":64
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":64
  * 		self.umax = 0.01
  * 		self.mmin = -0.01
  * 		self.mmax = 0.01             # <<<<<<<<<<<<<<
@@ -1265,7 +1265,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_mmax, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":69
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":69
  * 
  * 		self.properties = ['numfeatures', 'miniters', 'maxepochs', 'seed', 'algorithm', \
  * 							'keepUpositive', 'keepMpositive', 'minimprovement']             # <<<<<<<<<<<<<<
@@ -1290,7 +1290,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   Py_INCREF(__pyx_kp_56);
   PyList_SET_ITEM(__pyx_2, 7, __pyx_kp_56);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":68
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":68
  * 
  * 
  * 		self.properties = ['numfeatures', 'miniters', 'maxepochs', 'seed', 'algorithm', \             # <<<<<<<<<<<<<<
@@ -1300,7 +1300,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_properties, ((PyObject *)__pyx_2)) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(((PyObject *)__pyx_2)); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":70
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":70
  * 		self.properties = ['numfeatures', 'miniters', 'maxepochs', 'seed', 'algorithm', \
  * 							'keepUpositive', 'keepMpositive', 'minimprovement']
  * 		self.numfeatures = 12             # <<<<<<<<<<<<<<
@@ -1309,7 +1309,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_numfeatures, __pyx_int_12) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":71
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":71
  * 							'keepUpositive', 'keepMpositive', 'minimprovement']
  * 		self.numfeatures = 12
  * 		self.miniters = 2             # <<<<<<<<<<<<<<
@@ -1318,7 +1318,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_miniters, __pyx_int_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":72
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":72
  * 		self.numfeatures = 12
  * 		self.miniters = 2
  * 		self.maxepochs = 100             # <<<<<<<<<<<<<<
@@ -1327,7 +1327,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_maxepochs, __pyx_int_100) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":73
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":73
  * 		self.miniters = 2
  * 		self.maxepochs = 100
  * 		self.seed = 123456789 # seed for the random number generator.             # <<<<<<<<<<<<<<
@@ -1336,7 +1336,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_seed, __pyx_int_123456789) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":74
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":74
  * 		self.maxepochs = 100
  * 		self.seed = 123456789 # seed for the random number generator.
  * 		self.algorithm = 'brismf'             # <<<<<<<<<<<<<<
@@ -1345,7 +1345,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_algorithm, __pyx_kp_57) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 74; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":75
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":75
  * 		self.seed = 123456789 # seed for the random number generator.
  * 		self.algorithm = 'brismf'
  * 		self.keepUpositive = 0             # <<<<<<<<<<<<<<
@@ -1354,7 +1354,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_keepUpositive, __pyx_int_0) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":76
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":76
  * 		self.algorithm = 'brismf'
  * 		self.keepUpositive = 0
  * 		self.keepMpositive = 0             # <<<<<<<<<<<<<<
@@ -1363,7 +1363,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_keepMpositive, __pyx_int_0) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":77
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":77
  * 		self.keepUpositive = 0
  * 		self.keepMpositive = 0
  * 		self.itersForConvergence = 1 # number of iterations triggering the stopping criteria before stopping.             # <<<<<<<<<<<<<<
@@ -1372,7 +1372,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_itersForConvergence, __pyx_int_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":78
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":78
  * 		self.keepMpositive = 0
  * 		self.itersForConvergence = 1 # number of iterations triggering the stopping criteria before stopping.
  * 		self.minimprovement = 0.00004 # pretty arbitrary, just thrown in to save time.             # <<<<<<<<<<<<<<
@@ -1393,7 +1393,7 @@ static PyObject *__pyx_pf_3svd_3SVD___init__(PyObject *__pyx_self, PyObject *__p
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":80
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":80
  * 		self.minimprovement = 0.00004 # pretty arbitrary, just thrown in to save time.
  * 
  * 	def startSVDLog(self, overwrite=True):             # <<<<<<<<<<<<<<
@@ -1468,7 +1468,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   __pyx_v_parameter = Py_None; Py_INCREF(Py_None);
   __pyx_v_paramvalue = Py_None; Py_INCREF(Py_None);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":88
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":88
  * 		"""
  * 
  * 		import os             # <<<<<<<<<<<<<<
@@ -1480,7 +1480,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   __pyx_v_os = __pyx_1;
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":89
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":89
  * 
  * 		import os
  * 		from time import ctime             # <<<<<<<<<<<<<<
@@ -1498,7 +1498,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   __pyx_1 = 0;
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":90
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":90
  * 		import os
  * 		from time import ctime
  * 		cwd = os.curdir             # <<<<<<<<<<<<<<
@@ -1510,7 +1510,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   __pyx_v_cwd = __pyx_2;
   __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":91
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":91
  * 		from time import ctime
  * 		cwd = os.curdir
  * 		locfiles = os.listdir(cwd)             # <<<<<<<<<<<<<<
@@ -1528,7 +1528,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   __pyx_v_locfiles = __pyx_3;
   __pyx_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":95
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":95
  * 		# If the directory exists, either choke up if we want to preserve the folder's contents,
  * 		# or allow ourselves to write over its contents if overwrite=True
  * 		if os.path.exists(self.resultdir):             # <<<<<<<<<<<<<<
@@ -1549,7 +1549,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   Py_DECREF(__pyx_3); __pyx_3 = 0;
   if (__pyx_4) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":96
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":96
  * 		# or allow ourselves to write over its contents if overwrite=True
  * 		if os.path.exists(self.resultdir):
  * 			if overwrite is False:             # <<<<<<<<<<<<<<
@@ -1561,7 +1561,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
     Py_DECREF(__pyx_2); __pyx_2 = 0;
     if (__pyx_4) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":97
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":97
  * 		if os.path.exists(self.resultdir):
  * 			if overwrite is False:
  * 				raise IOError, 'Directory %s already exists. Either delete it or rename the model.' % self.resultdir             # <<<<<<<<<<<<<<
@@ -1581,7 +1581,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   }
   /*else*/ {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":100
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":100
  * 		else:
  * 			# makedirs doesn't choke on a path input, mkdir does.
  * 			os.makedirs(self.resultdir)             # <<<<<<<<<<<<<<
@@ -1600,7 +1600,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   }
   __pyx_L6:;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":102
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":102
  * 			os.makedirs(self.resultdir)
  * 
  * 		os.chdir(self.resultdir)             # <<<<<<<<<<<<<<
@@ -1617,7 +1617,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   Py_DECREF(((PyObject *)__pyx_2)); __pyx_2 = 0;
   Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":105
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":105
  * 
  * 		# Open up a logfile
  * 		self.logfile = open('log.txt', 'wt')             # <<<<<<<<<<<<<<
@@ -1634,7 +1634,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_logfile, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":108
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":108
  * 
  * 		# Write the name and date
  * 		self.logfile.write('Modelname: %s\n' % self.modelname)             # <<<<<<<<<<<<<<
@@ -1655,7 +1655,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   Py_DECREF(((PyObject *)__pyx_1)); __pyx_1 = 0;
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":109
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":109
  * 		# Write the name and date
  * 		self.logfile.write('Modelname: %s\n' % self.modelname)
  * 		self.logfile.write('%s\n\n' % ctime())             # <<<<<<<<<<<<<<
@@ -1676,7 +1676,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   Py_DECREF(((PyObject *)__pyx_3)); __pyx_3 = 0;
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":114
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":114
  * 		# If a model contains a special parameter value,
  * 		# all that has to be done is to do a couple self.parameters.append()
  * 		self.logfile.write('Parameters:\n')             # <<<<<<<<<<<<<<
@@ -1694,7 +1694,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   Py_DECREF(((PyObject *)__pyx_2)); __pyx_2 = 0;
   Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":115
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":115
  * 		# all that has to be done is to do a couple self.parameters.append()
  * 		self.logfile.write('Parameters:\n')
  * 		for parameter in self.parameters:             # <<<<<<<<<<<<<<
@@ -1726,7 +1726,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
     __pyx_v_parameter = __pyx_1;
     __pyx_1 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":116
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":116
  * 		self.logfile.write('Parameters:\n')
  * 		for parameter in self.parameters:
  * 			paramvalue = getattr(self, parameter)             # <<<<<<<<<<<<<<
@@ -1738,7 +1738,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
     __pyx_v_paramvalue = __pyx_3;
     __pyx_3 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":117
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":117
  * 		for parameter in self.parameters:
  * 			paramvalue = getattr(self, parameter)
  * 			self.logfile.write('%s:\t\t%s\n' % (parameter, str(paramvalue)))             # <<<<<<<<<<<<<<
@@ -1770,7 +1770,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   }
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":119
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":119
  * 			self.logfile.write('%s:\t\t%s\n' % (parameter, str(paramvalue)))
  * 
  * 		self.logfile.write('\nLog:\n')             # <<<<<<<<<<<<<<
@@ -1807,7 +1807,7 @@ static PyObject *__pyx_pf_3svd_3SVD_startSVDLog(PyObject *__pyx_self, PyObject *
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":121
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":121
  * 		self.logfile.write('\nLog:\n')
  * 
  * 	def updateLog(self, message, displaytext=True):             # <<<<<<<<<<<<<<
@@ -1879,7 +1879,7 @@ static PyObject *__pyx_pf_3svd_3SVD_updateLog(PyObject *__pyx_self, PyObject *__
   return NULL;
   __pyx_L4_argument_unpacking_done:;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":131
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":131
  * 		will be written to the logfile without displaying it in the console.
  * 		"""
  * 		print(message)             # <<<<<<<<<<<<<<
@@ -1892,7 +1892,7 @@ static PyObject *__pyx_pf_3svd_3SVD_updateLog(PyObject *__pyx_self, PyObject *__
   if (__Pyx_Print(((PyObject *)__pyx_1), 1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(((PyObject *)__pyx_1)); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":132
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":132
  * 		"""
  * 		print(message)
  * 		self.logfile.write(message+'\n')             # <<<<<<<<<<<<<<
@@ -1923,7 +1923,7 @@ static PyObject *__pyx_pf_3svd_3SVD_updateLog(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":135
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":135
  * 
  * 
  * 	def svd(self, havemats=False):             # <<<<<<<<<<<<<<
@@ -2036,7 +2036,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_bstruct_U.buf = NULL;
   __pyx_bstruct_M.buf = NULL;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":139
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":139
  * 		Run an SVD algorithm.
  * 		"""
  * 		from time import time             # <<<<<<<<<<<<<<
@@ -2054,7 +2054,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_1 = 0;
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":142
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":142
  * 
  * 		# Locate the folder where the model will be stored
  * 		self.outnameU = 'uf'+self.modelname             # <<<<<<<<<<<<<<
@@ -2067,7 +2067,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_outnameU, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":143
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":143
  * 		# Locate the folder where the model will be stored
  * 		self.outnameU = 'uf'+self.modelname
  * 		self.outnameM = 'mf'+self.modelname             # <<<<<<<<<<<<<<
@@ -2080,7 +2080,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_outnameM, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":144
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":144
  * 		self.outnameU = 'uf'+self.modelname
  * 		self.outnameM = 'mf'+self.modelname
  * 		self.resultdir = self.fd.arrayfolder.split('/')[:-3]             # <<<<<<<<<<<<<<
@@ -2103,7 +2103,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_resultdir, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":145
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":145
  * 		self.outnameM = 'mf'+self.modelname
  * 		self.resultdir = self.fd.arrayfolder.split('/')[:-3]
  * 		self.resultdir.append('results')             # <<<<<<<<<<<<<<
@@ -2115,7 +2115,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   Py_DECREF(__pyx_3); __pyx_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":146
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":146
  * 		self.resultdir = self.fd.arrayfolder.split('/')[:-3]
  * 		self.resultdir.append('results')
  * 		self.resultdir.append(self.modelname)             # <<<<<<<<<<<<<<
@@ -2129,7 +2129,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   Py_DECREF(__pyx_3); __pyx_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":147
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":147
  * 		self.resultdir.append('results')
  * 		self.resultdir.append(self.modelname)
  * 		from string import join             # <<<<<<<<<<<<<<
@@ -2147,7 +2147,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_3 = 0;
   Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":148
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":148
  * 		self.resultdir.append(self.modelname)
  * 		from string import join
  * 		self.resultdir = join(self.resultdir, '/')             # <<<<<<<<<<<<<<
@@ -2165,7 +2165,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_resultdir, __pyx_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 148; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_3); __pyx_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":151
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":151
  * 
  * 		# Begin a log of the model training
  * 		self.startSVDLog()             # <<<<<<<<<<<<<<
@@ -2177,7 +2177,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":154
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":154
  * 
  * 		# Get the proper update function
  * 		updateFeatures = getattr(self, self.algorithm)             # <<<<<<<<<<<<<<
@@ -2191,7 +2191,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_v_updateFeatures = __pyx_2;
   __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":160
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":160
  * 		cdef N.ndarray[f32_t, ndim=2] M
  * 
  * 		if not havemats:             # <<<<<<<<<<<<<<
@@ -2202,7 +2202,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_5 = (!__pyx_4);
   if (__pyx_5) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":161
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":161
  * 
  * 		if not havemats:
  * 			U = N.zeros((self.numusers, self.numfeatures), dtype='float32')             # <<<<<<<<<<<<<<
@@ -2250,7 +2250,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_v_U = ((PyArrayObject *)__pyx_6);
     __pyx_6 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":162
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":162
  * 		if not havemats:
  * 			U = N.zeros((self.numusers, self.numfeatures), dtype='float32')
  * 			M = N.zeros((self.nummovies, self.numfeatures), dtype='float32')             # <<<<<<<<<<<<<<
@@ -2298,7 +2298,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_v_M = ((PyArrayObject *)__pyx_3);
     __pyx_3 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":163
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":163
  * 			U = N.zeros((self.numusers, self.numfeatures), dtype='float32')
  * 			M = N.zeros((self.nummovies, self.numfeatures), dtype='float32')
  * 			print('Initializing user and movie feature arrays...')             # <<<<<<<<<<<<<<
@@ -2311,7 +2311,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     if (__Pyx_Print(((PyObject *)__pyx_2), 1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     Py_DECREF(((PyObject *)__pyx_2)); __pyx_2 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":164
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":164
  * 			M = N.zeros((self.nummovies, self.numfeatures), dtype='float32')
  * 			print('Initializing user and movie feature arrays...')
  * 			rs = N.random.RandomState(self.seed)             # <<<<<<<<<<<<<<
@@ -2334,7 +2334,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_v_rs = __pyx_6;
     __pyx_6 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":168
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":168
  * 			# by either umin and umax or mmin and mmax. We fill them up column-by-column to avoid
  * 			# a whole-array memory copy. Kind of hacky, but it works. No help from the NumPy message boards on an alternative.
  * 			for i in range(self.numfeatures):             # <<<<<<<<<<<<<<
@@ -2371,7 +2371,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_v_i = __pyx_2;
       __pyx_2 = 0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":169
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":169
  * 			# a whole-array memory copy. Kind of hacky, but it works. No help from the NumPy message boards on an alternative.
  * 			for i in range(self.numfeatures):
  * 				U[:,i] = rs.uniform(low=self.umin, high=self.umax, size=self.numusers).astype('float32')             # <<<<<<<<<<<<<<
@@ -2410,7 +2410,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       Py_DECREF(((PyObject *)__pyx_1)); __pyx_1 = 0;
       Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":170
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":170
  * 			for i in range(self.numfeatures):
  * 				U[:,i] = rs.uniform(low=self.umin, high=self.umax, size=self.numusers).astype('float32')
  * 				M[:,i] = rs.uniform(low=self.mmin, high=self.mmax, size=self.nummovies).astype('float32')             # <<<<<<<<<<<<<<
@@ -2451,7 +2451,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     Py_DECREF(__pyx_6); __pyx_6 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":171
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":171
  * 				U[:,i] = rs.uniform(low=self.umin, high=self.umax, size=self.numusers).astype('float32')
  * 				M[:,i] = rs.uniform(low=self.mmin, high=self.mmax, size=self.nummovies).astype('float32')
  * 			if updateFeatures == self.nsvd1 or updateFeatures == self.hybrid:             # <<<<<<<<<<<<<<
@@ -2472,7 +2472,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     if (__pyx_4) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":172
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":172
  * 				M[:,i] = rs.uniform(low=self.mmin, high=self.mmax, size=self.nummovies).astype('float32')
  * 			if updateFeatures == self.nsvd1 or updateFeatures == self.hybrid:
  * 				self.W = N.zeros((self.nummovies, self.numfeatures), dtype='float32')             # <<<<<<<<<<<<<<
@@ -2501,7 +2501,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_W, __pyx_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       Py_DECREF(__pyx_3); __pyx_3 = 0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":173
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":173
  * 			if updateFeatures == self.nsvd1 or updateFeatures == self.hybrid:
  * 				self.W = N.zeros((self.nummovies, self.numfeatures), dtype='float32')
  * 				for i in range(self.numfeatures):             # <<<<<<<<<<<<<<
@@ -2538,7 +2538,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
         __pyx_v_i = __pyx_1;
         __pyx_1 = 0;
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":174
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":174
  * 				self.W = N.zeros((self.nummovies, self.numfeatures), dtype='float32')
  * 				for i in range(self.numfeatures):
  * 					self.W[:,i] = rs.uniform(low=self.mmin, high=self.mmax, size=self.nummovies).astype('float32')             # <<<<<<<<<<<<<<
@@ -2583,7 +2583,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       goto __pyx_L9;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":175
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":175
  * 				for i in range(self.numfeatures):
  * 					self.W[:,i] = rs.uniform(low=self.mmin, high=self.mmax, size=self.nummovies).astype('float32')
  * 			elif updateFeatures==self.nsvd2 or updateFeatures==self.hybrid2:             # <<<<<<<<<<<<<<
@@ -2604,7 +2604,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     if (__pyx_5) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":176
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":176
  * 					self.W[:,i] = rs.uniform(low=self.mmin, high=self.mmax, size=self.nummovies).astype('float32')
  * 			elif updateFeatures==self.nsvd2 or updateFeatures==self.hybrid2:
  * 				self.W = N.zeros((self.numusers, self.numfeatures), dtype='float32')             # <<<<<<<<<<<<<<
@@ -2633,7 +2633,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_W, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 176; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":177
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":177
  * 			elif updateFeatures==self.nsvd2 or updateFeatures==self.hybrid2:
  * 				self.W = N.zeros((self.numusers, self.numfeatures), dtype='float32')
  * 				for i in range(self.numfeatures):             # <<<<<<<<<<<<<<
@@ -2670,7 +2670,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
         __pyx_v_i = __pyx_2;
         __pyx_2 = 0;
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":178
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":178
  * 				self.W = N.zeros((self.numusers, self.numfeatures), dtype='float32')
  * 				for i in range(self.numfeatures):
  * 					self.W[:,i] = rs.uniform(low=self.umin, high=self.umax, size=self.numusers).astype('float32')             # <<<<<<<<<<<<<<
@@ -2715,7 +2715,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       goto __pyx_L9;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":179
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":179
  * 				for i in range(self.numfeatures):
  * 					self.W[:,i] = rs.uniform(low=self.umin, high=self.umax, size=self.numusers).astype('float32')
  * 			elif updateFeatures==self.snmf:             # <<<<<<<<<<<<<<
@@ -2729,7 +2729,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(__pyx_6); __pyx_6 = 0;
     if (__pyx_4) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":180
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":180
  * 					self.W[:,i] = rs.uniform(low=self.umin, high=self.umax, size=self.numusers).astype('float32')
  * 			elif updateFeatures==self.snmf:
  * 				self.W = N.zeros((self.numnodes, self.numfeatures), dtype='float32')             # <<<<<<<<<<<<<<
@@ -2758,7 +2758,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_W, __pyx_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 180; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       Py_DECREF(__pyx_3); __pyx_3 = 0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":181
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":181
  * 			elif updateFeatures==self.snmf:
  * 				self.W = N.zeros((self.numnodes, self.numfeatures), dtype='float32')
  * 				for i in range(self.numfeatures):             # <<<<<<<<<<<<<<
@@ -2795,7 +2795,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
         __pyx_v_i = __pyx_3;
         __pyx_3 = 0;
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":182
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":182
  * 				self.W = N.zeros((self.numnodes, self.numfeatures), dtype='float32')
  * 				for i in range(self.numfeatures):
  * 					self.W[:,i] = rs.uniform(low=self.umin, high=self.umax, size=self.numnodes).astype('float32')             # <<<<<<<<<<<<<<
@@ -2844,7 +2844,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   }
   /*else*/ {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":184
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":184
  * 					self.W[:,i] = rs.uniform(low=self.umin, high=self.umax, size=self.numnodes).astype('float32')
  * 		else:
  * 			print('Using pre-defined matrices')             # <<<<<<<<<<<<<<
@@ -2857,7 +2857,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     if (__Pyx_Print(((PyObject *)__pyx_2), 1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 184; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     Py_DECREF(((PyObject *)__pyx_2)); __pyx_2 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":185
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":185
  * 		else:
  * 			print('Using pre-defined matrices')
  * 			if not hasattr(self, 'U') and not hasattr(self, 'M'):             # <<<<<<<<<<<<<<
@@ -2872,7 +2872,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     if (__pyx_5) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":186
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":186
  * 			print('Using pre-defined matrices')
  * 			if not hasattr(self, 'U') and not hasattr(self, 'M'):
  * 				raise ValueError, 'Must have U and M matrices declared to use the havemats=True option'             # <<<<<<<<<<<<<<
@@ -2885,7 +2885,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L16:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":187
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":187
  * 			if not hasattr(self, 'U') and not hasattr(self, 'M'):
  * 				raise ValueError, 'Must have U and M matrices declared to use the havemats=True option'
  * 			U = self.U             # <<<<<<<<<<<<<<
@@ -2915,7 +2915,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_v_U = ((PyArrayObject *)__pyx_8);
     __pyx_8 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":188
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":188
  * 				raise ValueError, 'Must have U and M matrices declared to use the havemats=True option'
  * 			U = self.U
  * 			M = self.M             # <<<<<<<<<<<<<<
@@ -2947,7 +2947,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   }
   __pyx_L6:;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":190
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":190
  * 			M = self.M
  * 
  * 		if updateFeatures in [self.brismf, self.nsvd0, self.nsvd1, self.nsvd2, self.nsvd3, self.snmf]:             # <<<<<<<<<<<<<<
@@ -3005,7 +3005,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   }
   if (__pyx_4) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":191
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":191
  * 
  * 		if updateFeatures in [self.brismf, self.nsvd0, self.nsvd1, self.nsvd2, self.nsvd3, self.snmf]:
  * 			U[:,0] = 1.0             # <<<<<<<<<<<<<<
@@ -3023,7 +3023,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(((PyObject *)__pyx_6)); __pyx_6 = 0;
     Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":192
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":192
  * 		if updateFeatures in [self.brismf, self.nsvd0, self.nsvd1, self.nsvd2, self.nsvd3, self.snmf]:
  * 			U[:,0] = 1.0
  * 			M[:,1] = 1.0             # <<<<<<<<<<<<<<
@@ -3044,7 +3044,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   }
   __pyx_L17:;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":194
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":194
  * 			M[:,1] = 1.0
  * 
  * 		if updateFeatures in [self.hybrid, self.hybrid2]:             # <<<<<<<<<<<<<<
@@ -3070,7 +3070,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   }
   if (__pyx_5) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":195
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":195
  * 
  * 		if updateFeatures in [self.hybrid, self.hybrid2]:
  * 			U[:,self.numfeaturesmf] = 1.0             # <<<<<<<<<<<<<<
@@ -3089,7 +3089,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(((PyObject *)__pyx_8)); __pyx_8 = 0;
     Py_DECREF(__pyx_6); __pyx_6 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":196
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":196
  * 		if updateFeatures in [self.hybrid, self.hybrid2]:
  * 			U[:,self.numfeaturesmf] = 1.0
  * 			M[:,self.numfeaturesmf+1] = 1.0             # <<<<<<<<<<<<<<
@@ -3110,7 +3110,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(((PyObject *)__pyx_6)); __pyx_6 = 0;
     Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":197
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":197
  * 			U[:,self.numfeaturesmf] = 1.0
  * 			M[:,self.numfeaturesmf+1] = 1.0
  * 			assert hasattr(self, 'beta'), 'Need parameter beta'             # <<<<<<<<<<<<<<
@@ -3125,7 +3125,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     #endif
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":198
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":198
  * 			M[:,self.numfeaturesmf+1] = 1.0
  * 			assert hasattr(self, 'beta'), 'Need parameter beta'
  * 			assert hasattr(self, 'numfeaturesmf'), 'Need parameter numfeaturesmf'             # <<<<<<<<<<<<<<
@@ -3140,7 +3140,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     #endif
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":199
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":199
  * 			assert hasattr(self, 'beta'), 'Need parameter beta'
  * 			assert hasattr(self, 'numfeaturesmf'), 'Need parameter numfeaturesmf'
  * 			assert hasattr(self, 'lrateUn'), 'Need parameter lrateUn'             # <<<<<<<<<<<<<<
@@ -3155,7 +3155,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     #endif
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":200
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":200
  * 			assert hasattr(self, 'numfeaturesmf'), 'Need parameter numfeaturesmf'
  * 			assert hasattr(self, 'lrateUn'), 'Need parameter lrateUn'
  * 			assert hasattr(self, 'lrateMn'), 'Need parameter lrateMn'             # <<<<<<<<<<<<<<
@@ -3170,7 +3170,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     #endif
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":201
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":201
  * 			assert hasattr(self, 'lrateUn'), 'Need parameter lrateUn'
  * 			assert hasattr(self, 'lrateMn'), 'Need parameter lrateMn'
  * 			assert hasattr(self, 'dampfactUn'), 'Need parameter dampfactUn'             # <<<<<<<<<<<<<<
@@ -3185,7 +3185,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     #endif
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":202
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":202
  * 			assert hasattr(self, 'lrateMn'), 'Need parameter lrateMn'
  * 			assert hasattr(self, 'dampfactUn'), 'Need parameter dampfactUn'
  * 			assert hasattr(self, 'dampfactMn'), 'Need parameter dampfactMn'             # <<<<<<<<<<<<<<
@@ -3200,7 +3200,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     #endif
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":203
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":203
  * 			assert hasattr(self, 'dampfactUn'), 'Need parameter dampfactUn'
  * 			assert hasattr(self, 'dampfactMn'), 'Need parameter dampfactMn'
  * 			if 'beta' not in self.parameters: self.parameters.append('beta')             # <<<<<<<<<<<<<<
@@ -3219,7 +3219,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L19:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":204
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":204
  * 			assert hasattr(self, 'dampfactMn'), 'Need parameter dampfactMn'
  * 			if 'beta' not in self.parameters: self.parameters.append('beta')
  * 			if 'lrateUn' not in self.parameters: self.parameters.append('lrateUn')             # <<<<<<<<<<<<<<
@@ -3238,7 +3238,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L20:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":205
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":205
  * 			if 'beta' not in self.parameters: self.parameters.append('beta')
  * 			if 'lrateUn' not in self.parameters: self.parameters.append('lrateUn')
  * 			if 'lrateMn' not in self.parameters: self.parameters.append('lrateMn')             # <<<<<<<<<<<<<<
@@ -3257,7 +3257,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L21:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":206
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":206
  * 			if 'lrateUn' not in self.parameters: self.parameters.append('lrateUn')
  * 			if 'lrateMn' not in self.parameters: self.parameters.append('lrateMn')
  * 			if 'dampfactUn' not in self.parameters: self.parameters.append('dampfactUn')             # <<<<<<<<<<<<<<
@@ -3276,7 +3276,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L22:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":207
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":207
  * 			if 'lrateMn' not in self.parameters: self.parameters.append('lrateMn')
  * 			if 'dampfactUn' not in self.parameters: self.parameters.append('dampfactUn')
  * 			if 'dampfactMn' not in self.parameters: self.parameters.append('dampfactMn')             # <<<<<<<<<<<<<<
@@ -3295,7 +3295,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L23:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":208
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":208
  * 			if 'dampfactUn' not in self.parameters: self.parameters.append('dampfactUn')
  * 			if 'dampfactMn' not in self.parameters: self.parameters.append('dampfactMn')
  * 			if 'numfeaturesmf' not in self.properties: self.properties.append('numfeaturesmf')             # <<<<<<<<<<<<<<
@@ -3314,7 +3314,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L24:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":209
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":209
  * 			if 'dampfactMn' not in self.parameters: self.parameters.append('dampfactMn')
  * 			if 'numfeaturesmf' not in self.properties: self.properties.append('numfeaturesmf')
  * 			if updateFeatures == self.hybrid:             # <<<<<<<<<<<<<<
@@ -3328,7 +3328,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(__pyx_6); __pyx_6 = 0;
     if (__pyx_4) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":210
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":210
  * 			if 'numfeaturesmf' not in self.properties: self.properties.append('numfeaturesmf')
  * 			if updateFeatures == self.hybrid:
  * 				U[:,0:self.numfeaturesmf] = U[:,0:self.numfeaturesmf]*self.beta             # <<<<<<<<<<<<<<
@@ -3365,7 +3365,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       goto __pyx_L25;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":211
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":211
  * 			if updateFeatures == self.hybrid:
  * 				U[:,0:self.numfeaturesmf] = U[:,0:self.numfeaturesmf]*self.beta
  * 			elif updateFeatures == self.hybrid2:             # <<<<<<<<<<<<<<
@@ -3379,7 +3379,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(__pyx_3); __pyx_3 = 0;
     if (__pyx_5) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":212
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":212
  * 				U[:,0:self.numfeaturesmf] = U[:,0:self.numfeaturesmf]*self.beta
  * 			elif updateFeatures == self.hybrid2:
  * 				M[:,0:self.numfeaturesmf] = M[:,0:self.numfeaturesmf]*self.beta             # <<<<<<<<<<<<<<
@@ -3420,7 +3420,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   }
   __pyx_L18:;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":214
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":214
  * 				M[:,0:self.numfeaturesmf] = M[:,0:self.numfeaturesmf]*self.beta
  * 
  * 		if updateFeatures in [self.snmf]:             # <<<<<<<<<<<<<<
@@ -3438,7 +3438,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_5 = ((int)__pyx_4);
   if (__pyx_5) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":215
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":215
  * 
  * 		if updateFeatures in [self.snmf]:
  * 			assert hasattr(self, 'numnodes'), 'Need parameter numnodes'             # <<<<<<<<<<<<<<
@@ -3453,7 +3453,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     #endif
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":216
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":216
  * 		if updateFeatures in [self.snmf]:
  * 			assert hasattr(self, 'numnodes'), 'Need parameter numnodes'
  * 			assert hasattr(self, 'numconnectednodes'), 'Need paramter numconnectednodes'             # <<<<<<<<<<<<<<
@@ -3468,7 +3468,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     #endif
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":217
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":217
  * 			assert hasattr(self, 'numnodes'), 'Need parameter numnodes'
  * 			assert hasattr(self, 'numconnectednodes'), 'Need paramter numconnectednodes'
  * 			if 'numnodes' not in self.properties: self.properties.append('numnodes')             # <<<<<<<<<<<<<<
@@ -3487,7 +3487,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L27:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":218
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":218
  * 			assert hasattr(self, 'numconnectednodes'), 'Need paramter numconnectednodes'
  * 			if 'numnodes' not in self.properties: self.properties.append('numnodes')
  * 			if 'numconnectednodes' not in self.properties: self.properties.append('numconnectednoes')             # <<<<<<<<<<<<<<
@@ -3509,7 +3509,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   }
   __pyx_L26:;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":220
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":220
  * 			if 'numconnectednodes' not in self.properties: self.properties.append('numconnectednoes')
  * 
  * 		cdef int counter	  = 0             # <<<<<<<<<<<<<<
@@ -3518,7 +3518,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
  */
   __pyx_v_counter = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":221
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":221
  * 
  * 		cdef int counter	  = 0
  * 		cdef int epoch		  = 0             # <<<<<<<<<<<<<<
@@ -3527,7 +3527,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
  */
   __pyx_v_epoch = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":222
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":222
  * 		cdef int counter	  = 0
  * 		cdef int epoch		  = 0
  * 		cdef float oldRMSE	  = 0.0             # <<<<<<<<<<<<<<
@@ -3536,7 +3536,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
  */
   __pyx_v_oldRMSE = 0.0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":223
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":223
  * 		cdef int epoch		  = 0
  * 		cdef float oldRMSE	  = 0.0
  * 		cdef float RMSE		  = 0.0             # <<<<<<<<<<<<<<
@@ -3545,7 +3545,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
  */
   __pyx_v_RMSE = 0.0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":224
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":224
  * 		cdef float oldRMSE	  = 0.0
  * 		cdef float RMSE		  = 0.0
  * 		self.RMSEhistory	  = []             # <<<<<<<<<<<<<<
@@ -3556,7 +3556,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_RMSEhistory, ((PyObject *)__pyx_3)) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 224; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(((PyObject *)__pyx_3)); __pyx_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":225
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":225
  * 		cdef float RMSE		  = 0.0
  * 		self.RMSEhistory	  = []
  * 		done = False             # <<<<<<<<<<<<<<
@@ -3568,7 +3568,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_v_done = __pyx_2;
   __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":227
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":227
  * 		done = False
  * 
  * 		RMSE = self.checkError(U, M, self.td.userRatings, self.td.userIDsForUsers, self.td.movieIDs)             # <<<<<<<<<<<<<<
@@ -3603,7 +3603,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_RMSE = __pyx_9;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":229
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":229
  * 		RMSE = self.checkError(U, M, self.td.userRatings, self.td.userIDsForUsers, self.td.movieIDs)
  * 
  * 		self.updateLog('\nRMSE Error of random initialized data: %f' % RMSE)             # <<<<<<<<<<<<<<
@@ -3622,7 +3622,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(((PyObject *)__pyx_6)); __pyx_6 = 0;
   Py_DECREF(__pyx_8); __pyx_8 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":231
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":231
  * 		self.updateLog('\nRMSE Error of random initialized data: %f' % RMSE)
  * 
  * 		while not done:             # <<<<<<<<<<<<<<
@@ -3634,7 +3634,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_5 = (!__pyx_4);
     if (!__pyx_5) break;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":232
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":232
  * 
  * 		while not done:
  * 			epoch += 1             # <<<<<<<<<<<<<<
@@ -3643,7 +3643,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
  */
     __pyx_v_epoch += 1;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":233
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":233
  * 		while not done:
  * 			epoch += 1
  * 			self.updateLog('\nTraining epoch: %d' % epoch)             # <<<<<<<<<<<<<<
@@ -3662,7 +3662,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(((PyObject *)__pyx_2)); __pyx_2 = 0;
     Py_DECREF(__pyx_6); __pyx_6 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":236
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":236
  * 
  * 
  * 			t1 = time()             # <<<<<<<<<<<<<<
@@ -3674,7 +3674,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_v_t1 = __pyx_8;
     __pyx_8 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":238
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":238
  * 			t1 = time()
  * 			# Update all features
  * 			if updateFeatures in [self.nsvd2, self.hybrid2, self.nsvd3]:             # <<<<<<<<<<<<<<
@@ -3708,7 +3708,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     if (__pyx_4) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":239
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":239
  * 			# Update all features
  * 			if updateFeatures in [self.nsvd2, self.hybrid2, self.nsvd3]:
  * 				updateFeatures(U, M, self.fd.movieRatings, self.fd.userIDs)             # <<<<<<<<<<<<<<
@@ -3736,7 +3736,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       goto __pyx_L31;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":240
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":240
  * 			if updateFeatures in [self.nsvd2, self.hybrid2, self.nsvd3]:
  * 				updateFeatures(U, M, self.fd.movieRatings, self.fd.userIDs)
  * 			elif updateFeatures in [self.rmf, self.brismf, self.pmf, self.bpmf]:             # <<<<<<<<<<<<<<
@@ -3778,7 +3778,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     if (__pyx_5) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":241
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":241
  * 				updateFeatures(U, M, self.fd.movieRatings, self.fd.userIDs)
  * 			elif updateFeatures in [self.rmf, self.brismf, self.pmf, self.bpmf]:
  * 				updateFeatures(U, M, self.fd.userRatings, self.fd.userIDsForUsers, self.fd.movieIDs)             # <<<<<<<<<<<<<<
@@ -3811,7 +3811,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       goto __pyx_L31;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":242
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":242
  * 			elif updateFeatures in [self.rmf, self.brismf, self.pmf, self.bpmf]:
  * 				updateFeatures(U, M, self.fd.userRatings, self.fd.userIDsForUsers, self.fd.movieIDs)
  * 			elif updateFeatures in [self.nsvd0, self.nsvd1, self.hybrid, self.snmf]:             # <<<<<<<<<<<<<<
@@ -3853,7 +3853,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     if (__pyx_4) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":243
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":243
  * 				updateFeatures(U, M, self.fd.userRatings, self.fd.userIDsForUsers, self.fd.movieIDs)
  * 			elif updateFeatures in [self.nsvd0, self.nsvd1, self.hybrid, self.snmf]:
  * 				updateFeatures(U, M, self.fd.userRatings, self.fd.movieIDs)             # <<<<<<<<<<<<<<
@@ -3882,7 +3882,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L31:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":244
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":244
  * 			elif updateFeatures in [self.nsvd0, self.nsvd1, self.hybrid, self.snmf]:
  * 				updateFeatures(U, M, self.fd.userRatings, self.fd.movieIDs)
  * 			t2 = time()             # <<<<<<<<<<<<<<
@@ -3894,7 +3894,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_v_t2 = __pyx_1;
     __pyx_1 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":246
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":246
  * 			t2 = time()
  * 
  * 			oldRMSE = RMSE             # <<<<<<<<<<<<<<
@@ -3903,7 +3903,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
  */
     __pyx_v_oldRMSE = __pyx_v_RMSE;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":248
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":248
  * 			oldRMSE = RMSE
  * 
  * 			RMSE = self.checkError(U, M, self.td.userRatings, self.td.userIDsForUsers, self.td.movieIDs) # Calculate the RMSE             # <<<<<<<<<<<<<<
@@ -3938,7 +3938,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(__pyx_6); __pyx_6 = 0;
     __pyx_v_RMSE = __pyx_9;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":250
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":250
  * 			RMSE = self.checkError(U, M, self.td.userRatings, self.td.userIDsForUsers, self.td.movieIDs) # Calculate the RMSE
  * 
  * 			if not RMSE < 0 and not RMSE > 0: # check for nan             # <<<<<<<<<<<<<<
@@ -3951,7 +3951,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     if (__pyx_5) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":251
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":251
  * 
  * 			if not RMSE < 0 and not RMSE > 0: # check for nan
  * 				self.updateLog('\n\nWARNING: NaN values present!')             # <<<<<<<<<<<<<<
@@ -3967,7 +3967,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       Py_DECREF(((PyObject *)__pyx_2)); __pyx_2 = 0;
       Py_DECREF(__pyx_8); __pyx_8 = 0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":252
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":252
  * 			if not RMSE < 0 and not RMSE > 0: # check for nan
  * 				self.updateLog('\n\nWARNING: NaN values present!')
  * 				RMSE = 99999.0             # <<<<<<<<<<<<<<
@@ -3976,7 +3976,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
  */
       __pyx_v_RMSE = 99999.0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":253
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":253
  * 				self.updateLog('\n\nWARNING: NaN values present!')
  * 				RMSE = 99999.0
  * 				done = True             # <<<<<<<<<<<<<<
@@ -3988,7 +3988,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_v_done = __pyx_3;
       __pyx_3 = 0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":254
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":254
  * 				RMSE = 99999.0
  * 				done = True
  * 				continue             # <<<<<<<<<<<<<<
@@ -4000,7 +4000,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L32:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":256
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":256
  * 				continue
  * 
  * 			self.RMSEhistory.append(RMSE)             # <<<<<<<<<<<<<<
@@ -4014,7 +4014,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(__pyx_1); __pyx_1 = 0;
     Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":257
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":257
  * 
  * 			self.RMSEhistory.append(RMSE)
  * 			self.updateLog('\tRMSE: %f' % RMSE)             # <<<<<<<<<<<<<<
@@ -4033,7 +4033,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(((PyObject *)__pyx_6)); __pyx_6 = 0;
     Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":258
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":258
  * 			self.RMSEhistory.append(RMSE)
  * 			self.updateLog('\tRMSE: %f' % RMSE)
  * 			self.updateLog('\tTime: %f' % (t2-t1))             # <<<<<<<<<<<<<<
@@ -4052,7 +4052,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(((PyObject *)__pyx_3)); __pyx_3 = 0;
     Py_DECREF(__pyx_8); __pyx_8 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":260
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":260
  * 			self.updateLog('\tTime: %f' % (t2-t1))
  * 
  * 			deltaRMSE = oldRMSE - RMSE             # <<<<<<<<<<<<<<
@@ -4064,7 +4064,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_v_deltaRMSE = __pyx_6;
     __pyx_6 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":261
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":261
  * 
  * 			deltaRMSE = oldRMSE - RMSE
  * 			if epoch >= self.miniters:             # <<<<<<<<<<<<<<
@@ -4080,7 +4080,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     Py_DECREF(__pyx_3); __pyx_3 = 0;
     if (__pyx_4) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":262
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":262
  * 			deltaRMSE = oldRMSE - RMSE
  * 			if epoch >= self.miniters:
  * 				if deltaRMSE <= self.minimprovement:             # <<<<<<<<<<<<<<
@@ -4094,7 +4094,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       Py_DECREF(__pyx_6); __pyx_6 = 0;
       if (__pyx_5) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":263
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":263
  * 			if epoch >= self.miniters:
  * 				if deltaRMSE <= self.minimprovement:
  * 					counter += 1             # <<<<<<<<<<<<<<
@@ -4103,7 +4103,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
  */
         __pyx_v_counter += 1;
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":264
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":264
  * 				if deltaRMSE <= self.minimprovement:
  * 					counter += 1
  * 					if counter == self.itersForConvergence:             # <<<<<<<<<<<<<<
@@ -4119,7 +4119,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
         Py_DECREF(__pyx_3); __pyx_3 = 0;
         if (__pyx_4) {
 
-          /* "/home/alex/workspace/flix/src/svd.pyx":265
+          /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":265
  * 					counter += 1
  * 					if counter == self.itersForConvergence:
  * 						done = True             # <<<<<<<<<<<<<<
@@ -4134,7 +4134,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
         }
         __pyx_L35:;
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":266
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":266
  * 					if counter == self.itersForConvergence:
  * 						done = True
  * 					continue             # <<<<<<<<<<<<<<
@@ -4145,7 +4145,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
         goto __pyx_L34;
       }
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":267
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":267
  * 						done = True
  * 					continue
  * 				elif RMSE > self.minimprovement:             # <<<<<<<<<<<<<<
@@ -4161,7 +4161,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       Py_DECREF(__pyx_2); __pyx_2 = 0;
       if (__pyx_5) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":268
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":268
  * 					continue
  * 				elif RMSE > self.minimprovement:
  * 					N.save(self.outnameU, U)             # <<<<<<<<<<<<<<
@@ -4182,7 +4182,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
         Py_DECREF(((PyObject *)__pyx_1)); __pyx_1 = 0;
         Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":269
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":269
  * 				elif RMSE > self.minimprovement:
  * 					N.save(self.outnameU, U)
  * 					N.save(self.outnameM, M)             # <<<<<<<<<<<<<<
@@ -4203,7 +4203,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
         Py_DECREF(((PyObject *)__pyx_1)); __pyx_1 = 0;
         Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":270
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":270
  * 					N.save(self.outnameU, U)
  * 					N.save(self.outnameM, M)
  * 					if hasattr(self, 'W'):             # <<<<<<<<<<<<<<
@@ -4213,7 +4213,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
         __pyx_4 = PyObject_HasAttr(__pyx_v_self, __pyx_kp_124); if (unlikely(__pyx_4 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 270; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         if (__pyx_4) {
 
-          /* "/home/alex/workspace/flix/src/svd.pyx":271
+          /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":271
  * 					N.save(self.outnameM, M)
  * 					if hasattr(self, 'W'):
  * 						N.save('w' + self.outnameU[1:], self.W)             # <<<<<<<<<<<<<<
@@ -4245,7 +4245,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       }
       __pyx_L34:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":273
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":273
  * 						N.save('w' + self.outnameU[1:], self.W)
  * 
  * 				if epoch == self.maxepochs:             # <<<<<<<<<<<<<<
@@ -4261,7 +4261,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       Py_DECREF(__pyx_8); __pyx_8 = 0;
       if (__pyx_5) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":274
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":274
  * 
  * 				if epoch == self.maxepochs:
  * 					done = True             # <<<<<<<<<<<<<<
@@ -4273,7 +4273,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
         __pyx_v_done = __pyx_3;
         __pyx_3 = 0;
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":275
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":275
  * 				if epoch == self.maxepochs:
  * 					done = True
  * 					continue             # <<<<<<<<<<<<<<
@@ -4285,7 +4285,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
       }
       /*else*/ {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":277
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":277
  * 					continue
  * 				else:
  * 					counter = 0             # <<<<<<<<<<<<<<
@@ -4301,7 +4301,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_L29:;
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":280
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":280
  * 
  * 		# If the run was successful, load the models in,
  * 		self.U = N.load(self.outnameU + '.npy')             # <<<<<<<<<<<<<<
@@ -4323,7 +4323,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_U, __pyx_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 280; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_3); __pyx_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":281
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":281
  * 		# If the run was successful, load the models in,
  * 		self.U = N.load(self.outnameU + '.npy')
  * 		self.M = N.load(self.outnameM + '.npy')             # <<<<<<<<<<<<<<
@@ -4345,7 +4345,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_M, __pyx_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 281; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_3); __pyx_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":282
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":282
  * 		self.U = N.load(self.outnameU + '.npy')
  * 		self.M = N.load(self.outnameM + '.npy')
  * 		if hasattr(self, 'W'):             # <<<<<<<<<<<<<<
@@ -4355,7 +4355,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_4 = PyObject_HasAttr(__pyx_v_self, __pyx_kp_128); if (unlikely(__pyx_4 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_4) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":283
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":283
  * 		self.M = N.load(self.outnameM + '.npy')
  * 		if hasattr(self, 'W'):
  * 			self.W = N.load('w'+self.outnameU[1:] + '.npy')             # <<<<<<<<<<<<<<
@@ -4384,7 +4384,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   }
   __pyx_L38:;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":285
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":285
  * 			self.W = N.load('w'+self.outnameU[1:] + '.npy')
  * 		# close the logfile,
  * 		self.logfile.close()             # <<<<<<<<<<<<<<
@@ -4398,7 +4398,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_8); __pyx_8 = 0;
   Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":287
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":287
  * 		self.logfile.close()
  * 		# and spit out a probe10 prediction
  * 		probeRatings = self.makeProbePrediction(self.td.userIDsForUsers, self.td.movieIDs, 'probe')             # <<<<<<<<<<<<<<
@@ -4426,7 +4426,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_v_probeRatings = __pyx_8;
   __pyx_8 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":288
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":288
  * 		# and spit out a probe10 prediction
  * 		probeRatings = self.makeProbePrediction(self.td.userIDsForUsers, self.td.movieIDs, 'probe')
  * 		probeRatings.dump('probe10ratings')             # <<<<<<<<<<<<<<
@@ -4442,7 +4442,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(((PyObject *)__pyx_1)); __pyx_1 = 0;
   Py_DECREF(__pyx_3); __pyx_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":290
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":290
  * 		probeRatings.dump('probe10ratings')
  * 
  * 		if hasattr(self, 'qd'):             # <<<<<<<<<<<<<<
@@ -4452,7 +4452,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_5 = PyObject_HasAttr(__pyx_v_self, __pyx_kp_133); if (unlikely(__pyx_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_5) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":291
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":291
  * 
  * 		if hasattr(self, 'qd'):
  * 			print('Making quiz ratings')             # <<<<<<<<<<<<<<
@@ -4465,7 +4465,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     if (__Pyx_Print(((PyObject *)__pyx_6), 1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     Py_DECREF(((PyObject *)__pyx_6)); __pyx_6 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":292
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":292
  * 		if hasattr(self, 'qd'):
  * 			print('Making quiz ratings')
  * 			quizRatings = self.makeProbePrediction(self.qd.userIDsForUsers, self.qd.movieIDs, 'quiz')             # <<<<<<<<<<<<<<
@@ -4493,7 +4493,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_v_quizRatings = __pyx_3;
     __pyx_3 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":293
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":293
  * 			print('Making quiz ratings')
  * 			quizRatings = self.makeProbePrediction(self.qd.userIDsForUsers, self.qd.movieIDs, 'quiz')
  * 			quizRatings.dump('quizratings')             # <<<<<<<<<<<<<<
@@ -4548,7 +4548,7 @@ static PyObject *__pyx_pf_3svd_3SVD_svd(PyObject *__pyx_self, PyObject *__pyx_ar
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":297
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":297
  * 
  * 
  * 	def makeProbePrediction(self, N.ndarray[i32_t, ndim=1] userIDsForUsers, N.ndarray[i16_t, ndim=1] movieIDs, predicttype='probe'):             # <<<<<<<<<<<<<<
@@ -4687,7 +4687,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   __pyx_bstride_0_movieIDs = __pyx_bstruct_movieIDs.strides[0];
   __pyx_bshape_0_movieIDs = __pyx_bstruct_movieIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":303
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":303
  * 		"""
  * 
  * 		cdef N.ndarray[f32_t, ndim=2] U = self.U             # <<<<<<<<<<<<<<
@@ -4707,7 +4707,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   __pyx_v_U = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":304
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":304
  * 
  * 		cdef N.ndarray[f32_t, ndim=2] U = self.U
  * 		cdef N.ndarray[f32_t, ndim=2] M = self.M             # <<<<<<<<<<<<<<
@@ -4727,7 +4727,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   __pyx_v_M = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":306
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":306
  * 		cdef N.ndarray[f32_t, ndim=2] M = self.M
  * 
  * 		if predicttype is 'probe':             # <<<<<<<<<<<<<<
@@ -4737,7 +4737,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   __pyx_2 = (__pyx_v_predicttype == __pyx_kp_137);
   if (__pyx_2) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":307
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":307
  * 
  * 		if predicttype is 'probe':
  * 			tmp = self.td.numratings             # <<<<<<<<<<<<<<
@@ -4753,7 +4753,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
     goto __pyx_L6;
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":308
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":308
  * 		if predicttype is 'probe':
  * 			tmp = self.td.numratings
  * 		elif predicttype is 'quiz':             # <<<<<<<<<<<<<<
@@ -4763,7 +4763,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   __pyx_2 = (__pyx_v_predicttype == __pyx_kp_138);
   if (__pyx_2) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":309
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":309
  * 			tmp = self.td.numratings
  * 		elif predicttype is 'quiz':
  * 			tmp = userIDsForUsers.size             # <<<<<<<<<<<<<<
@@ -4778,7 +4778,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   }
   /*else*/ {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":311
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":311
  * 			tmp = userIDsForUsers.size
  * 		else:
  * 			raise ValueError, 'predicctype argument must be either "probe" or "quiz"'             # <<<<<<<<<<<<<<
@@ -4790,7 +4790,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   }
   __pyx_L6:;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":312
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":312
  * 		else:
  * 			raise ValueError, 'predicctype argument must be either "probe" or "quiz"'
  * 		cdef int numratings = tmp             # <<<<<<<<<<<<<<
@@ -4800,7 +4800,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   __pyx_4 = __pyx_PyInt_int(__pyx_v_tmp); if (unlikely((__pyx_4 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 312; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_numratings = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":314
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":314
  * 		cdef int numratings = tmp
  * 
  * 		cdef int numfeatures = U.shape[1]             # <<<<<<<<<<<<<<
@@ -4809,7 +4809,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
  */
   __pyx_v_numfeatures = (__pyx_v_U->dimensions[1]);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":318
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":318
  * 		cdef float prediction
  * 
  * 		cdef N.ndarray[f32_t, ndim=1] probeRatings = N.zeros(numratings, dtype='float32')             # <<<<<<<<<<<<<<
@@ -4841,7 +4841,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   __pyx_v_probeRatings = ((PyArrayObject *)__pyx_6);
   __pyx_6 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":320
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":320
  * 		cdef N.ndarray[f32_t, ndim=1] probeRatings = N.zeros(numratings, dtype='float32')
  * 
  * 		for i from 0 <= i < numratings:             # <<<<<<<<<<<<<<
@@ -4850,7 +4850,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
  */
   for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_numratings; __pyx_v_i++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":321
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":321
  * 
  * 		for i from 0 <= i < numratings:
  * 			uid = userIDsForUsers[i]             # <<<<<<<<<<<<<<
@@ -4869,7 +4869,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
     }
     __pyx_v_uid = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDsForUsers.buf, __pyx_t_4, __pyx_bstride_0_userIDsForUsers));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":322
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":322
  * 		for i from 0 <= i < numratings:
  * 			uid = userIDsForUsers[i]
  * 			mid = movieIDs[i]             # <<<<<<<<<<<<<<
@@ -4888,7 +4888,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
     }
     __pyx_v_mid = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_5, __pyx_bstride_0_movieIDs));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":324
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":324
  * 			mid = movieIDs[i]
  * 
  * 			prediction = 0.0             # <<<<<<<<<<<<<<
@@ -4897,7 +4897,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
  */
     __pyx_v_prediction = 0.0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":325
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":325
  * 
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -4906,7 +4906,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":326
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":326
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -4946,7 +4946,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
       __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_6, __pyx_bstride_0_U, __pyx_t_7, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_8, __pyx_bstride_0_M, __pyx_t_9, __pyx_bstride_1_M)));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":328
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":328
  * 				prediction += U[uid,k]*M[mid,k]
  * 
  * 			probeRatings[i] = prediction             # <<<<<<<<<<<<<<
@@ -4966,7 +4966,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
     *__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_probeRatings.buf, __pyx_t_10, __pyx_bstride_0_probeRatings) = __pyx_v_prediction;
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":331
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":331
  * 
  * 		# Clip predictions
  * 		probeRatings[probeRatings<1.0] = 1.0             # <<<<<<<<<<<<<<
@@ -4981,7 +4981,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   Py_DECREF(__pyx_3); __pyx_3 = 0;
   Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":332
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":332
  * 		# Clip predictions
  * 		probeRatings[probeRatings<1.0] = 1.0
  * 		probeRatings[probeRatings>5.0] = 5.0             # <<<<<<<<<<<<<<
@@ -4996,7 +4996,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   Py_DECREF(__pyx_6); __pyx_6 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":333
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":333
  * 		probeRatings[probeRatings<1.0] = 1.0
  * 		probeRatings[probeRatings>5.0] = 5.0
  * 		return probeRatings             # <<<<<<<<<<<<<<
@@ -5039,7 +5039,7 @@ static PyObject *__pyx_pf_3svd_3SVD_makeProbePrediction(PyObject *__pyx_self, Py
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":335
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":335
  * 		return probeRatings
  * 
  * 	def checkError(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -5204,7 +5204,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
   __pyx_bstride_0_movieIDs = __pyx_bstruct_movieIDs.strides[0];
   __pyx_bshape_0_movieIDs = __pyx_bstruct_movieIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":340
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":340
  * 		cdef float error, prediction
  * 		cdef int uid, mid, i, k
  * 		cdef int numratings = self.td.numratings             # <<<<<<<<<<<<<<
@@ -5218,7 +5218,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = __pyx_3;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":341
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":341
  * 		cdef int uid, mid, i, k
  * 		cdef int numratings = self.td.numratings
  * 		numfeatures = self.numfeatures             # <<<<<<<<<<<<<<
@@ -5230,7 +5230,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
   __pyx_v_numfeatures = __pyx_1;
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":343
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":343
  * 		numfeatures = self.numfeatures
  * 
  * 		error = 0.0             # <<<<<<<<<<<<<<
@@ -5239,7 +5239,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
  */
   __pyx_v_error = 0.0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":345
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":345
  * 		error = 0.0
  * 
  * 		for i from 0 <= i < numratings:             # <<<<<<<<<<<<<<
@@ -5248,7 +5248,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
  */
   for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_numratings; __pyx_v_i++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":346
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":346
  * 
  * 		for i from 0 <= i < numratings:
  * 			uid = userIDsForUsers[i]             # <<<<<<<<<<<<<<
@@ -5267,7 +5267,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
     }
     __pyx_v_uid = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDsForUsers.buf, __pyx_t_1, __pyx_bstride_0_userIDsForUsers));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":347
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":347
  * 		for i from 0 <= i < numratings:
  * 			uid = userIDsForUsers[i]
  * 			mid = movieIDs[i]             # <<<<<<<<<<<<<<
@@ -5286,7 +5286,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
     }
     __pyx_v_mid = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_2, __pyx_bstride_0_movieIDs));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":349
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":349
  * 			mid = movieIDs[i]
  * 
  * 			prediction = 0.0             # <<<<<<<<<<<<<<
@@ -5295,7 +5295,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
  */
     __pyx_v_prediction = 0.0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":350
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":350
  * 
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -5305,7 +5305,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
     __pyx_3 = __pyx_PyInt_int(__pyx_v_numfeatures); if (unlikely((__pyx_3 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_3; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":351
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":351
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -5345,7 +5345,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
       __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_3, __pyx_bstride_0_U, __pyx_t_4, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_5, __pyx_bstride_0_M, __pyx_t_6, __pyx_bstride_1_M)));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":352
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":352
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]
  * 			error += (userRatings[i] - prediction)*(userRatings[i] - prediction)             # <<<<<<<<<<<<<<
@@ -5375,7 +5375,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
     __pyx_v_error += (((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_userRatings.buf, __pyx_t_7, __pyx_bstride_0_userRatings)) - __pyx_v_prediction) * ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_userRatings.buf, __pyx_t_8, __pyx_bstride_0_userRatings)) - __pyx_v_prediction));
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":354
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":354
  * 			error += (userRatings[i] - prediction)*(userRatings[i] - prediction)
  * 
  * 		return N.sqrt(error/N.float(numratings))             # <<<<<<<<<<<<<<
@@ -5439,7 +5439,7 @@ static PyObject *__pyx_pf_3svd_3SVD_checkError(PyObject *__pyx_self, PyObject *_
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":397
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":397
  * 	# ============================================================
  * 
  * 	def snmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -5677,7 +5677,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   __pyx_bstride_0_movieIDs = __pyx_bstruct_movieIDs.strides[0];
   __pyx_bshape_0_movieIDs = __pyx_bstruct_movieIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":413
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":413
  * 
  * 		# This is the special, extra item matrix that NSVD1 requires.
  * 		cdef N.ndarray[f32_t, ndim=2] W = self.W             # <<<<<<<<<<<<<<
@@ -5697,7 +5697,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   __pyx_v_W = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":416
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":416
  * 
  * 		cdef unsigned int i, k, uid, mid, nid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.             # <<<<<<<<<<<<<<
@@ -5706,7 +5706,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
   __pyx_v_u0 = ((unsigned int)0);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":417
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":417
  * 		cdef unsigned int i, k, uid, mid, nid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.
  * 		cdef unsigned int u1 = <unsigned int>1 # Cython wants to check bounds otherwise...             # <<<<<<<<<<<<<<
@@ -5715,7 +5715,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
   __pyx_v_u1 = ((unsigned int)1);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":420
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":420
  * 		cdef float error, prediction, uf, mf, biasreg, usernorm, tmpu, tmpm
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -5729,7 +5729,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":421
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":421
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -5741,7 +5741,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":422
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":422
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 		cdef unsigned int numusers = <unsigned int> self.fd.numusers             # <<<<<<<<<<<<<<
@@ -5755,7 +5755,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numusers = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":423
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":423
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 		cdef unsigned int numusers = <unsigned int> self.fd.numusers
  * 		cdef unsigned int numnodes = <unsigned int>self.numnodes             # <<<<<<<<<<<<<<
@@ -5767,7 +5767,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numnodes = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":426
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":426
  * 
  * 		# WARNING ALERT WA WA WA: HARD-WIRED 0.5 CONNECTION PROBABILITY
  * 		cdef unsigned int numconnectednodes = <unsigned int>self.numconnectednodes             # <<<<<<<<<<<<<<
@@ -5779,7 +5779,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numconnectednodes = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":428
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":428
  * 		cdef unsigned int numconnectednodes = <unsigned int>self.numconnectednodes
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex             # <<<<<<<<<<<<<<
@@ -5801,7 +5801,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   __pyx_v_userIndex = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":429
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":429
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:,1] - userIndex[:,0]             # <<<<<<<<<<<<<<
@@ -5839,7 +5839,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   __pyx_v_numRatingsForUser = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":430
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":430
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:,1] - userIndex[:,0]
  * 		cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')             # <<<<<<<<<<<<<<
@@ -5871,7 +5871,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   __pyx_v_userFeatureCache = ((PyArrayObject *)__pyx_5);
   __pyx_5 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":433
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":433
  * 		cdef N.ndarray[i64_t, ndim=1] nodelist
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -5883,7 +5883,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":434
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":434
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -5895,7 +5895,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":435
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":435
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -5907,7 +5907,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":436
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":436
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -5919,7 +5919,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":439
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":439
  * 
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb             # <<<<<<<<<<<<<<
@@ -5931,7 +5931,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":440
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":440
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb             # <<<<<<<<<<<<<<
@@ -5943,7 +5943,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":441
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":441
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb             # <<<<<<<<<<<<<<
@@ -5955,7 +5955,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":442
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":442
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb
  * 		cdef float dampfactMb = self.dampfactMb             # <<<<<<<<<<<<<<
@@ -5967,7 +5967,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":446
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":446
  * 
  * 
  * 		for uid from 0 <= uid < numusers:             # <<<<<<<<<<<<<<
@@ -5976,7 +5976,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
   for (__pyx_v_uid = 0; __pyx_v_uid < __pyx_v_numusers; __pyx_v_uid++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":447
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":447
  * 
  * 		for uid from 0 <= uid < numusers:
  * 			if uid % 20000 == 0: self.updateLog('\tUpdating user %d' % uid)             # <<<<<<<<<<<<<<
@@ -6000,7 +6000,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":449
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":449
  * 			if uid % 20000 == 0: self.updateLog('\tUpdating user %d' % uid)
  * 
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]             # <<<<<<<<<<<<<<
@@ -6016,7 +6016,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
     }
     __pyx_v_inumRatings = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_numRatingsForUser.buf, __pyx_t_6, __pyx_bstride_0_numRatingsForUser)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":450
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":450
  * 
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]
  * 			istart = <unsigned int>userIndex[uid,u0]             # <<<<<<<<<<<<<<
@@ -6034,7 +6034,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
     }
     __pyx_v_istart = ((unsigned int)(*__Pyx_BufPtrStrided2d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIndex.buf, __pyx_t_8, __pyx_bstride_0_userIndex, __pyx_t_9, __pyx_bstride_1_userIndex)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":455
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":455
  * 			# This way, we get a replicable shuffle for each user, and
  * 			# we don't have to store the giant connection matrix in memory.
  * 			nodelist = N.arange(numnodes)             # <<<<<<<<<<<<<<
@@ -6073,7 +6073,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
     __pyx_v_nodelist = ((PyArrayObject *)__pyx_4);
     __pyx_4 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":456
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":456
  * 			# we don't have to store the giant connection matrix in memory.
  * 			nodelist = N.arange(numnodes)
  * 			rs = N.random.RandomState(N.int(uid))             # <<<<<<<<<<<<<<
@@ -6105,7 +6105,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
     __pyx_v_rs = __pyx_4;
     __pyx_4 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":457
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":457
  * 			nodelist = N.arange(numnodes)
  * 			rs = N.random.RandomState(N.int(uid))
  * 			rs.shuffle(nodelist)             # <<<<<<<<<<<<<<
@@ -6121,7 +6121,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
     Py_DECREF(((PyObject *)__pyx_5)); __pyx_5 = 0;
     Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":460
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":460
  * 
  * 			# construct the user vector from movie vectors
  * 			for i from 0 <= i < numconnectednodes:             # <<<<<<<<<<<<<<
@@ -6130,7 +6130,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_numconnectednodes; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":461
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":461
  * 			# construct the user vector from movie vectors
  * 			for i from 0 <= i < numconnectednodes:
  * 				nid = <unsigned int>nodelist[i]             # <<<<<<<<<<<<<<
@@ -6146,7 +6146,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
       __pyx_v_nid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i64_t *, __pyx_bstruct_nodelist.buf, __pyx_t_13, __pyx_bstride_0_nodelist)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":462
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":462
  * 			for i from 0 <= i < numconnectednodes:
  * 				nid = <unsigned int>nodelist[i]
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -6155,7 +6155,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":463
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":463
  * 				nid = <unsigned int>nodelist[i]
  * 				for k from 2 <= k < numfeatures:
  * 					userFeatureCache[k] += W[nid,k]             # <<<<<<<<<<<<<<
@@ -6182,7 +6182,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":466
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":466
  * 
  * 			# normalize based on movie support
  * 			usernorm = 1/N.sqrt(numnodes)             # <<<<<<<<<<<<<<
@@ -6205,7 +6205,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
     Py_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __pyx_v_usernorm = __pyx_6;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":467
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":467
  * 			# normalize based on movie support
  * 			usernorm = 1/N.sqrt(numnodes)
  * 			userFeatureCache *= usernorm             # <<<<<<<<<<<<<<
@@ -6237,7 +6237,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
     __pyx_v_userFeatureCache = ((PyArrayObject *)__pyx_5);
     __pyx_5 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":470
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":470
  * 
  * 			# put the user vector into the user matrix
  * 			for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -6246,7 +6246,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
     for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":471
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":471
  * 			# put the user vector into the user matrix
  * 			for k from 2 <= k < numfeatures:
  * 				U[uid,k] = userFeatureCache[k]             # <<<<<<<<<<<<<<
@@ -6272,7 +6272,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_18, __pyx_bstride_0_U, __pyx_t_19, __pyx_bstride_1_U) = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_userFeatureCache.buf, __pyx_t_17, __pyx_bstride_0_userFeatureCache));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":475
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":475
  * 
  * 			# The Engine of NSVD1 begins here----
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -6281,7 +6281,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":476
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":476
  * 			# The Engine of NSVD1 begins here----
  * 			for i from 0 <= i < inumRatings:
  * 				if userRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating             # <<<<<<<<<<<<<<
@@ -6302,7 +6302,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
       __pyx_L17:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":477
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":477
  * 			for i from 0 <= i < inumRatings:
  * 				if userRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating
  * 				mid = <unsigned int>movieIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -6318,7 +6318,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
       __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_21, __pyx_bstride_0_movieIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":480
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":480
  * 
  * 				# 1. Compute error
  * 				prediction = 0.0             # <<<<<<<<<<<<<<
@@ -6327,7 +6327,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
       __pyx_v_prediction = 0.0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":481
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":481
  * 				# 1. Compute error
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -6336,7 +6336,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
       for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":482
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":482
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -6364,7 +6364,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
         __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_22, __pyx_bstride_0_U, __pyx_t_23, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_24, __pyx_bstride_0_M, __pyx_t_25, __pyx_bstride_1_M)));
       }
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":483
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":483
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]
  * 				error = userRatings[istart+i] - prediction             # <<<<<<<<<<<<<<
@@ -6380,7 +6380,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
       __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_userRatings.buf, __pyx_t_26, __pyx_bstride_0_userRatings)) - __pyx_v_prediction);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":486
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":486
  * 
  * 				# 2. Update the bias features
  * 				biasreg = U[uid,u1] + M[mid,u0]             # <<<<<<<<<<<<<<
@@ -6407,7 +6407,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
       __pyx_v_biasreg = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_27, __pyx_bstride_0_U, __pyx_t_28, __pyx_bstride_1_U)) + (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_29, __pyx_bstride_0_M, __pyx_t_30, __pyx_bstride_1_M)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":487
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":487
  * 				# 2. Update the bias features
  * 				biasreg = U[uid,u1] + M[mid,u0]
  * 				U[uid,u1] += lrateUb*(error - dampfactUb*biasreg)             # <<<<<<<<<<<<<<
@@ -6425,7 +6425,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_31, __pyx_bstride_0_U, __pyx_t_32, __pyx_bstride_1_U) += (__pyx_v_lrateUb * (__pyx_v_error - (__pyx_v_dampfactUb * __pyx_v_biasreg)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":488
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":488
  * 				biasreg = U[uid,u1] + M[mid,u0]
  * 				U[uid,u1] += lrateUb*(error - dampfactUb*biasreg)
  * 				M[mid,u0] += lrateMb*(error - dampfactMb*biasreg)             # <<<<<<<<<<<<<<
@@ -6443,7 +6443,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_33, __pyx_bstride_0_M, __pyx_t_34, __pyx_bstride_1_M) += (__pyx_v_lrateMb * (__pyx_v_error - (__pyx_v_dampfactMb * __pyx_v_biasreg)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":491
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":491
  * 
  * 				# 3. Update the meat of the features
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -6452,7 +6452,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":492
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":492
  * 				# 3. Update the meat of the features
  * 				for k from 2 <= k < numfeatures:
  * 					uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -6470,7 +6470,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
         }
         __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_35, __pyx_bstride_0_U, __pyx_t_36, __pyx_bstride_1_U));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":493
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":493
  * 				for k from 2 <= k < numfeatures:
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -6488,7 +6488,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
         }
         __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_37, __pyx_bstride_0_M, __pyx_t_38, __pyx_bstride_1_M));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":494
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":494
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -6506,7 +6506,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
         }
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_39, __pyx_bstride_0_U, __pyx_t_40, __pyx_bstride_1_U) += (__pyx_v_lrateU * ((__pyx_v_error * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf)));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":495
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":495
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*mf - dampfactU*uf)
  * 					M[mid,k] += lrateM*(error*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -6527,7 +6527,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       __pyx_L15:;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":498
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":498
  * 
  * 			# 4. Update the node vectors
  * 			for i from 0 <= i < numconnectednodes:             # <<<<<<<<<<<<<<
@@ -6536,7 +6536,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_numconnectednodes; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":499
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":499
  * 			# 4. Update the node vectors
  * 			for i from 0 <= i < numconnectednodes:
  * 				nid = <unsigned int>nodelist[i]             # <<<<<<<<<<<<<<
@@ -6552,7 +6552,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
       __pyx_v_nid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i64_t *, __pyx_bstruct_nodelist.buf, __pyx_t_43, __pyx_bstride_0_nodelist)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":500
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":500
  * 			for i from 0 <= i < numconnectednodes:
  * 				nid = <unsigned int>nodelist[i]
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -6561,7 +6561,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":501
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":501
  * 				nid = <unsigned int>nodelist[i]
  * 				for k from 2 <= k < numfeatures:
  * 					W[nid,k] += (U[uid,k] - userFeatureCache[k])*usernorm             # <<<<<<<<<<<<<<
@@ -6598,7 +6598,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":503
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":503
  * 					W[nid,k] += (U[uid,k] - userFeatureCache[k])*usernorm
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -6650,7 +6650,7 @@ static PyObject *__pyx_pf_3svd_3SVD_snmf(PyObject *__pyx_self, PyObject *__pyx_a
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":506
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":506
  * 
  * 	@cython.boundscheck(False)
  * 	def nsvd0(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -6867,7 +6867,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_bstride_0_movieIDs = __pyx_bstruct_movieIDs.strides[0];
   __pyx_bshape_0_movieIDs = __pyx_bstruct_movieIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":515
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":515
  * 		"""
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.             # <<<<<<<<<<<<<<
@@ -6876,7 +6876,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
   __pyx_v_u0 = ((unsigned int)0);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":516
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":516
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.
  * 		cdef unsigned int u1 = <unsigned int>1 # Cython wants to check bounds otherwise...             # <<<<<<<<<<<<<<
@@ -6885,7 +6885,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
   __pyx_v_u1 = ((unsigned int)1);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":519
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":519
  * 		cdef float error, prediction, uf, mf, biasreg, usernorm
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -6899,7 +6899,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":520
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":520
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -6911,7 +6911,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":521
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":521
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 		cdef unsigned int numusers = <unsigned int> self.fd.numusers             # <<<<<<<<<<<<<<
@@ -6925,7 +6925,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numusers = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":523
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":523
  * 		cdef unsigned int numusers = <unsigned int> self.fd.numusers
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex             # <<<<<<<<<<<<<<
@@ -6947,7 +6947,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_userIndex = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":524
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":524
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:,1] - userIndex[:,0]             # <<<<<<<<<<<<<<
@@ -6985,7 +6985,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_numRatingsForUser = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":525
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":525
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:,1] - userIndex[:,0]
  * 		cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')             # <<<<<<<<<<<<<<
@@ -7017,7 +7017,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_userFeatureCache = ((PyArrayObject *)__pyx_5);
   __pyx_5 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":527
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":527
  * 		cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -7029,7 +7029,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":528
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":528
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -7041,7 +7041,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":529
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":529
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -7053,7 +7053,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":530
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":530
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -7065,7 +7065,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":533
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":533
  * 
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb             # <<<<<<<<<<<<<<
@@ -7077,7 +7077,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":534
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":534
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb             # <<<<<<<<<<<<<<
@@ -7089,7 +7089,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":535
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":535
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb             # <<<<<<<<<<<<<<
@@ -7101,7 +7101,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":536
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":536
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb
  * 		cdef float dampfactMb = self.dampfactMb             # <<<<<<<<<<<<<<
@@ -7113,7 +7113,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":539
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":539
  * 
  * 
  * 		for uid from 0 <= uid < numusers:             # <<<<<<<<<<<<<<
@@ -7122,7 +7122,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
   for (__pyx_v_uid = 0; __pyx_v_uid < __pyx_v_numusers; __pyx_v_uid++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":540
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":540
  * 
  * 		for uid from 0 <= uid < numusers:
  * 			if uid % 20000 == 0: self.updateLog('\tUpdating user %d' % uid)             # <<<<<<<<<<<<<<
@@ -7146,7 +7146,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":542
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":542
  * 			if uid % 20000 == 0: self.updateLog('\tUpdating user %d' % uid)
  * 
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]             # <<<<<<<<<<<<<<
@@ -7156,7 +7156,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_t_5 = __pyx_v_uid;
     __pyx_v_inumRatings = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_numRatingsForUser.buf, __pyx_t_5, __pyx_bstride_0_numRatingsForUser)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":543
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":543
  * 
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]
  * 			istart = <unsigned int>userIndex[uid,u0]             # <<<<<<<<<<<<<<
@@ -7167,7 +7167,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_t_7 = __pyx_v_u0;
     __pyx_v_istart = ((unsigned int)(*__Pyx_BufPtrStrided2d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIndex.buf, __pyx_t_6, __pyx_bstride_0_userIndex, __pyx_t_7, __pyx_bstride_1_userIndex)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":544
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":544
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]
  * 			istart = <unsigned int>userIndex[uid,u0]
  * 			usernorm = 1/N.sqrt(inumRatings)             # <<<<<<<<<<<<<<
@@ -7190,7 +7190,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
     Py_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_v_usernorm = __pyx_6;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":547
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":547
  * 
  * 			# zero the user vector
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -7199,7 +7199,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":548
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":548
  * 			# zero the user vector
  * 			for k from 0 <= k < numfeatures:
  * 				userFeatureCache[k] = 0.0             # <<<<<<<<<<<<<<
@@ -7210,7 +7210,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
       *__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_userFeatureCache.buf, __pyx_t_8, __pyx_bstride_0_userFeatureCache) = 0.0;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":551
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":551
  * 
  * 			# load the biases
  * 			userFeatureCache[u0] = 1.0             # <<<<<<<<<<<<<<
@@ -7220,7 +7220,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_t_9 = __pyx_v_u0;
     *__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_userFeatureCache.buf, __pyx_t_9, __pyx_bstride_0_userFeatureCache) = 1.0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":552
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":552
  * 			# load the biases
  * 			userFeatureCache[u0] = 1.0
  * 			userFeatureCache[u1] = U[uid,u1]             # <<<<<<<<<<<<<<
@@ -7232,7 +7232,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_t_12 = __pyx_v_u1;
     *__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_userFeatureCache.buf, __pyx_t_12, __pyx_bstride_0_userFeatureCache) = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_10, __pyx_bstride_0_U, __pyx_t_11, __pyx_bstride_1_U));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":555
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":555
  * 
  * 			# construct the user vector from movie vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -7241,7 +7241,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":556
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":556
  * 			# construct the user vector from movie vectors
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -7251,7 +7251,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_13 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_13, __pyx_bstride_0_movieIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":557
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":557
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -7260,7 +7260,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":558
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":558
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:
  * 					userFeatureCache[k] += M[mid,k]             # <<<<<<<<<<<<<<
@@ -7274,7 +7274,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
       }
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":561
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":561
  * 
  * 			# normalize based on movie support
  * 			userFeatureCache *= usernorm             # <<<<<<<<<<<<<<
@@ -7306,7 +7306,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_v_userFeatureCache = ((PyArrayObject *)__pyx_1);
     __pyx_1 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":564
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":564
  * 
  * 			# put the user vector into the user matrix
  * 			for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -7315,7 +7315,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":565
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":565
  * 			# put the user vector into the user matrix
  * 			for k from 2 <= k < numfeatures:
  * 				U[uid,k] = userFeatureCache[k]             # <<<<<<<<<<<<<<
@@ -7328,7 +7328,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_21, __pyx_bstride_0_U, __pyx_t_22, __pyx_bstride_1_U) = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_userFeatureCache.buf, __pyx_t_20, __pyx_bstride_0_userFeatureCache));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":569
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":569
  * 
  * 			# The Engine of NSVD0 begins here----
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -7337,7 +7337,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":570
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":570
  * 			# The Engine of NSVD0 begins here----
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -7347,7 +7347,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_23 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_23, __pyx_bstride_0_movieIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":573
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":573
  * 
  * 				# 1. Compute error
  * 				prediction = 0.0             # <<<<<<<<<<<<<<
@@ -7356,7 +7356,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
       __pyx_v_prediction = 0.0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":574
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":574
  * 				# 1. Compute error
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -7365,7 +7365,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":575
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":575
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -7379,7 +7379,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_24, __pyx_bstride_0_U, __pyx_t_25, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_26, __pyx_bstride_0_M, __pyx_t_27, __pyx_bstride_1_M)));
       }
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":576
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":576
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]
  * 				error = userRatings[istart+i] - prediction             # <<<<<<<<<<<<<<
@@ -7389,7 +7389,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_28 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_userRatings.buf, __pyx_t_28, __pyx_bstride_0_userRatings)) - __pyx_v_prediction);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":582
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":582
  * 				# U[uid,u1] += lrateUb*(error - dampfactUb*biasreg)
  * 				 # M[mid,u0] += lrateMb*(error - dampfactMb*biasreg)
  * 				U[uid,u1] += lrateUb*error             # <<<<<<<<<<<<<<
@@ -7400,7 +7400,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_30 = __pyx_v_u1;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_29, __pyx_bstride_0_U, __pyx_t_30, __pyx_bstride_1_U) += (__pyx_v_lrateUb * __pyx_v_error);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":583
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":583
  * 				 # M[mid,u0] += lrateMb*(error - dampfactMb*biasreg)
  * 				U[uid,u1] += lrateUb*error
  * 				M[mid,u0] += lrateMb*error             # <<<<<<<<<<<<<<
@@ -7411,7 +7411,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_32 = __pyx_v_u0;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_31, __pyx_bstride_0_M, __pyx_t_32, __pyx_bstride_1_M) += (__pyx_v_lrateMb * __pyx_v_error);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":586
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":586
  * 
  * 				# 3. Update the meat of the features
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -7420,7 +7420,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":587
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":587
  * 				# 3. Update the meat of the features
  * 				for k from 2 <= k < numfeatures:
  * 					uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -7431,7 +7431,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_34 = __pyx_v_k;
         __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_33, __pyx_bstride_0_U, __pyx_t_34, __pyx_bstride_1_U));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":588
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":588
  * 				for k from 2 <= k < numfeatures:
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -7442,7 +7442,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_36 = __pyx_v_k;
         __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_35, __pyx_bstride_0_M, __pyx_t_36, __pyx_bstride_1_M));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":589
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":589
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -7453,7 +7453,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_38 = __pyx_v_k;
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_37, __pyx_bstride_0_U, __pyx_t_38, __pyx_bstride_1_U) += (__pyx_v_lrateU * ((__pyx_v_error * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf)));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":590
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":590
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*mf - dampfactU*uf)
  * 					M[mid,k] += lrateM*(error*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -7466,7 +7466,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
       }
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":593
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":593
  * 
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -7475,7 +7475,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":594
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":594
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -7485,7 +7485,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_41 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_41, __pyx_bstride_0_movieIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":595
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":595
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -7494,7 +7494,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":596
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":596
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:
  * 					M[mid,k] += (U[uid,k] - userFeatureCache[k])*usernorm             # <<<<<<<<<<<<<<
@@ -7511,7 +7511,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":598
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":598
  * 					M[mid,k] += (U[uid,k] - userFeatureCache[k])*usernorm
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -7556,7 +7556,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd0(PyObject *__pyx_self, PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":602
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":602
  * 
  * 	@cython.boundscheck(False)
  * 	def nsvd1(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -7783,7 +7783,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_bstride_0_movieIDs = __pyx_bstruct_movieIDs.strides[0];
   __pyx_bshape_0_movieIDs = __pyx_bstruct_movieIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":611
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":611
  * 
  * 		# This is the special, extra item matrix that NSVD1 requires.
  * 		cdef N.ndarray[f32_t, ndim=2] W = self.W             # <<<<<<<<<<<<<<
@@ -7803,7 +7803,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_W = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":615
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":615
  * 
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.             # <<<<<<<<<<<<<<
@@ -7812,7 +7812,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
   __pyx_v_u0 = ((unsigned int)0);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":616
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":616
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.
  * 		cdef unsigned int u1 = <unsigned int>1 # Cython wants to check bounds otherwise...             # <<<<<<<<<<<<<<
@@ -7821,7 +7821,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
   __pyx_v_u1 = ((unsigned int)1);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":619
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":619
  * 		cdef float error, prediction, uf, mf, biasreg, usernorm
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -7835,7 +7835,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":620
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":620
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -7847,7 +7847,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":621
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":621
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 		cdef unsigned int numusers = <unsigned int> self.fd.numusers             # <<<<<<<<<<<<<<
@@ -7861,7 +7861,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numusers = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":623
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":623
  * 		cdef unsigned int numusers = <unsigned int> self.fd.numusers
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex             # <<<<<<<<<<<<<<
@@ -7883,7 +7883,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_userIndex = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":624
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":624
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:,1] - userIndex[:,0]             # <<<<<<<<<<<<<<
@@ -7921,7 +7921,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_numRatingsForUser = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":625
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":625
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:,1] - userIndex[:,0]
  * 		cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')             # <<<<<<<<<<<<<<
@@ -7953,7 +7953,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_userFeatureCache = ((PyArrayObject *)__pyx_5);
   __pyx_5 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":627
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":627
  * 		cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -7965,7 +7965,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":628
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":628
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -7977,7 +7977,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":629
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":629
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -7989,7 +7989,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":630
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":630
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -8001,7 +8001,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":633
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":633
  * 
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb             # <<<<<<<<<<<<<<
@@ -8013,7 +8013,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":634
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":634
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb             # <<<<<<<<<<<<<<
@@ -8025,7 +8025,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":635
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":635
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb             # <<<<<<<<<<<<<<
@@ -8037,7 +8037,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":636
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":636
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb
  * 		cdef float dampfactMb = self.dampfactMb             # <<<<<<<<<<<<<<
@@ -8049,7 +8049,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":639
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":639
  * 
  * 
  * 		for uid from 0 <= uid < numusers:             # <<<<<<<<<<<<<<
@@ -8058,7 +8058,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
   for (__pyx_v_uid = 0; __pyx_v_uid < __pyx_v_numusers; __pyx_v_uid++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":640
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":640
  * 
  * 		for uid from 0 <= uid < numusers:
  * 			if uid % 20000 == 0: self.updateLog('\tUpdating user %d' % uid)             # <<<<<<<<<<<<<<
@@ -8082,7 +8082,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":642
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":642
  * 			if uid % 20000 == 0: self.updateLog('\tUpdating user %d' % uid)
  * 
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]             # <<<<<<<<<<<<<<
@@ -8092,7 +8092,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_t_6 = __pyx_v_uid;
     __pyx_v_inumRatings = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_numRatingsForUser.buf, __pyx_t_6, __pyx_bstride_0_numRatingsForUser)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":643
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":643
  * 
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]
  * 			istart = <unsigned int>userIndex[uid,u0]             # <<<<<<<<<<<<<<
@@ -8103,7 +8103,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_t_8 = __pyx_v_u0;
     __pyx_v_istart = ((unsigned int)(*__Pyx_BufPtrStrided2d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIndex.buf, __pyx_t_7, __pyx_bstride_0_userIndex, __pyx_t_8, __pyx_bstride_1_userIndex)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":644
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":644
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]
  * 			istart = <unsigned int>userIndex[uid,u0]
  * 			usernorm = 1/N.sqrt(inumRatings)             # <<<<<<<<<<<<<<
@@ -8126,7 +8126,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
     Py_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_usernorm = __pyx_6;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":647
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":647
  * 
  * 			# zero the user vector
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -8135,7 +8135,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":648
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":648
  * 			# zero the user vector
  * 			for k from 0 <= k < numfeatures:
  * 				userFeatureCache[k] = 0.0             # <<<<<<<<<<<<<<
@@ -8146,7 +8146,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       *__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_userFeatureCache.buf, __pyx_t_9, __pyx_bstride_0_userFeatureCache) = 0.0;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":651
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":651
  * 
  * 			# construct the user vector from movie vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -8155,7 +8155,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":652
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":652
  * 			# construct the user vector from movie vectors
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -8165,7 +8165,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_10 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_10, __pyx_bstride_0_movieIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":653
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":653
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -8174,7 +8174,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":654
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":654
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:
  * 					userFeatureCache[k] += W[mid,k]             # <<<<<<<<<<<<<<
@@ -8188,7 +8188,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       }
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":657
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":657
  * 
  * 			# normalize based on movie support
  * 			userFeatureCache *= usernorm             # <<<<<<<<<<<<<<
@@ -8220,7 +8220,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_v_userFeatureCache = ((PyArrayObject *)__pyx_1);
     __pyx_1 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":660
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":660
  * 
  * 			# put the user vector into the user matrix
  * 			for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -8229,7 +8229,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":661
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":661
  * 			# put the user vector into the user matrix
  * 			for k from 2 <= k < numfeatures:
  * 				U[uid,k] = userFeatureCache[k]             # <<<<<<<<<<<<<<
@@ -8242,7 +8242,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_18, __pyx_bstride_0_U, __pyx_t_19, __pyx_bstride_1_U) = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_userFeatureCache.buf, __pyx_t_17, __pyx_bstride_0_userFeatureCache));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":665
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":665
  * 
  * 			# The Engine of NSVD1 begins here----
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -8251,7 +8251,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":666
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":666
  * 			# The Engine of NSVD1 begins here----
  * 			for i from 0 <= i < inumRatings:
  * 				if userRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating             # <<<<<<<<<<<<<<
@@ -8266,7 +8266,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       }
       __pyx_L19:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":667
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":667
  * 			for i from 0 <= i < inumRatings:
  * 				if userRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating
  * 				mid = <unsigned int>movieIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -8276,7 +8276,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_21 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_21, __pyx_bstride_0_movieIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":670
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":670
  * 
  * 				# 1. Compute error
  * 				prediction = 0.0             # <<<<<<<<<<<<<<
@@ -8285,7 +8285,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
       __pyx_v_prediction = 0.0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":671
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":671
  * 				# 1. Compute error
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -8294,7 +8294,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":672
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":672
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -8308,7 +8308,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_22, __pyx_bstride_0_U, __pyx_t_23, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_24, __pyx_bstride_0_M, __pyx_t_25, __pyx_bstride_1_M)));
       }
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":673
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":673
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]
  * 				error = userRatings[istart+i] - prediction             # <<<<<<<<<<<<<<
@@ -8318,7 +8318,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_26 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_userRatings.buf, __pyx_t_26, __pyx_bstride_0_userRatings)) - __pyx_v_prediction);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":676
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":676
  * 
  * 				# 2. Update the bias features
  * 				biasreg = U[uid,u1] + M[mid,u0]             # <<<<<<<<<<<<<<
@@ -8331,7 +8331,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_30 = __pyx_v_u0;
       __pyx_v_biasreg = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_27, __pyx_bstride_0_U, __pyx_t_28, __pyx_bstride_1_U)) + (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_29, __pyx_bstride_0_M, __pyx_t_30, __pyx_bstride_1_M)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":677
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":677
  * 				# 2. Update the bias features
  * 				biasreg = U[uid,u1] + M[mid,u0]
  * 				U[uid,u1] += lrateUb*(error - dampfactUb*biasreg)             # <<<<<<<<<<<<<<
@@ -8342,7 +8342,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_32 = __pyx_v_u1;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_31, __pyx_bstride_0_U, __pyx_t_32, __pyx_bstride_1_U) += (__pyx_v_lrateUb * (__pyx_v_error - (__pyx_v_dampfactUb * __pyx_v_biasreg)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":678
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":678
  * 				biasreg = U[uid,u1] + M[mid,u0]
  * 				U[uid,u1] += lrateUb*(error - dampfactUb*biasreg)
  * 				M[mid,u0] += lrateMb*(error - dampfactMb*biasreg)             # <<<<<<<<<<<<<<
@@ -8353,7 +8353,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_34 = __pyx_v_u0;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_33, __pyx_bstride_0_M, __pyx_t_34, __pyx_bstride_1_M) += (__pyx_v_lrateMb * (__pyx_v_error - (__pyx_v_dampfactMb * __pyx_v_biasreg)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":681
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":681
  * 
  * 				# 3. Update the meat of the features
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -8362,7 +8362,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":682
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":682
  * 				# 3. Update the meat of the features
  * 				for k from 2 <= k < numfeatures:
  * 					uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -8373,7 +8373,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_36 = __pyx_v_k;
         __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_35, __pyx_bstride_0_U, __pyx_t_36, __pyx_bstride_1_U));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":683
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":683
  * 				for k from 2 <= k < numfeatures:
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -8384,7 +8384,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_38 = __pyx_v_k;
         __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_37, __pyx_bstride_0_M, __pyx_t_38, __pyx_bstride_1_M));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":684
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":684
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -8395,7 +8395,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_40 = __pyx_v_k;
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_39, __pyx_bstride_0_U, __pyx_t_40, __pyx_bstride_1_U) += (__pyx_v_lrateU * ((__pyx_v_error * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf)));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":685
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":685
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*mf - dampfactU*uf)
  * 					M[mid,k] += lrateM*(error*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -8409,7 +8409,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_L17:;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":688
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":688
  * 
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -8418,7 +8418,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":689
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":689
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -8428,7 +8428,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_43 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_43, __pyx_bstride_0_movieIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":690
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":690
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -8437,7 +8437,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":691
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":691
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:
  * 					W[mid,k] += (U[uid,k] - userFeatureCache[k])*usernorm             # <<<<<<<<<<<<<<
@@ -8454,7 +8454,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":693
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":693
  * 					W[mid,k] += (U[uid,k] - userFeatureCache[k])*usernorm
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -8502,7 +8502,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd1(PyObject *__pyx_self, PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":697
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":697
  * 
  * 	@cython.boundscheck(False)
  * 	def nsvd2(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] movieRatings, \             # <<<<<<<<<<<<<<
@@ -8724,7 +8724,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_bstride_0_userIDs = __pyx_bstruct_userIDs.strides[0];
   __pyx_bshape_0_userIDs = __pyx_bstruct_userIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":707
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":707
  * 
  * 		# This is the special, extra user matrix that NSVD2 requires.
  * 		cdef N.ndarray[f32_t, ndim=2] W = self.W             # <<<<<<<<<<<<<<
@@ -8744,7 +8744,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_W = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":711
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":711
  * 
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.             # <<<<<<<<<<<<<<
@@ -8753,7 +8753,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
   __pyx_v_u0 = ((unsigned int)0);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":712
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":712
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.
  * 		cdef unsigned int u1 = <unsigned int>1 # Cython wants to check bounds otherwise...             # <<<<<<<<<<<<<<
@@ -8762,7 +8762,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
   __pyx_v_u1 = ((unsigned int)1);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":715
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":715
  * 		cdef float error, prediction, uf, mf, biasreg, movienorm
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -8776,7 +8776,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":716
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":716
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -8788,7 +8788,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":717
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":717
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 		cdef unsigned int nummovies = <unsigned int> self.fd.nummovies             # <<<<<<<<<<<<<<
@@ -8802,7 +8802,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_nummovies = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":719
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":719
  * 		cdef unsigned int nummovies = <unsigned int> self.fd.nummovies
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex             # <<<<<<<<<<<<<<
@@ -8824,7 +8824,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_movieIndex = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":720
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":720
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:,1] - movieIndex[:,0]             # <<<<<<<<<<<<<<
@@ -8862,7 +8862,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_numRatingsForMovie = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":721
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":721
  * 		cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:,1] - movieIndex[:,0]
  * 		cdef N.ndarray[f32_t, ndim=1] movieFeatureCache = N.zeros(numfeatures, dtype='float32')             # <<<<<<<<<<<<<<
@@ -8894,7 +8894,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_movieFeatureCache = ((PyArrayObject *)__pyx_5);
   __pyx_5 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":723
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":723
  * 		cdef N.ndarray[f32_t, ndim=1] movieFeatureCache = N.zeros(numfeatures, dtype='float32')
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -8906,7 +8906,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":724
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":724
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -8918,7 +8918,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":725
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":725
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -8930,7 +8930,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":726
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":726
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -8942,7 +8942,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":729
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":729
  * 
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb             # <<<<<<<<<<<<<<
@@ -8954,7 +8954,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":730
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":730
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb             # <<<<<<<<<<<<<<
@@ -8966,7 +8966,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":731
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":731
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb             # <<<<<<<<<<<<<<
@@ -8978,7 +8978,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":732
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":732
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb
  * 		cdef float dampfactMb = self.dampfactMb             # <<<<<<<<<<<<<<
@@ -8990,7 +8990,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":735
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":735
  * 
  * 
  * 		for mid from 0 <= mid < nummovies:             # <<<<<<<<<<<<<<
@@ -8999,7 +8999,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
   for (__pyx_v_mid = 0; __pyx_v_mid < __pyx_v_nummovies; __pyx_v_mid++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":736
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":736
  * 
  * 		for mid from 0 <= mid < nummovies:
  * 			if mid % 2000 == 0: self.updateLog('\tUpdating movie %d' % mid)             # <<<<<<<<<<<<<<
@@ -9023,7 +9023,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":738
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":738
  * 			if mid % 2000 == 0: self.updateLog('\tUpdating movie %d' % mid)
  * 
  * 			inumRatings = <unsigned int>numRatingsForMovie[mid]             # <<<<<<<<<<<<<<
@@ -9033,7 +9033,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_t_6 = __pyx_v_mid;
     __pyx_v_inumRatings = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_numRatingsForMovie.buf, __pyx_t_6, __pyx_bstride_0_numRatingsForMovie)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":739
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":739
  * 
  * 			inumRatings = <unsigned int>numRatingsForMovie[mid]
  * 			istart = <unsigned int>movieIndex[mid,u0]             # <<<<<<<<<<<<<<
@@ -9044,7 +9044,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_t_8 = __pyx_v_u0;
     __pyx_v_istart = ((unsigned int)(*__Pyx_BufPtrStrided2d(__pyx_t_3svd_i32_t *, __pyx_bstruct_movieIndex.buf, __pyx_t_7, __pyx_bstride_0_movieIndex, __pyx_t_8, __pyx_bstride_1_movieIndex)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":740
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":740
  * 			inumRatings = <unsigned int>numRatingsForMovie[mid]
  * 			istart = <unsigned int>movieIndex[mid,u0]
  * 			movienorm = 1/N.sqrt(inumRatings)             # <<<<<<<<<<<<<<
@@ -9067,7 +9067,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
     Py_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_movienorm = __pyx_6;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":743
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":743
  * 
  * 			# zero the movie vector
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -9076,7 +9076,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":744
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":744
  * 			# zero the movie vector
  * 			for k from 0 <= k < numfeatures:
  * 				movieFeatureCache[k] = 0.0             # <<<<<<<<<<<<<<
@@ -9087,7 +9087,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       *__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_movieFeatureCache.buf, __pyx_t_9, __pyx_bstride_0_movieFeatureCache) = 0.0;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":747
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":747
  * 
  * 			# construct the movie vector from movie vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -9096,7 +9096,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":748
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":748
  * 			# construct the movie vector from movie vectors
  * 			for i from 0 <= i < inumRatings:
  * 				uid= <unsigned int>userIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -9106,7 +9106,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_10 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDs.buf, __pyx_t_10, __pyx_bstride_0_userIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":749
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":749
  * 			for i from 0 <= i < inumRatings:
  * 				uid= <unsigned int>userIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -9115,7 +9115,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":750
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":750
  * 				uid= <unsigned int>userIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:
  * 					movieFeatureCache[k] += W[uid,k]             # <<<<<<<<<<<<<<
@@ -9129,7 +9129,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       }
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":753
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":753
  * 
  * 			# normalize based on user support
  * 			movieFeatureCache *= movienorm             # <<<<<<<<<<<<<<
@@ -9161,7 +9161,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_v_movieFeatureCache = ((PyArrayObject *)__pyx_1);
     __pyx_1 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":756
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":756
  * 
  * 			# put the user vector into the user matrix
  * 			for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -9170,7 +9170,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":757
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":757
  * 			# put the user vector into the user matrix
  * 			for k from 2 <= k < numfeatures:
  * 				M[mid,k] = movieFeatureCache[k]             # <<<<<<<<<<<<<<
@@ -9183,7 +9183,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_18, __pyx_bstride_0_M, __pyx_t_19, __pyx_bstride_1_M) = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_movieFeatureCache.buf, __pyx_t_17, __pyx_bstride_0_movieFeatureCache));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":761
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":761
  * 
  * 			# The Engine of NSVD2 begins here----
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -9192,7 +9192,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":762
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":762
  * 			# The Engine of NSVD2 begins here----
  * 			for i from 0 <= i < inumRatings:
  * 				if movieRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating             # <<<<<<<<<<<<<<
@@ -9207,7 +9207,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       }
       __pyx_L19:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":763
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":763
  * 			for i from 0 <= i < inumRatings:
  * 				if movieRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating
  * 				uid = <unsigned int>userIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -9217,7 +9217,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_21 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDs.buf, __pyx_t_21, __pyx_bstride_0_userIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":766
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":766
  * 
  * 				# 1. Compute error
  * 				prediction = 0.0             # <<<<<<<<<<<<<<
@@ -9226,7 +9226,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
       __pyx_v_prediction = 0.0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":767
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":767
  * 				# 1. Compute error
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -9235,7 +9235,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":768
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":768
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -9249,7 +9249,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_22, __pyx_bstride_0_U, __pyx_t_23, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_24, __pyx_bstride_0_M, __pyx_t_25, __pyx_bstride_1_M)));
       }
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":769
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":769
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]
  * 				error = movieRatings[istart+i] - prediction             # <<<<<<<<<<<<<<
@@ -9259,7 +9259,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_26 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_movieRatings.buf, __pyx_t_26, __pyx_bstride_0_movieRatings)) - __pyx_v_prediction);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":772
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":772
  * 
  * 				# 2. Update the bias features
  * 				U[uid,u1] += lrateUb*error             # <<<<<<<<<<<<<<
@@ -9270,7 +9270,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_28 = __pyx_v_u1;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_27, __pyx_bstride_0_U, __pyx_t_28, __pyx_bstride_1_U) += (__pyx_v_lrateUb * __pyx_v_error);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":773
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":773
  * 				# 2. Update the bias features
  * 				U[uid,u1] += lrateUb*error
  * 				M[mid,u0] += lrateMb*error             # <<<<<<<<<<<<<<
@@ -9281,7 +9281,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_30 = __pyx_v_u0;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_29, __pyx_bstride_0_M, __pyx_t_30, __pyx_bstride_1_M) += (__pyx_v_lrateMb * __pyx_v_error);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":776
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":776
  * 
  * 				# 3. Update the meat of the features
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -9290,7 +9290,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":777
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":777
  * 				# 3. Update the meat of the features
  * 				for k from 2 <= k < numfeatures:
  * 					uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -9301,7 +9301,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_32 = __pyx_v_k;
         __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_31, __pyx_bstride_0_U, __pyx_t_32, __pyx_bstride_1_U));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":778
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":778
  * 				for k from 2 <= k < numfeatures:
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -9312,7 +9312,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_34 = __pyx_v_k;
         __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_33, __pyx_bstride_0_M, __pyx_t_34, __pyx_bstride_1_M));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":779
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":779
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -9323,7 +9323,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_36 = __pyx_v_k;
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_35, __pyx_bstride_0_U, __pyx_t_36, __pyx_bstride_1_U) += (__pyx_v_lrateU * ((__pyx_v_error * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf)));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":780
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":780
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*mf - dampfactU*uf)
  * 					M[mid,k] += lrateM*(error*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -9337,7 +9337,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_L17:;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":783
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":783
  * 
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -9346,7 +9346,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":784
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":784
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:
  * 				uid = <unsigned int>userIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -9356,7 +9356,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_39 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDs.buf, __pyx_t_39, __pyx_bstride_0_userIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":785
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":785
  * 			for i from 0 <= i < inumRatings:
  * 				uid = <unsigned int>userIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -9365,7 +9365,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":786
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":786
  * 				uid = <unsigned int>userIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:
  * 					W[uid,k] += (M[mid,k] - movieFeatureCache[k])*movienorm             # <<<<<<<<<<<<<<
@@ -9382,7 +9382,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":788
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":788
  * 					W[uid,k] += (M[mid,k] - movieFeatureCache[k])*movienorm
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -9430,7 +9430,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd2(PyObject *__pyx_self, PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":791
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":791
  * 
  * 	@cython.boundscheck(False)
  * 	def nsvd3(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] movieRatings, \             # <<<<<<<<<<<<<<
@@ -9644,7 +9644,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_bstride_0_userIDs = __pyx_bstruct_userIDs.strides[0];
   __pyx_bshape_0_userIDs = __pyx_bstruct_userIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":798
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":798
  * 
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.             # <<<<<<<<<<<<<<
@@ -9653,7 +9653,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
   __pyx_v_u0 = ((unsigned int)0);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":799
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":799
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.
  * 		cdef unsigned int u1 = <unsigned int>1 # Cython wants to check bounds otherwise...             # <<<<<<<<<<<<<<
@@ -9662,7 +9662,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
   __pyx_v_u1 = ((unsigned int)1);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":802
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":802
  * 		cdef float error, prediction, uf, mf, biasreg, movienorm
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -9676,7 +9676,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":803
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":803
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -9688,7 +9688,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":804
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":804
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 		cdef unsigned int nummovies = <unsigned int> self.fd.nummovies             # <<<<<<<<<<<<<<
@@ -9702,7 +9702,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_nummovies = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":806
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":806
  * 		cdef unsigned int nummovies = <unsigned int> self.fd.nummovies
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex             # <<<<<<<<<<<<<<
@@ -9724,7 +9724,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_movieIndex = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":807
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":807
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:,1] - movieIndex[:,0]             # <<<<<<<<<<<<<<
@@ -9762,7 +9762,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_numRatingsForMovie = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":808
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":808
  * 		cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:,1] - movieIndex[:,0]
  * 		cdef N.ndarray[f32_t, ndim=1] movieFeatureCache = N.zeros(numfeatures, dtype='float32')             # <<<<<<<<<<<<<<
@@ -9794,7 +9794,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   __pyx_v_movieFeatureCache = ((PyArrayObject *)__pyx_5);
   __pyx_5 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":810
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":810
  * 		cdef N.ndarray[f32_t, ndim=1] movieFeatureCache = N.zeros(numfeatures, dtype='float32')
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -9806,7 +9806,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":811
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":811
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -9818,7 +9818,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":812
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":812
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -9830,7 +9830,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":813
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":813
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -9842,7 +9842,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":816
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":816
  * 
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb             # <<<<<<<<<<<<<<
@@ -9854,7 +9854,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":817
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":817
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb             # <<<<<<<<<<<<<<
@@ -9866,7 +9866,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":818
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":818
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb             # <<<<<<<<<<<<<<
@@ -9878,7 +9878,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":819
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":819
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb
  * 		cdef float dampfactMb = self.dampfactMb             # <<<<<<<<<<<<<<
@@ -9890,7 +9890,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":822
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":822
  * 
  * 
  * 		for mid from 0 <= mid < nummovies:             # <<<<<<<<<<<<<<
@@ -9899,7 +9899,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
   for (__pyx_v_mid = 0; __pyx_v_mid < __pyx_v_nummovies; __pyx_v_mid++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":823
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":823
  * 
  * 		for mid from 0 <= mid < nummovies:
  * 			if mid % 2000 == 0: self.updateLog('\tUpdating movie %d' % mid)             # <<<<<<<<<<<<<<
@@ -9923,7 +9923,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":825
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":825
  * 			if mid % 2000 == 0: self.updateLog('\tUpdating movie %d' % mid)
  * 
  * 			inumRatings = <unsigned int>numRatingsForMovie[mid]             # <<<<<<<<<<<<<<
@@ -9933,7 +9933,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_t_5 = __pyx_v_mid;
     __pyx_v_inumRatings = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_numRatingsForMovie.buf, __pyx_t_5, __pyx_bstride_0_numRatingsForMovie)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":826
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":826
  * 
  * 			inumRatings = <unsigned int>numRatingsForMovie[mid]
  * 			istart = <unsigned int>movieIndex[mid,u0]             # <<<<<<<<<<<<<<
@@ -9944,7 +9944,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_t_7 = __pyx_v_u0;
     __pyx_v_istart = ((unsigned int)(*__Pyx_BufPtrStrided2d(__pyx_t_3svd_i32_t *, __pyx_bstruct_movieIndex.buf, __pyx_t_6, __pyx_bstride_0_movieIndex, __pyx_t_7, __pyx_bstride_1_movieIndex)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":827
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":827
  * 			inumRatings = <unsigned int>numRatingsForMovie[mid]
  * 			istart = <unsigned int>movieIndex[mid,u0]
  * 			movienorm = 1/N.sqrt(inumRatings)             # <<<<<<<<<<<<<<
@@ -9967,7 +9967,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
     Py_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_v_movienorm = __pyx_6;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":830
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":830
  * 
  * 			# zero the movie vector
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -9976,7 +9976,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":831
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":831
  * 			# zero the movie vector
  * 			for k from 0 <= k < numfeatures:
  * 				movieFeatureCache[k] = 0.0             # <<<<<<<<<<<<<<
@@ -9987,7 +9987,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       *__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_movieFeatureCache.buf, __pyx_t_8, __pyx_bstride_0_movieFeatureCache) = 0.0;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":834
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":834
  * 
  * 			# construct the movie vector from movie vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -9996,7 +9996,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":835
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":835
  * 			# construct the movie vector from movie vectors
  * 			for i from 0 <= i < inumRatings:
  * 				uid= <unsigned int>userIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -10006,7 +10006,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_9 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDs.buf, __pyx_t_9, __pyx_bstride_0_userIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":836
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":836
  * 			for i from 0 <= i < inumRatings:
  * 				uid= <unsigned int>userIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -10015,7 +10015,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":837
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":837
  * 				uid= <unsigned int>userIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:
  * 					movieFeatureCache[k] += U[uid,k]             # <<<<<<<<<<<<<<
@@ -10029,7 +10029,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       }
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":840
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":840
  * 
  * 			# normalize based on user support
  * 			movieFeatureCache *= movienorm             # <<<<<<<<<<<<<<
@@ -10061,7 +10061,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
     __pyx_v_movieFeatureCache = ((PyArrayObject *)__pyx_1);
     __pyx_1 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":843
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":843
  * 
  * 			# put the user vector into the user matrix
  * 			for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -10070,7 +10070,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":844
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":844
  * 			# put the user vector into the user matrix
  * 			for k from 2 <= k < numfeatures:
  * 				M[mid,k] = movieFeatureCache[k]             # <<<<<<<<<<<<<<
@@ -10083,7 +10083,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_17, __pyx_bstride_0_M, __pyx_t_18, __pyx_bstride_1_M) = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_movieFeatureCache.buf, __pyx_t_16, __pyx_bstride_0_movieFeatureCache));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":848
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":848
  * 
  * 			# The Engine of NSVD2 begins here----
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -10092,7 +10092,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":849
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":849
  * 			# The Engine of NSVD2 begins here----
  * 			for i from 0 <= i < inumRatings:
  * 				if movieRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating             # <<<<<<<<<<<<<<
@@ -10107,7 +10107,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       }
       __pyx_L19:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":850
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":850
  * 			for i from 0 <= i < inumRatings:
  * 				if movieRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating
  * 				uid = <unsigned int>userIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -10117,7 +10117,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_20 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDs.buf, __pyx_t_20, __pyx_bstride_0_userIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":853
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":853
  * 
  * 				# 1. Compute error
  * 				prediction = 0.0             # <<<<<<<<<<<<<<
@@ -10126,7 +10126,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
       __pyx_v_prediction = 0.0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":854
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":854
  * 				# 1. Compute error
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -10135,7 +10135,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":855
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":855
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -10149,7 +10149,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_21, __pyx_bstride_0_U, __pyx_t_22, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_23, __pyx_bstride_0_M, __pyx_t_24, __pyx_bstride_1_M)));
       }
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":856
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":856
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]
  * 				error = movieRatings[istart+i] - prediction             # <<<<<<<<<<<<<<
@@ -10159,7 +10159,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_25 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_movieRatings.buf, __pyx_t_25, __pyx_bstride_0_movieRatings)) - __pyx_v_prediction);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":859
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":859
  * 
  * 				# 2. Update the bias features
  * 				U[uid,u1] += lrateUb*error             # <<<<<<<<<<<<<<
@@ -10170,7 +10170,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_27 = __pyx_v_u1;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_26, __pyx_bstride_0_U, __pyx_t_27, __pyx_bstride_1_U) += (__pyx_v_lrateUb * __pyx_v_error);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":860
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":860
  * 				# 2. Update the bias features
  * 				U[uid,u1] += lrateUb*error
  * 				M[mid,u0] += lrateMb*error             # <<<<<<<<<<<<<<
@@ -10181,7 +10181,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_29 = __pyx_v_u0;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_28, __pyx_bstride_0_M, __pyx_t_29, __pyx_bstride_1_M) += (__pyx_v_lrateMb * __pyx_v_error);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":863
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":863
  * 
  * 				# 3. Update the meat of the features
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -10190,7 +10190,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":864
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":864
  * 				# 3. Update the meat of the features
  * 				for k from 2 <= k < numfeatures:
  * 					uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -10201,7 +10201,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_31 = __pyx_v_k;
         __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_30, __pyx_bstride_0_U, __pyx_t_31, __pyx_bstride_1_U));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":865
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":865
  * 				for k from 2 <= k < numfeatures:
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -10212,7 +10212,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_33 = __pyx_v_k;
         __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_32, __pyx_bstride_0_M, __pyx_t_33, __pyx_bstride_1_M));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":866
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":866
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -10223,7 +10223,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
         __pyx_t_35 = __pyx_v_k;
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_34, __pyx_bstride_0_U, __pyx_t_35, __pyx_bstride_1_U) += (__pyx_v_lrateU * ((__pyx_v_error * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf)));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":867
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":867
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*mf - dampfactU*uf)
  * 					M[mid,k] += lrateM*(error*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -10237,7 +10237,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_L17:;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":870
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":870
  * 
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -10246,7 +10246,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":871
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":871
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:
  * 				uid = <unsigned int>userIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -10256,7 +10256,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
       __pyx_t_38 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDs.buf, __pyx_t_38, __pyx_bstride_0_userIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":872
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":872
  * 			for i from 0 <= i < inumRatings:
  * 				uid = <unsigned int>userIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -10265,7 +10265,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
  */
       for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":873
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":873
  * 				uid = <unsigned int>userIDs[istart+i]
  * 				for k from 2 <= k < numfeatures:
  * 					U[uid,k] += (M[mid,k] - movieFeatureCache[k])*movienorm             # <<<<<<<<<<<<<<
@@ -10282,7 +10282,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":875
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":875
  * 					U[uid,k] += (M[mid,k] - movieFeatureCache[k])*movienorm
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -10327,7 +10327,7 @@ static PyObject *__pyx_pf_3svd_3SVD_nsvd3(PyObject *__pyx_self, PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":880
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":880
  * 
  * 	@cython.boundscheck(False)
  * 	def hybrid(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -10568,7 +10568,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   __pyx_bstride_0_movieIDs = __pyx_bstruct_movieIDs.strides[0];
   __pyx_bshape_0_movieIDs = __pyx_bstruct_movieIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":889
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":889
  * 		"""
  * 				# This is the special, extra item matrix that NSVD1 requires.
  * 		cdef N.ndarray[f32_t, ndim=2] W = self.W             # <<<<<<<<<<<<<<
@@ -10588,7 +10588,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   __pyx_v_W = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":892
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":892
  * 
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.             # <<<<<<<<<<<<<<
@@ -10597,7 +10597,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
   __pyx_v_u0 = ((unsigned int)0);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":893
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":893
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.
  * 		cdef unsigned int u1 = <unsigned int>1 # Cython wants to check bounds otherwise...             # <<<<<<<<<<<<<<
@@ -10606,7 +10606,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
   __pyx_v_u1 = ((unsigned int)1);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":896
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":896
  * 		cdef float error, prediction, uf, mf, biasreg, usernorm, ubupdate, mbupdate
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -10620,7 +10620,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":897
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":897
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -10632,7 +10632,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":898
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":898
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 		cdef unsigned int numfeaturesmf = <unsigned int>self.numfeaturesmf             # <<<<<<<<<<<<<<
@@ -10644,7 +10644,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numfeaturesmf = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":899
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":899
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 		cdef unsigned int numfeaturesmf = <unsigned int>self.numfeaturesmf
  * 		cdef unsigned int numusers = <unsigned int> self.fd.numusers             # <<<<<<<<<<<<<<
@@ -10658,7 +10658,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numusers = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":901
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":901
  * 		cdef unsigned int numusers = <unsigned int> self.fd.numusers
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex             # <<<<<<<<<<<<<<
@@ -10680,7 +10680,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   __pyx_v_userIndex = ((PyArrayObject *)__pyx_2);
   __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":902
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":902
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:,1] - userIndex[:,0]             # <<<<<<<<<<<<<<
@@ -10718,7 +10718,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   __pyx_v_numRatingsForUser = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":903
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":903
  * 		cdef N.ndarray[i32_t, ndim=2] userIndex = self.fd.userIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForUser = userIndex[:,1] - userIndex[:,0]
  * 		cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')             # <<<<<<<<<<<<<<
@@ -10750,7 +10750,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   __pyx_v_userFeatureCache = ((PyArrayObject *)__pyx_5);
   __pyx_5 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":905
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":905
  * 		cdef N.ndarray[f32_t, ndim=1] userFeatureCache = N.zeros(numfeatures, dtype='float32')
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -10762,7 +10762,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_lrateU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":906
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":906
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -10774,7 +10774,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":907
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":907
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -10786,7 +10786,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_dampfactU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":908
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":908
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -10798,7 +10798,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":909
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":909
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM
  * 		cdef float beta = self.beta             # <<<<<<<<<<<<<<
@@ -10810,7 +10810,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_beta = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":912
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":912
  * 
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb             # <<<<<<<<<<<<<<
@@ -10822,7 +10822,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":913
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":913
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb             # <<<<<<<<<<<<<<
@@ -10834,7 +10834,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":914
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":914
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb             # <<<<<<<<<<<<<<
@@ -10846,7 +10846,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":915
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":915
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb
  * 		cdef float dampfactMb = self.dampfactMb             # <<<<<<<<<<<<<<
@@ -10858,7 +10858,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":918
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":918
  * 
  * 		# NSVD1 specific parameters
  * 		cdef float lrateUn = self.lrateUn             # <<<<<<<<<<<<<<
@@ -10870,7 +10870,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateUn = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":919
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":919
  * 		# NSVD1 specific parameters
  * 		cdef float lrateUn = self.lrateUn
  * 		cdef float lrateMn = self.lrateMn             # <<<<<<<<<<<<<<
@@ -10882,7 +10882,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateMn = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":920
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":920
  * 		cdef float lrateUn = self.lrateUn
  * 		cdef float lrateMn = self.lrateMn
  * 		cdef float dampfactUn = self.dampfactUn             # <<<<<<<<<<<<<<
@@ -10894,7 +10894,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactUn = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":921
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":921
  * 		cdef float lrateMn = self.lrateMn
  * 		cdef float dampfactUn = self.dampfactUn
  * 		cdef float dampfactMn = self.dampfactMn             # <<<<<<<<<<<<<<
@@ -10906,7 +10906,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactMn = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":924
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":924
  * 
  * 
  * 		for uid from 0 <= uid < numusers:             # <<<<<<<<<<<<<<
@@ -10915,7 +10915,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
   for (__pyx_v_uid = 0; __pyx_v_uid < __pyx_v_numusers; __pyx_v_uid++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":925
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":925
  * 
  * 		for uid from 0 <= uid < numusers:
  * 			if uid % 20000 == 0: self.updateLog('\tUpdating user %d' % uid)             # <<<<<<<<<<<<<<
@@ -10939,7 +10939,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":927
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":927
  * 			if uid % 20000 == 0: self.updateLog('\tUpdating user %d' % uid)
  * 
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]             # <<<<<<<<<<<<<<
@@ -10949,7 +10949,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
     __pyx_t_6 = __pyx_v_uid;
     __pyx_v_inumRatings = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_numRatingsForUser.buf, __pyx_t_6, __pyx_bstride_0_numRatingsForUser)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":928
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":928
  * 
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]
  * 			istart = <unsigned int>userIndex[uid,u0]             # <<<<<<<<<<<<<<
@@ -10960,7 +10960,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
     __pyx_t_8 = __pyx_v_u0;
     __pyx_v_istart = ((unsigned int)(*__Pyx_BufPtrStrided2d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIndex.buf, __pyx_t_7, __pyx_bstride_0_userIndex, __pyx_t_8, __pyx_bstride_1_userIndex)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":929
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":929
  * 			inumRatings = <unsigned int>numRatingsForUser[uid]
  * 			istart = <unsigned int>userIndex[uid,u0]
  * 			usernorm = inumRatings**-0.5             # <<<<<<<<<<<<<<
@@ -10969,7 +10969,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
     __pyx_v_usernorm = pow(__pyx_v_inumRatings, (-0.5));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":932
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":932
  * 
  * 			# zero the user vector
  * 			for k from numfeaturesmf <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -10978,7 +10978,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
     for (__pyx_v_k = __pyx_v_numfeaturesmf; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":933
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":933
  * 			# zero the user vector
  * 			for k from numfeaturesmf <= k < numfeatures:
  * 				userFeatureCache[k] = 0.0             # <<<<<<<<<<<<<<
@@ -10989,7 +10989,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       *__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_userFeatureCache.buf, __pyx_t_9, __pyx_bstride_0_userFeatureCache) = 0.0;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":936
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":936
  * 
  * 			# construct the user vector from movie vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -10998,7 +10998,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":937
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":937
  * 			# construct the user vector from movie vectors
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -11008,7 +11008,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       __pyx_t_10 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_10, __pyx_bstride_0_movieIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":938
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":938
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from numfeaturesmf+2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -11017,7 +11017,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
       for (__pyx_v_k = (__pyx_v_numfeaturesmf + 2); __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":939
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":939
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from numfeaturesmf+2 <= k < numfeatures:
  * 					userFeatureCache[k] += W[mid,k]             # <<<<<<<<<<<<<<
@@ -11031,7 +11031,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       }
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":942
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":942
  * 
  * 			# normalize based on movie support, multiply in (1-beta)
  * 			userFeatureCache *= usernorm             # <<<<<<<<<<<<<<
@@ -11063,7 +11063,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
     __pyx_v_userFeatureCache = ((PyArrayObject *)__pyx_2);
     __pyx_2 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":945
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":945
  * 
  * 			# put the user vector into the user matrix
  * 			for k from numfeaturesmf+2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -11072,7 +11072,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
     for (__pyx_v_k = (__pyx_v_numfeaturesmf + 2); __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":946
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":946
  * 			# put the user vector into the user matrix
  * 			for k from numfeaturesmf+2 <= k < numfeatures:
  * 				U[uid,k] = userFeatureCache[k]             # <<<<<<<<<<<<<<
@@ -11085,7 +11085,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_18, __pyx_bstride_0_U, __pyx_t_19, __pyx_bstride_1_U) = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_userFeatureCache.buf, __pyx_t_17, __pyx_bstride_0_userFeatureCache));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":949
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":949
  * 
  * 			# The Engine of NSVD1 begins here----
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -11094,7 +11094,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":950
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":950
  * 			# The Engine of NSVD1 begins here----
  * 			for i from 0 <= i < inumRatings:
  * 				if userRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating             # <<<<<<<<<<<<<<
@@ -11109,7 +11109,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       }
       __pyx_L19:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":951
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":951
  * 			for i from 0 <= i < inumRatings:
  * 				if userRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating
  * 				mid = <unsigned int>movieIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -11119,7 +11119,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       __pyx_t_21 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_21, __pyx_bstride_0_movieIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":954
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":954
  * 
  * 				# 1. Compute error
  * 				prediction = 0.0             # <<<<<<<<<<<<<<
@@ -11128,7 +11128,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
       __pyx_v_prediction = 0.0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":955
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":955
  * 				# 1. Compute error
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -11137,7 +11137,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
       for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":956
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":956
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -11151,7 +11151,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
         __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_22, __pyx_bstride_0_U, __pyx_t_23, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_24, __pyx_bstride_0_M, __pyx_t_25, __pyx_bstride_1_M)));
       }
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":957
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":957
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]
  * 				error = userRatings[istart+i] - prediction             # <<<<<<<<<<<<<<
@@ -11161,7 +11161,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       __pyx_t_26 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_userRatings.buf, __pyx_t_26, __pyx_bstride_0_userRatings)) - __pyx_v_prediction);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":960
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":960
  * 
  * 				# 2. Update the bias features
  * 				biasreg = U[uid,u1+numfeaturesmf] + M[mid,u0+numfeaturesmf]             # <<<<<<<<<<<<<<
@@ -11174,7 +11174,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       __pyx_t_30 = (__pyx_v_u0 + __pyx_v_numfeaturesmf);
       __pyx_v_biasreg = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_27, __pyx_bstride_0_U, __pyx_t_28, __pyx_bstride_1_U)) + (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_29, __pyx_bstride_0_M, __pyx_t_30, __pyx_bstride_1_M)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":961
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":961
  * 				# 2. Update the bias features
  * 				biasreg = U[uid,u1+numfeaturesmf] + M[mid,u0+numfeaturesmf]
  * 				U[uid,u1+numfeaturesmf] += lrateUb*(error*beta - dampfactUb*biasreg)             # <<<<<<<<<<<<<<
@@ -11185,7 +11185,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       __pyx_t_32 = (__pyx_v_u1 + __pyx_v_numfeaturesmf);
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_31, __pyx_bstride_0_U, __pyx_t_32, __pyx_bstride_1_U) += (__pyx_v_lrateUb * ((__pyx_v_error * __pyx_v_beta) - (__pyx_v_dampfactUb * __pyx_v_biasreg)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":962
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":962
  * 				biasreg = U[uid,u1+numfeaturesmf] + M[mid,u0+numfeaturesmf]
  * 				U[uid,u1+numfeaturesmf] += lrateUb*(error*beta - dampfactUb*biasreg)
  * 				M[mid,u0+numfeaturesmf] +=  lrateMb*(error*beta - dampfactMb*biasreg)             # <<<<<<<<<<<<<<
@@ -11196,7 +11196,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       __pyx_t_34 = (__pyx_v_u0 + __pyx_v_numfeaturesmf);
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_33, __pyx_bstride_0_M, __pyx_t_34, __pyx_bstride_1_M) += (__pyx_v_lrateMb * ((__pyx_v_error * __pyx_v_beta) - (__pyx_v_dampfactMb * __pyx_v_biasreg)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":966
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":966
  * 				# 3. Update the bulk of the features
  * 				# 	for the MF
  * 				for k from 0 <= k < numfeaturesmf:             # <<<<<<<<<<<<<<
@@ -11205,7 +11205,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
       for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeaturesmf; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":967
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":967
  * 				# 	for the MF
  * 				for k from 0 <= k < numfeaturesmf:
  * 					uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -11216,7 +11216,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
         __pyx_t_36 = __pyx_v_k;
         __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_35, __pyx_bstride_0_U, __pyx_t_36, __pyx_bstride_1_U));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":968
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":968
  * 				for k from 0 <= k < numfeaturesmf:
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -11227,7 +11227,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
         __pyx_t_38 = __pyx_v_k;
         __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_37, __pyx_bstride_0_M, __pyx_t_38, __pyx_bstride_1_M));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":969
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":969
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*beta*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -11238,7 +11238,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
         __pyx_t_40 = __pyx_v_k;
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_39, __pyx_bstride_0_U, __pyx_t_40, __pyx_bstride_1_U) += (__pyx_v_lrateU * (((__pyx_v_error * __pyx_v_beta) * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf)));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":970
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":970
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(error*beta*mf - dampfactU*uf)
  * 					M[mid,k] += lrateM*(error*beta*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -11250,7 +11250,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_41, __pyx_bstride_0_M, __pyx_t_42, __pyx_bstride_1_M) += (__pyx_v_lrateM * (((__pyx_v_error * __pyx_v_beta) * __pyx_v_uf) - (__pyx_v_dampfactM * __pyx_v_mf)));
       }
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":973
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":973
  * 
  * 				# 	for NSVD1
  * 				for k from numfeaturesmf+2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -11259,7 +11259,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
       for (__pyx_v_k = (__pyx_v_numfeaturesmf + 2); __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":974
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":974
  * 				# 	for NSVD1
  * 				for k from numfeaturesmf+2 <= k < numfeatures:
  * 					uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -11270,7 +11270,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
         __pyx_t_44 = __pyx_v_k;
         __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_43, __pyx_bstride_0_U, __pyx_t_44, __pyx_bstride_1_U));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":975
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":975
  * 				for k from numfeaturesmf+2 <= k < numfeatures:
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -11281,7 +11281,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
         __pyx_t_46 = __pyx_v_k;
         __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_45, __pyx_bstride_0_M, __pyx_t_46, __pyx_bstride_1_M));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":976
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":976
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateUn*(error*(1-beta)*mf - dampfactUn*uf)             # <<<<<<<<<<<<<<
@@ -11292,7 +11292,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
         __pyx_t_48 = __pyx_v_k;
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_47, __pyx_bstride_0_U, __pyx_t_48, __pyx_bstride_1_U) += (__pyx_v_lrateUn * (((__pyx_v_error * (1 - __pyx_v_beta)) * __pyx_v_mf) - (__pyx_v_dampfactUn * __pyx_v_uf)));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":977
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":977
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateUn*(error*(1-beta)*mf - dampfactUn*uf)
  * 					M[mid,k] += lrateMn*(error*(1-beta)*uf - dampfactMn*mf)             # <<<<<<<<<<<<<<
@@ -11306,7 +11306,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       __pyx_L17:;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":980
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":980
  * 
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -11315,7 +11315,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":981
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":981
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -11325,7 +11325,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
       __pyx_t_51 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_51, __pyx_bstride_0_movieIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":982
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":982
  * 			for i from 0 <= i < inumRatings:
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from 2+numfeaturesmf <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -11334,7 +11334,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
  */
       for (__pyx_v_k = (2 + __pyx_v_numfeaturesmf); __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":983
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":983
  * 				mid = <unsigned int>movieIDs[istart+i]
  * 				for k from 2+numfeaturesmf <= k < numfeatures:
  * 					W[mid,k] += (U[uid,k] - userFeatureCache[k])*usernorm             # <<<<<<<<<<<<<<
@@ -11351,7 +11351,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":986
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":986
  * 
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -11399,7 +11399,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid(PyObject *__pyx_self, PyObject *__pyx
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":989
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":989
  * 
  * 	@cython.boundscheck(False)
  * 	def hybrid2(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] movieRatings, \             # <<<<<<<<<<<<<<
@@ -11642,7 +11642,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   __pyx_bstride_0_userIDs = __pyx_bstruct_userIDs.strides[0];
   __pyx_bshape_0_userIDs = __pyx_bstruct_userIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":998
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":998
  * 		"""
  * 		# This is the special, extra user matrix that NSVD1 requires.
  * 		cdef N.ndarray[f32_t, ndim=2] W = self.W             # <<<<<<<<<<<<<<
@@ -11662,7 +11662,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   __pyx_v_W = ((PyArrayObject *)__pyx_1);
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1001
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1001
  * 
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.             # <<<<<<<<<<<<<<
@@ -11671,7 +11671,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
   __pyx_v_u0 = ((unsigned int)0);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1002
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1002
  * 		cdef unsigned int i, k, uid, mid, inumRatings, istart
  * 		cdef unsigned int u0 = <unsigned int>0 # to speed up access of bias features.
  * 		cdef unsigned int u1 = <unsigned int>1 # Cython wants to check bounds otherwise...             # <<<<<<<<<<<<<<
@@ -11680,7 +11680,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
   __pyx_v_u1 = ((unsigned int)1);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1005
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1005
  * 		cdef float error, prediction, uf, mf, biasreg, usernorm, ubupdate, mbupdate
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -11694,7 +11694,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1006
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1006
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -11706,7 +11706,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1007
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1007
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 		cdef unsigned int numfeaturesmf = <unsigned int>self.numfeaturesmf             # <<<<<<<<<<<<<<
@@ -11718,7 +11718,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numfeaturesmf = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1008
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1008
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 		cdef unsigned int numfeaturesmf = <unsigned int>self.numfeaturesmf
  * 		cdef unsigned int nummovies = <unsigned int> self.fd.nummovies             # <<<<<<<<<<<<<<
@@ -11732,7 +11732,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_nummovies = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1010
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1010
  * 		cdef unsigned int nummovies = <unsigned int> self.fd.nummovies
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex             # <<<<<<<<<<<<<<
@@ -11754,7 +11754,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   __pyx_v_movieIndex = ((PyArrayObject *)__pyx_2);
   __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1011
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1011
  * 
  * 		cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:,1] - movieIndex[:,0]             # <<<<<<<<<<<<<<
@@ -11792,7 +11792,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   __pyx_v_numRatingsForMovie = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1012
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1012
  * 		cdef N.ndarray[i32_t, ndim=2] movieIndex = self.fd.movieIndex
  * 		cdef N.ndarray[i32_t, ndim=1] numRatingsForMovie = movieIndex[:,1] - movieIndex[:,0]
  * 		cdef N.ndarray[f32_t, ndim=1] movieFeatureCache = N.zeros(numfeatures, dtype='float32')             # <<<<<<<<<<<<<<
@@ -11824,7 +11824,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   __pyx_v_movieFeatureCache = ((PyArrayObject *)__pyx_5);
   __pyx_5 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1014
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1014
  * 		cdef N.ndarray[f32_t, ndim=1] movieFeatureCache = N.zeros(numfeatures, dtype='float32')
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -11836,7 +11836,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_lrateU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1015
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1015
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -11848,7 +11848,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1016
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1016
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -11860,7 +11860,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_dampfactU = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1017
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1017
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -11872,7 +11872,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactM = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1018
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1018
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM
  * 		cdef float beta = self.beta             # <<<<<<<<<<<<<<
@@ -11884,7 +11884,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_beta = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1021
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1021
  * 
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb             # <<<<<<<<<<<<<<
@@ -11896,7 +11896,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1022
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1022
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb             # <<<<<<<<<<<<<<
@@ -11908,7 +11908,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1023
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1023
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb             # <<<<<<<<<<<<<<
@@ -11920,7 +11920,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactUb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1024
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1024
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb
  * 		cdef float dampfactMb = self.dampfactMb             # <<<<<<<<<<<<<<
@@ -11932,7 +11932,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactMb = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1027
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1027
  * 
  * 		# NSVD1 specific parameters
  * 		cdef float lrateUn = self.lrateUn             # <<<<<<<<<<<<<<
@@ -11944,7 +11944,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_4); __pyx_4 = 0;
   __pyx_v_lrateUn = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1028
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1028
  * 		# NSVD1 specific parameters
  * 		cdef float lrateUn = self.lrateUn
  * 		cdef float lrateMn = self.lrateMn             # <<<<<<<<<<<<<<
@@ -11956,7 +11956,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateMn = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1029
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1029
  * 		cdef float lrateUn = self.lrateUn
  * 		cdef float lrateMn = self.lrateMn
  * 		cdef float dampfactUn = self.dampfactUn             # <<<<<<<<<<<<<<
@@ -11968,7 +11968,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_5); __pyx_5 = 0;
   __pyx_v_dampfactUn = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1030
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1030
  * 		cdef float lrateMn = self.lrateMn
  * 		cdef float dampfactUn = self.dampfactUn
  * 		cdef float dampfactMn = self.dampfactMn             # <<<<<<<<<<<<<<
@@ -11980,7 +11980,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactMn = __pyx_6;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1032
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1032
  * 		cdef float dampfactMn = self.dampfactMn
  * 
  * 		for mid from 0 <= mid < nummovies:             # <<<<<<<<<<<<<<
@@ -11989,7 +11989,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
   for (__pyx_v_mid = 0; __pyx_v_mid < __pyx_v_nummovies; __pyx_v_mid++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1033
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1033
  * 
  * 		for mid from 0 <= mid < nummovies:
  * 			if mid % 2000 == 0: self.updateLog('\tUpdating movie %d' % mid)             # <<<<<<<<<<<<<<
@@ -12013,7 +12013,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1035
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1035
  * 			if mid % 2000 == 0: self.updateLog('\tUpdating movie %d' % mid)
  * 
  * 			inumRatings = <unsigned int>numRatingsForMovie[mid]             # <<<<<<<<<<<<<<
@@ -12023,7 +12023,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
     __pyx_t_6 = __pyx_v_mid;
     __pyx_v_inumRatings = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_numRatingsForMovie.buf, __pyx_t_6, __pyx_bstride_0_numRatingsForMovie)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1036
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1036
  * 
  * 			inumRatings = <unsigned int>numRatingsForMovie[mid]
  * 			istart = <unsigned int>movieIndex[mid,u0]             # <<<<<<<<<<<<<<
@@ -12034,7 +12034,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
     __pyx_t_8 = __pyx_v_u0;
     __pyx_v_istart = ((unsigned int)(*__Pyx_BufPtrStrided2d(__pyx_t_3svd_i32_t *, __pyx_bstruct_movieIndex.buf, __pyx_t_7, __pyx_bstride_0_movieIndex, __pyx_t_8, __pyx_bstride_1_movieIndex)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1037
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1037
  * 			inumRatings = <unsigned int>numRatingsForMovie[mid]
  * 			istart = <unsigned int>movieIndex[mid,u0]
  * 			movienorm= inumRatings**-0.5             # <<<<<<<<<<<<<<
@@ -12046,7 +12046,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
     __pyx_v_movienorm = __pyx_2;
     __pyx_2 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1040
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1040
  * 
  * 			# zero the movie vector
  * 			for k from numfeaturesmf <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -12055,7 +12055,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
     for (__pyx_v_k = __pyx_v_numfeaturesmf; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1041
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1041
  * 			# zero the movie vector
  * 			for k from numfeaturesmf <= k < numfeatures:
  * 				movieFeatureCache[k] = 0.0             # <<<<<<<<<<<<<<
@@ -12066,7 +12066,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       *__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_movieFeatureCache.buf, __pyx_t_9, __pyx_bstride_0_movieFeatureCache) = 0.0;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1044
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1044
  * 
  * 			# construct the movie vector from user vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -12075,7 +12075,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1045
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1045
  * 			# construct the movie vector from user vectors
  * 			for i from 0 <= i < inumRatings:
  * 				uid = <unsigned int>userIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -12085,7 +12085,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       __pyx_t_10 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDs.buf, __pyx_t_10, __pyx_bstride_0_userIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1046
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1046
  * 			for i from 0 <= i < inumRatings:
  * 				uid = <unsigned int>userIDs[istart+i]
  * 				for k from numfeaturesmf+2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -12094,7 +12094,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
       for (__pyx_v_k = (__pyx_v_numfeaturesmf + 2); __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1047
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1047
  * 				uid = <unsigned int>userIDs[istart+i]
  * 				for k from numfeaturesmf+2 <= k < numfeatures:
  * 					movieFeatureCache[k] += W[uid,k]             # <<<<<<<<<<<<<<
@@ -12108,7 +12108,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       }
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1050
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1050
  * 
  * 			# normalize based on movie support, multiply in (1-beta)
  * 			movieFeatureCache *= movienorm#*(1-beta)             # <<<<<<<<<<<<<<
@@ -12138,7 +12138,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
     __pyx_v_movieFeatureCache = ((PyArrayObject *)__pyx_4);
     __pyx_4 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1053
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1053
  * 
  * 			# put the user vector into the user matrix
  * 			for k from numfeaturesmf+2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -12147,7 +12147,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
     for (__pyx_v_k = (__pyx_v_numfeaturesmf + 2); __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1054
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1054
  * 			# put the user vector into the user matrix
  * 			for k from numfeaturesmf+2 <= k < numfeatures:
  * 				M[mid,k] = movieFeatureCache[k]             # <<<<<<<<<<<<<<
@@ -12160,7 +12160,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_18, __pyx_bstride_0_M, __pyx_t_19, __pyx_bstride_1_M) = (*__Pyx_BufPtrStrided1d(__pyx_t_3svd_f32_t *, __pyx_bstruct_movieFeatureCache.buf, __pyx_t_17, __pyx_bstride_0_movieFeatureCache));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1057
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1057
  * 
  * 			# The Engine of NSVD1 begins here----
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -12169,7 +12169,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1058
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1058
  * 			# The Engine of NSVD1 begins here----
  * 			for i from 0 <= i < inumRatings:
  * 				if movieRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating             # <<<<<<<<<<<<<<
@@ -12184,7 +12184,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       }
       __pyx_L19:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1059
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1059
  * 			for i from 0 <= i < inumRatings:
  * 				if movieRatings[istart+i] == 0: continue # the (uid, mid) pair was from the quiz, no real rating
  * 				uid = <unsigned int>userIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -12194,7 +12194,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       __pyx_t_21 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDs.buf, __pyx_t_21, __pyx_bstride_0_userIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1062
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1062
  * 
  * 				# 1. Compute error
  * 				prediction = 0.0             # <<<<<<<<<<<<<<
@@ -12203,7 +12203,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
       __pyx_v_prediction = 0.0;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1063
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1063
  * 				# 1. Compute error
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -12212,7 +12212,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
       for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1064
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1064
  * 				prediction = 0.0
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -12226,7 +12226,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
         __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_22, __pyx_bstride_0_U, __pyx_t_23, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_24, __pyx_bstride_0_M, __pyx_t_25, __pyx_bstride_1_M)));
       }
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1065
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1065
  * 				for k from 0 <= k < numfeatures:
  * 					prediction += U[uid,k]*M[mid,k]
  * 				error = movieRatings[istart+i] - prediction             # <<<<<<<<<<<<<<
@@ -12236,7 +12236,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       __pyx_t_26 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_movieRatings.buf, __pyx_t_26, __pyx_bstride_0_movieRatings)) - __pyx_v_prediction);
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1068
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1068
  * 
  * 				# 2. Update the bias features
  * 				biasreg = U[uid,u1+numfeaturesmf] + M[mid,u0+numfeaturesmf]             # <<<<<<<<<<<<<<
@@ -12249,7 +12249,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       __pyx_t_30 = (__pyx_v_u0 + __pyx_v_numfeaturesmf);
       __pyx_v_biasreg = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_27, __pyx_bstride_0_U, __pyx_t_28, __pyx_bstride_1_U)) + (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_29, __pyx_bstride_0_M, __pyx_t_30, __pyx_bstride_1_M)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1069
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1069
  * 				# 2. Update the bias features
  * 				biasreg = U[uid,u1+numfeaturesmf] + M[mid,u0+numfeaturesmf]
  * 				U[uid,u1+numfeaturesmf] += lrateUb*(error - dampfactUb*biasreg)             # <<<<<<<<<<<<<<
@@ -12260,7 +12260,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       __pyx_t_32 = (__pyx_v_u1 + __pyx_v_numfeaturesmf);
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_31, __pyx_bstride_0_U, __pyx_t_32, __pyx_bstride_1_U) += (__pyx_v_lrateUb * (__pyx_v_error - (__pyx_v_dampfactUb * __pyx_v_biasreg)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1070
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1070
  * 				biasreg = U[uid,u1+numfeaturesmf] + M[mid,u0+numfeaturesmf]
  * 				U[uid,u1+numfeaturesmf] += lrateUb*(error - dampfactUb*biasreg)
  * 				M[mid,u0+numfeaturesmf] +=  lrateMb*(error - dampfactMb*biasreg)             # <<<<<<<<<<<<<<
@@ -12271,7 +12271,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       __pyx_t_34 = (__pyx_v_u0 + __pyx_v_numfeaturesmf);
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_33, __pyx_bstride_0_M, __pyx_t_34, __pyx_bstride_1_M) += (__pyx_v_lrateMb * (__pyx_v_error - (__pyx_v_dampfactMb * __pyx_v_biasreg)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1075
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1075
  * 				# 3. Update the bulk of the features
  * 				# 	for the MF
  * 				for k from 0 <= k < numfeaturesmf:             # <<<<<<<<<<<<<<
@@ -12280,7 +12280,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
       for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeaturesmf; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1076
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1076
  * 				# 	for the MF
  * 				for k from 0 <= k < numfeaturesmf:
  * 					uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -12291,7 +12291,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
         __pyx_t_36 = __pyx_v_k;
         __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_35, __pyx_bstride_0_U, __pyx_t_36, __pyx_bstride_1_U));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1077
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1077
  * 				for k from 0 <= k < numfeaturesmf:
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -12302,7 +12302,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
         __pyx_t_38 = __pyx_v_k;
         __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_37, __pyx_bstride_0_M, __pyx_t_38, __pyx_bstride_1_M));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1078
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1078
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(beta*error*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -12313,7 +12313,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
         __pyx_t_40 = __pyx_v_k;
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_39, __pyx_bstride_0_U, __pyx_t_40, __pyx_bstride_1_U) += (__pyx_v_lrateU * (((__pyx_v_beta * __pyx_v_error) * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf)));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1079
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1079
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateU*(beta*error*mf - dampfactU*uf)
  * 					M[mid,k] += lrateM*(beta*error*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -12325,7 +12325,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_41, __pyx_bstride_0_M, __pyx_t_42, __pyx_bstride_1_M) += (__pyx_v_lrateM * (((__pyx_v_beta * __pyx_v_error) * __pyx_v_uf) - (__pyx_v_dampfactM * __pyx_v_mf)));
       }
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1081
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1081
  * 					M[mid,k] += lrateM*(beta*error*uf - dampfactM*mf)
  * 				# 	for NSVD1
  * 				for k from numfeaturesmf+2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -12334,7 +12334,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
       for (__pyx_v_k = (__pyx_v_numfeaturesmf + 2); __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1082
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1082
  * 				# 	for NSVD1
  * 				for k from numfeaturesmf+2 <= k < numfeatures:
  * 					uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -12345,7 +12345,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
         __pyx_t_44 = __pyx_v_k;
         __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_43, __pyx_bstride_0_U, __pyx_t_44, __pyx_bstride_1_U));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1083
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1083
  * 				for k from numfeaturesmf+2 <= k < numfeatures:
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -12356,7 +12356,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
         __pyx_t_46 = __pyx_v_k;
         __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_45, __pyx_bstride_0_M, __pyx_t_46, __pyx_bstride_1_M));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1084
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1084
  * 					uf = U[uid,k]
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateUn*(error*(1-beta)*mf - dampfactUn*uf)             # <<<<<<<<<<<<<<
@@ -12367,7 +12367,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
         __pyx_t_48 = __pyx_v_k;
         *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_47, __pyx_bstride_0_U, __pyx_t_48, __pyx_bstride_1_U) += (__pyx_v_lrateUn * (((__pyx_v_error * (1 - __pyx_v_beta)) * __pyx_v_mf) - (__pyx_v_dampfactUn * __pyx_v_uf)));
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1085
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1085
  * 					mf = M[mid,k]
  * 					U[uid,k] += lrateUn*(error*(1-beta)*mf - dampfactUn*uf)
  * 					M[mid,k] += lrateMn*(error*(1-beta)*uf - dampfactMn*mf)             # <<<<<<<<<<<<<<
@@ -12381,7 +12381,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       __pyx_L17:;
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1088
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1088
  * 
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:             # <<<<<<<<<<<<<<
@@ -12390,7 +12390,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
     for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_inumRatings; __pyx_v_i++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1089
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1089
  * 			# 4. Update the movie feature vectors
  * 			for i from 0 <= i < inumRatings:
  * 				uid = <unsigned int>userIDs[istart+i]             # <<<<<<<<<<<<<<
@@ -12400,7 +12400,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
       __pyx_t_51 = (__pyx_v_istart + __pyx_v_i);
       __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDs.buf, __pyx_t_51, __pyx_bstride_0_userIDs)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1090
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1090
  * 			for i from 0 <= i < inumRatings:
  * 				uid = <unsigned int>userIDs[istart+i]
  * 				for k from 2+numfeaturesmf <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -12409,7 +12409,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
  */
       for (__pyx_v_k = (2 + __pyx_v_numfeaturesmf); __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-        /* "/home/alex/workspace/flix/src/svd.pyx":1091
+        /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1091
  * 				uid = <unsigned int>userIDs[istart+i]
  * 				for k from 2+numfeaturesmf <= k < numfeatures:
  * 					W[uid,k] += (U[mid,k] - movieFeatureCache[k])*movienorm             # <<<<<<<<<<<<<<
@@ -12431,7 +12431,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1094
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1094
  * 
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -12480,7 +12480,7 @@ static PyObject *__pyx_pf_3svd_3SVD_hybrid2(PyObject *__pyx_self, PyObject *__py
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":1098
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1098
  * 
  * 	@cython.boundscheck(False)
  * 	def rmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -12657,7 +12657,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_bstride_0_movieIDs = __pyx_bstruct_movieIDs.strides[0];
   __pyx_bshape_0_movieIDs = __pyx_bstruct_movieIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1105
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1105
  * 		cdef float error, prediction, uf, mf
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -12671,7 +12671,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1106
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1106
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -12683,7 +12683,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1108
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1108
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -12695,7 +12695,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateU = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1109
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1109
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -12707,7 +12707,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_lrateM = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1110
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1110
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -12719,7 +12719,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_dampfactU = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1111
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1111
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -12731,7 +12731,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactM = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1113
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1113
  * 		cdef float dampfactM = self.dampfactM
  * 
  * 		for i from 0 <= i < numratings:             # <<<<<<<<<<<<<<
@@ -12740,7 +12740,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
  */
   for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_numratings; __pyx_v_i++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1114
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1114
  * 
  * 		for i from 0 <= i < numratings:
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)             # <<<<<<<<<<<<<<
@@ -12764,7 +12764,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1115
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1115
  * 		for i from 0 <= i < numratings:
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)
  * 			uid = <unsigned int>userIDsForUsers[i]             # <<<<<<<<<<<<<<
@@ -12774,7 +12774,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_t_2 = __pyx_v_i;
     __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDsForUsers.buf, __pyx_t_2, __pyx_bstride_0_userIDsForUsers)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1116
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1116
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)
  * 			uid = <unsigned int>userIDsForUsers[i]
  * 			mid = <unsigned int>movieIDs[i]             # <<<<<<<<<<<<<<
@@ -12784,7 +12784,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_t_3 = __pyx_v_i;
     __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_3, __pyx_bstride_0_movieIDs)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1118
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1118
  * 			mid = <unsigned int>movieIDs[i]
  * 			# Find errors and predictions, before we do any updates
  * 			prediction = 0.0             # <<<<<<<<<<<<<<
@@ -12793,7 +12793,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
  */
     __pyx_v_prediction = 0.0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1119
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1119
  * 			# Find errors and predictions, before we do any updates
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -12802,7 +12802,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1120
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1120
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -12816,7 +12816,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_4, __pyx_bstride_0_U, __pyx_t_5, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_6, __pyx_bstride_0_M, __pyx_t_7, __pyx_bstride_1_M)));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1121
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1121
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]
  * 			error = userRatings[i] - prediction             # <<<<<<<<<<<<<<
@@ -12826,7 +12826,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_t_8 = __pyx_v_i;
     __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_userRatings.buf, __pyx_t_8, __pyx_bstride_0_userRatings)) - __pyx_v_prediction);
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1124
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1124
  * 
  * 			# Update non-bias features
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -12835,7 +12835,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1125
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1125
  * 			# Update non-bias features
  * 			for k from 0 <= k < numfeatures:
  * 				uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -12846,7 +12846,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_t_10 = __pyx_v_k;
       __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_9, __pyx_bstride_0_U, __pyx_t_10, __pyx_bstride_1_U));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1126
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1126
  * 			for k from 0 <= k < numfeatures:
  * 				uf = U[uid,k]
  * 				mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -12857,7 +12857,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_t_12 = __pyx_v_k;
       __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_11, __pyx_bstride_0_M, __pyx_t_12, __pyx_bstride_1_M));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1127
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1127
  * 				uf = U[uid,k]
  * 				mf = M[mid,k]
  * 				U[uid,k] += lrateU*(error*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -12868,7 +12868,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_t_14 = __pyx_v_k;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_13, __pyx_bstride_0_U, __pyx_t_14, __pyx_bstride_1_U) += (__pyx_v_lrateU * ((__pyx_v_error * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1128
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1128
  * 				mf = M[mid,k]
  * 				U[uid,k] += lrateU*(error*mf - dampfactU*uf)
  * 				M[mid,k] += lrateM*(error*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -12881,7 +12881,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1130
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1130
  * 				M[mid,k] += lrateM*(error*uf - dampfactM*mf)
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -12918,7 +12918,7 @@ static PyObject *__pyx_pf_3svd_3SVD_rmf(PyObject *__pyx_self, PyObject *__pyx_ar
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":1134
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1134
  * 
  * 	@cython.boundscheck(False)
  * 	def brismf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -13108,7 +13108,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   __pyx_bstride_0_movieIDs = __pyx_bstruct_movieIDs.strides[0];
   __pyx_bshape_0_movieIDs = __pyx_bstruct_movieIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1142
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1142
  * 		cdef float error, prediction, uf, mf, biasreg
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -13122,7 +13122,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1143
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1143
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -13134,7 +13134,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1145
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1145
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -13146,7 +13146,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateU = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1146
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1146
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -13158,7 +13158,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_lrateM = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1147
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1147
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -13170,7 +13170,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_dampfactU = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1148
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1148
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -13182,7 +13182,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactM = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1151
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1151
  * 
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb             # <<<<<<<<<<<<<<
@@ -13194,7 +13194,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateUb = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1152
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1152
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb             # <<<<<<<<<<<<<<
@@ -13206,7 +13206,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_lrateMb = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1153
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1153
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb             # <<<<<<<<<<<<<<
@@ -13218,7 +13218,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_dampfactUb = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1154
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1154
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb
  * 		cdef float dampfactMb = self.dampfactMb             # <<<<<<<<<<<<<<
@@ -13230,7 +13230,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactMb = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1156
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1156
  * 		cdef float dampfactMb = self.dampfactMb
  * 
  * 		for i from 0 <= i < (numratings):             # <<<<<<<<<<<<<<
@@ -13239,7 +13239,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
  */
   for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_numratings; __pyx_v_i++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1157
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1157
  * 
  * 		for i from 0 <= i < (numratings):
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)             # <<<<<<<<<<<<<<
@@ -13263,7 +13263,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1158
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1158
  * 		for i from 0 <= i < (numratings):
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)
  * 			uid = <unsigned int>userIDsForUsers[i]             # <<<<<<<<<<<<<<
@@ -13273,7 +13273,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
     __pyx_t_2 = __pyx_v_i;
     __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDsForUsers.buf, __pyx_t_2, __pyx_bstride_0_userIDsForUsers)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1159
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1159
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)
  * 			uid = <unsigned int>userIDsForUsers[i]
  * 			mid = <unsigned int>movieIDs[i]             # <<<<<<<<<<<<<<
@@ -13283,7 +13283,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
     __pyx_t_3 = __pyx_v_i;
     __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_3, __pyx_bstride_0_movieIDs)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1161
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1161
  * 			mid = <unsigned int>movieIDs[i]
  * 			# Find errors and predictions, before we do any updates
  * 			prediction = 0.0             # <<<<<<<<<<<<<<
@@ -13292,7 +13292,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
  */
     __pyx_v_prediction = 0.0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1162
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1162
  * 			# Find errors and predictions, before we do any updates
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -13301,7 +13301,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1163
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1163
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -13315,7 +13315,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
       __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_4, __pyx_bstride_0_U, __pyx_t_5, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_6, __pyx_bstride_0_M, __pyx_t_7, __pyx_bstride_1_M)));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1164
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1164
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]
  * 			error = userRatings[i] - prediction             # <<<<<<<<<<<<<<
@@ -13325,7 +13325,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
     __pyx_t_8 = __pyx_v_i;
     __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_userRatings.buf, __pyx_t_8, __pyx_bstride_0_userRatings)) - __pyx_v_prediction);
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1167
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1167
  * 
  * 			# Update bias features
  * 			biasreg = U[uid,1] + M[mid,0]             # <<<<<<<<<<<<<<
@@ -13340,7 +13340,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
     if (__pyx_t_12 < 0) __pyx_t_12 += __pyx_bshape_1_M;
     __pyx_v_biasreg = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_9, __pyx_bstride_0_U, __pyx_t_10, __pyx_bstride_1_U)) + (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_11, __pyx_bstride_0_M, __pyx_t_12, __pyx_bstride_1_M)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1168
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1168
  * 			# Update bias features
  * 			biasreg = U[uid,1] + M[mid,0]
  * 			U[uid,1] += lrateUb*(error - dampfactUb*biasreg)             # <<<<<<<<<<<<<<
@@ -13352,7 +13352,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
     if (__pyx_t_14 < 0) __pyx_t_14 += __pyx_bshape_1_U;
     *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_13, __pyx_bstride_0_U, __pyx_t_14, __pyx_bstride_1_U) += (__pyx_v_lrateUb * (__pyx_v_error - (__pyx_v_dampfactUb * __pyx_v_biasreg)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1169
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1169
  * 			biasreg = U[uid,1] + M[mid,0]
  * 			U[uid,1] += lrateUb*(error - dampfactUb*biasreg)
  * 			M[mid,0] += lrateMb*(error - dampfactMb*biasreg)             # <<<<<<<<<<<<<<
@@ -13364,7 +13364,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
     if (__pyx_t_16 < 0) __pyx_t_16 += __pyx_bshape_1_M;
     *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_15, __pyx_bstride_0_M, __pyx_t_16, __pyx_bstride_1_M) += (__pyx_v_lrateMb * (__pyx_v_error - (__pyx_v_dampfactMb * __pyx_v_biasreg)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1172
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1172
  * 
  * 			# Update non-bias features
  * 			for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -13373,7 +13373,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
  */
     for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1173
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1173
  * 			# Update non-bias features
  * 			for k from 2 <= k < numfeatures:
  * 				uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -13384,7 +13384,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
       __pyx_t_18 = __pyx_v_k;
       __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_17, __pyx_bstride_0_U, __pyx_t_18, __pyx_bstride_1_U));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1174
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1174
  * 			for k from 2 <= k < numfeatures:
  * 				uf = U[uid,k]
  * 				mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -13395,7 +13395,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
       __pyx_t_20 = __pyx_v_k;
       __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_19, __pyx_bstride_0_M, __pyx_t_20, __pyx_bstride_1_M));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1175
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1175
  * 				uf = U[uid,k]
  * 				mf = M[mid,k]
  * 				U[uid,k] += lrateU*(error*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -13406,7 +13406,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
       __pyx_t_22 = __pyx_v_k;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_21, __pyx_bstride_0_U, __pyx_t_22, __pyx_bstride_1_U) += (__pyx_v_lrateU * ((__pyx_v_error * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf)));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1176
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1176
  * 				mf = M[mid,k]
  * 				U[uid,k] += lrateU*(error*mf - dampfactU*uf)
  * 				M[mid,k] += lrateM*(error*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -13419,7 +13419,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1178
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1178
  * 				M[mid,k] += lrateM*(error*uf - dampfactM*mf)
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -13456,7 +13456,7 @@ static PyObject *__pyx_pf_3svd_3SVD_brismf(PyObject *__pyx_self, PyObject *__pyx
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":1182
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1182
  * 
  * 	@cython.boundscheck(False)
  * 	def bpmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -13659,7 +13659,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   __pyx_bstride_0_movieIDs = __pyx_bstruct_movieIDs.strides[0];
   __pyx_bshape_0_movieIDs = __pyx_bstruct_movieIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1192
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1192
  * 		cdef float error, prediction, uf, mf, biasreg, tmpm, tmpu
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -13673,7 +13673,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1193
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1193
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -13685,7 +13685,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1195
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1195
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 
  * 		cdef int keepUpositive = self.keepUpositive             # <<<<<<<<<<<<<<
@@ -13697,7 +13697,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_keepUpositive = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1196
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1196
  * 
  * 		cdef int keepUpositive = self.keepUpositive
  * 		cdef int keepMpositive = self.keepMpositive             # <<<<<<<<<<<<<<
@@ -13709,7 +13709,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_keepMpositive = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1198
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1198
  * 		cdef int keepMpositive = self.keepMpositive
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -13721,7 +13721,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateU = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1199
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1199
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -13733,7 +13733,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_lrateM = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1200
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1200
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -13745,7 +13745,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_dampfactU = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1201
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1201
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -13757,7 +13757,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactM = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1204
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1204
  * 
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb             # <<<<<<<<<<<<<<
@@ -13769,7 +13769,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateUb = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1205
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1205
  * 		# special bias features
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb             # <<<<<<<<<<<<<<
@@ -13781,7 +13781,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_lrateMb = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1206
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1206
  * 		cdef float lrateUb = self.lrateUb
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb             # <<<<<<<<<<<<<<
@@ -13793,7 +13793,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_dampfactUb = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1207
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1207
  * 		cdef float lrateMb = self.lrateMb
  * 		cdef float dampfactUb = self.dampfactUb
  * 		cdef float dampfactMb = self.dampfactMb             # <<<<<<<<<<<<<<
@@ -13805,7 +13805,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactMb = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1209
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1209
  * 		cdef float dampfactMb = self.dampfactMb
  * 
  * 		for i from 0 <= i < (numratings):             # <<<<<<<<<<<<<<
@@ -13814,7 +13814,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
   for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_numratings; __pyx_v_i++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1210
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1210
  * 
  * 		for i from 0 <= i < (numratings):
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)             # <<<<<<<<<<<<<<
@@ -13838,7 +13838,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1211
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1211
  * 		for i from 0 <= i < (numratings):
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)
  * 			uid = <unsigned int>userIDsForUsers[i]             # <<<<<<<<<<<<<<
@@ -13848,7 +13848,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     __pyx_t_2 = __pyx_v_i;
     __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDsForUsers.buf, __pyx_t_2, __pyx_bstride_0_userIDsForUsers)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1212
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1212
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)
  * 			uid = <unsigned int>userIDsForUsers[i]
  * 			mid = <unsigned int>movieIDs[i]             # <<<<<<<<<<<<<<
@@ -13858,7 +13858,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     __pyx_t_3 = __pyx_v_i;
     __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_3, __pyx_bstride_0_movieIDs)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1214
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1214
  * 			mid = <unsigned int>movieIDs[i]
  * 			# Find errors and predictions, before we do any updates
  * 			prediction = 0.0             # <<<<<<<<<<<<<<
@@ -13867,7 +13867,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
     __pyx_v_prediction = 0.0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1215
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1215
  * 			# Find errors and predictions, before we do any updates
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -13876,7 +13876,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1216
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1216
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -13890,7 +13890,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
       __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_4, __pyx_bstride_0_U, __pyx_t_5, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_6, __pyx_bstride_0_M, __pyx_t_7, __pyx_bstride_1_M)));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1217
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1217
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]
  * 			error = userRatings[i] - prediction             # <<<<<<<<<<<<<<
@@ -13900,7 +13900,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     __pyx_t_8 = __pyx_v_i;
     __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_userRatings.buf, __pyx_t_8, __pyx_bstride_0_userRatings)) - __pyx_v_prediction);
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1220
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1220
  * 
  * 			# Update bias features
  * 			biasreg = U[uid,1] + M[mid,0]             # <<<<<<<<<<<<<<
@@ -13915,7 +13915,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     if (__pyx_t_12 < 0) __pyx_t_12 += __pyx_bshape_1_M;
     __pyx_v_biasreg = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_9, __pyx_bstride_0_U, __pyx_t_10, __pyx_bstride_1_U)) + (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_11, __pyx_bstride_0_M, __pyx_t_12, __pyx_bstride_1_M)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1221
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1221
  * 			# Update bias features
  * 			biasreg = U[uid,1] + M[mid,0]
  * 			tmpu = U[uid,1] + lrateUb*(error - dampfactUb*biasreg)             # <<<<<<<<<<<<<<
@@ -13927,7 +13927,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     if (__pyx_t_14 < 0) __pyx_t_14 += __pyx_bshape_1_U;
     __pyx_v_tmpu = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_13, __pyx_bstride_0_U, __pyx_t_14, __pyx_bstride_1_U)) + (__pyx_v_lrateUb * (__pyx_v_error - (__pyx_v_dampfactUb * __pyx_v_biasreg))));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1222
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1222
  * 			biasreg = U[uid,1] + M[mid,0]
  * 			tmpu = U[uid,1] + lrateUb*(error - dampfactUb*biasreg)
  * 			tmpm = M[mid,0] + lrateMb*(error - dampfactMb*biasreg)             # <<<<<<<<<<<<<<
@@ -13939,7 +13939,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     if (__pyx_t_16 < 0) __pyx_t_16 += __pyx_bshape_1_M;
     __pyx_v_tmpm = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_15, __pyx_bstride_0_M, __pyx_t_16, __pyx_bstride_1_M)) + (__pyx_v_lrateMb * (__pyx_v_error - (__pyx_v_dampfactMb * __pyx_v_biasreg))));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1223
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1223
  * 			tmpu = U[uid,1] + lrateUb*(error - dampfactUb*biasreg)
  * 			tmpm = M[mid,0] + lrateMb*(error - dampfactMb*biasreg)
  * 			if keepUpositive == 1 and tmpu < 0.0: tmpu = 0.0             # <<<<<<<<<<<<<<
@@ -13956,7 +13956,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     }
     __pyx_L11:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1224
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1224
  * 			tmpm = M[mid,0] + lrateMb*(error - dampfactMb*biasreg)
  * 			if keepUpositive == 1 and tmpu < 0.0: tmpu = 0.0
  * 			if keepMpositive == 1 and tmpm < 0.0: tmpm = 0.0             # <<<<<<<<<<<<<<
@@ -13973,7 +13973,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     }
     __pyx_L12:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1225
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1225
  * 			if keepUpositive == 1 and tmpu < 0.0: tmpu = 0.0
  * 			if keepMpositive == 1 and tmpm < 0.0: tmpm = 0.0
  * 			U[uid,1] = tmpu             # <<<<<<<<<<<<<<
@@ -13985,7 +13985,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     if (__pyx_t_18 < 0) __pyx_t_18 += __pyx_bshape_1_U;
     *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_17, __pyx_bstride_0_U, __pyx_t_18, __pyx_bstride_1_U) = __pyx_v_tmpu;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1226
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1226
  * 			if keepMpositive == 1 and tmpm < 0.0: tmpm = 0.0
  * 			U[uid,1] = tmpu
  * 			M[mid,0] = tmpm             # <<<<<<<<<<<<<<
@@ -13997,7 +13997,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     if (__pyx_t_20 < 0) __pyx_t_20 += __pyx_bshape_1_M;
     *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_19, __pyx_bstride_0_M, __pyx_t_20, __pyx_bstride_1_M) = __pyx_v_tmpm;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1229
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1229
  * 
  * 			# Update non-bias features
  * 			for k from 2 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -14006,7 +14006,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
  */
     for (__pyx_v_k = 2; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1230
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1230
  * 			# Update non-bias features
  * 			for k from 2 <= k < numfeatures:
  * 				uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -14017,7 +14017,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
       __pyx_t_22 = __pyx_v_k;
       __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_21, __pyx_bstride_0_U, __pyx_t_22, __pyx_bstride_1_U));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1231
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1231
  * 			for k from 2 <= k < numfeatures:
  * 				uf = U[uid,k]
  * 				mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -14028,7 +14028,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
       __pyx_t_24 = __pyx_v_k;
       __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_23, __pyx_bstride_0_M, __pyx_t_24, __pyx_bstride_1_M));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1232
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1232
  * 				uf = U[uid,k]
  * 				mf = M[mid,k]
  * 				tmpu = U[uid,k] + lrateU*(error*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -14039,7 +14039,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
       __pyx_t_26 = __pyx_v_k;
       __pyx_v_tmpu = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_25, __pyx_bstride_0_U, __pyx_t_26, __pyx_bstride_1_U)) + (__pyx_v_lrateU * ((__pyx_v_error * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf))));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1233
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1233
  * 				mf = M[mid,k]
  * 				tmpu = U[uid,k] + lrateU*(error*mf - dampfactU*uf)
  * 				tmpm = M[mid,k] + lrateM*(error*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -14050,7 +14050,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
       __pyx_t_28 = __pyx_v_k;
       __pyx_v_tmpm = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_27, __pyx_bstride_0_M, __pyx_t_28, __pyx_bstride_1_M)) + (__pyx_v_lrateM * ((__pyx_v_error * __pyx_v_uf) - (__pyx_v_dampfactM * __pyx_v_mf))));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1234
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1234
  * 				tmpu = U[uid,k] + lrateU*(error*mf - dampfactU*uf)
  * 				tmpm = M[mid,k] + lrateM*(error*uf - dampfactM*mf)
  * 				if keepUpositive == 1 and tmpu < 0.0: tmpu = 0.0             # <<<<<<<<<<<<<<
@@ -14067,7 +14067,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
       __pyx_L15:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1235
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1235
  * 				tmpm = M[mid,k] + lrateM*(error*uf - dampfactM*mf)
  * 				if keepUpositive == 1 and tmpu < 0.0: tmpu = 0.0
  * 				if keepMpositive == 1 and tmpm < 0.0: tmpm = 0.0             # <<<<<<<<<<<<<<
@@ -14084,7 +14084,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
       }
       __pyx_L16:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1236
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1236
  * 				if keepUpositive == 1 and tmpu < 0.0: tmpu = 0.0
  * 				if keepMpositive == 1 and tmpm < 0.0: tmpm = 0.0
  * 				U[uid,k] = tmpu             # <<<<<<<<<<<<<<
@@ -14095,7 +14095,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
       __pyx_t_30 = __pyx_v_k;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_29, __pyx_bstride_0_U, __pyx_t_30, __pyx_bstride_1_U) = __pyx_v_tmpu;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1237
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1237
  * 				if keepMpositive == 1 and tmpm < 0.0: tmpm = 0.0
  * 				U[uid,k] = tmpu
  * 				M[mid,k] = tmpm             # <<<<<<<<<<<<<<
@@ -14108,7 +14108,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1239
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1239
  * 				M[mid,k] = tmpm
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -14145,7 +14145,7 @@ static PyObject *__pyx_pf_3svd_3SVD_bpmf(PyObject *__pyx_self, PyObject *__pyx_a
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":1242
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1242
  * 
  * 	@cython.boundscheck(False)
  * 	def pmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -14331,7 +14331,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
   __pyx_bstride_0_movieIDs = __pyx_bstruct_movieIDs.strides[0];
   __pyx_bshape_0_movieIDs = __pyx_bstruct_movieIDs.shape[0];
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1250
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1250
  * 		cdef float error, prediction, uf, mf, biasreg, tmpm, tmpu
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings             # <<<<<<<<<<<<<<
@@ -14345,7 +14345,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_numratings = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1251
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1251
  * 
  * 		cdef unsigned int numratings = <unsigned int>self.fd.numratings
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures             # <<<<<<<<<<<<<<
@@ -14357,7 +14357,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_numfeatures = ((unsigned int)__pyx_3);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1253
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1253
  * 		cdef unsigned int numfeatures = <unsigned int>self.numfeatures
  * 
  * 		cdef int keepUpositive = self.keepUpositive             # <<<<<<<<<<<<<<
@@ -14369,7 +14369,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_keepUpositive = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1254
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1254
  * 
  * 		cdef int keepUpositive = self.keepUpositive
  * 		cdef int keepMpositive = self.keepMpositive             # <<<<<<<<<<<<<<
@@ -14381,7 +14381,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_keepMpositive = __pyx_4;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1256
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1256
  * 		cdef int keepMpositive = self.keepMpositive
  * 
  * 		cdef float lrateU = self.lrateU             # <<<<<<<<<<<<<<
@@ -14393,7 +14393,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_lrateU = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1257
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1257
  * 
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM             # <<<<<<<<<<<<<<
@@ -14405,7 +14405,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_lrateM = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1258
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1258
  * 		cdef float lrateU = self.lrateU
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU             # <<<<<<<<<<<<<<
@@ -14417,7 +14417,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_2); __pyx_2 = 0;
   __pyx_v_dampfactU = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1259
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1259
  * 		cdef float lrateM = self.lrateM
  * 		cdef float dampfactU = self.dampfactU
  * 		cdef float dampfactM = self.dampfactM             # <<<<<<<<<<<<<<
@@ -14429,7 +14429,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   __pyx_v_dampfactM = __pyx_5;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1261
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1261
  * 		cdef float dampfactM = self.dampfactM
  * 
  * 		for i from 0 <= i < (numratings):             # <<<<<<<<<<<<<<
@@ -14438,7 +14438,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
  */
   for (__pyx_v_i = 0; __pyx_v_i < __pyx_v_numratings; __pyx_v_i++) {
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1262
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1262
  * 
  * 		for i from 0 <= i < (numratings):
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)             # <<<<<<<<<<<<<<
@@ -14462,7 +14462,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
     }
     __pyx_L8:;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1263
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1263
  * 		for i from 0 <= i < (numratings):
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)
  * 			uid = <unsigned int>userIDsForUsers[i]             # <<<<<<<<<<<<<<
@@ -14472,7 +14472,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_t_2 = __pyx_v_i;
     __pyx_v_uid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i32_t *, __pyx_bstruct_userIDsForUsers.buf, __pyx_t_2, __pyx_bstride_0_userIDsForUsers)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1264
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1264
  * 			if i % 10000000 == 0: self.updateLog('\tTraining rating %d' % i)
  * 			uid = <unsigned int>userIDsForUsers[i]
  * 			mid = <unsigned int>movieIDs[i]             # <<<<<<<<<<<<<<
@@ -14482,7 +14482,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_t_3 = __pyx_v_i;
     __pyx_v_mid = ((unsigned int)(*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i16_t *, __pyx_bstruct_movieIDs.buf, __pyx_t_3, __pyx_bstride_0_movieIDs)));
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1266
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1266
  * 			mid = <unsigned int>movieIDs[i]
  * 			# Find errors and predictions, before we do any updates
  * 			prediction = 0.0             # <<<<<<<<<<<<<<
@@ -14491,7 +14491,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
  */
     __pyx_v_prediction = 0.0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1267
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1267
  * 			# Find errors and predictions, before we do any updates
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -14500,7 +14500,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1268
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1268
  * 			prediction = 0.0
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]             # <<<<<<<<<<<<<<
@@ -14514,7 +14514,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_v_prediction += ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_4, __pyx_bstride_0_U, __pyx_t_5, __pyx_bstride_1_U)) * (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_6, __pyx_bstride_0_M, __pyx_t_7, __pyx_bstride_1_M)));
     }
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1269
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1269
  * 			for k from 0 <= k < numfeatures:
  * 				prediction += U[uid,k]*M[mid,k]
  * 			error = userRatings[i] - prediction             # <<<<<<<<<<<<<<
@@ -14524,7 +14524,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
     __pyx_t_8 = __pyx_v_i;
     __pyx_v_error = ((*__Pyx_BufPtrStrided1d(__pyx_t_3svd_i8_t *, __pyx_bstruct_userRatings.buf, __pyx_t_8, __pyx_bstride_0_userRatings)) - __pyx_v_prediction);
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1272
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1272
  * 
  * 			# Update non-bias features
  * 			for k from 0  <= k < numfeatures:             # <<<<<<<<<<<<<<
@@ -14533,7 +14533,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
  */
     for (__pyx_v_k = 0; __pyx_v_k < __pyx_v_numfeatures; __pyx_v_k++) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1273
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1273
  * 			# Update non-bias features
  * 			for k from 0  <= k < numfeatures:
  * 				uf = U[uid,k]             # <<<<<<<<<<<<<<
@@ -14544,7 +14544,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_t_10 = __pyx_v_k;
       __pyx_v_uf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_9, __pyx_bstride_0_U, __pyx_t_10, __pyx_bstride_1_U));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1274
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1274
  * 			for k from 0  <= k < numfeatures:
  * 				uf = U[uid,k]
  * 				mf = M[mid,k]             # <<<<<<<<<<<<<<
@@ -14555,7 +14555,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_t_12 = __pyx_v_k;
       __pyx_v_mf = (*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_11, __pyx_bstride_0_M, __pyx_t_12, __pyx_bstride_1_M));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1275
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1275
  * 				uf = U[uid,k]
  * 				mf = M[mid,k]
  * 				tmpu = U[uid,k] + lrateU*(error*mf - dampfactU*uf)             # <<<<<<<<<<<<<<
@@ -14566,7 +14566,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_t_14 = __pyx_v_k;
       __pyx_v_tmpu = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_13, __pyx_bstride_0_U, __pyx_t_14, __pyx_bstride_1_U)) + (__pyx_v_lrateU * ((__pyx_v_error * __pyx_v_mf) - (__pyx_v_dampfactU * __pyx_v_uf))));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1276
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1276
  * 				mf = M[mid,k]
  * 				tmpu = U[uid,k] + lrateU*(error*mf - dampfactU*uf)
  * 				tmpm = M[mid,k] + lrateM*(error*uf - dampfactM*mf)             # <<<<<<<<<<<<<<
@@ -14577,7 +14577,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_t_16 = __pyx_v_k;
       __pyx_v_tmpm = ((*__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_M.buf, __pyx_t_15, __pyx_bstride_0_M, __pyx_t_16, __pyx_bstride_1_M)) + (__pyx_v_lrateM * ((__pyx_v_error * __pyx_v_uf) - (__pyx_v_dampfactM * __pyx_v_mf))));
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1277
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1277
  * 				tmpu = U[uid,k] + lrateU*(error*mf - dampfactU*uf)
  * 				tmpm = M[mid,k] + lrateM*(error*uf - dampfactM*mf)
  * 				if keepUpositive == 1 and tmpu < 0.0: tmpu = 0.0             # <<<<<<<<<<<<<<
@@ -14594,7 +14594,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
       }
       __pyx_L13:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1278
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1278
  * 				tmpm = M[mid,k] + lrateM*(error*uf - dampfactM*mf)
  * 				if keepUpositive == 1 and tmpu < 0.0: tmpu = 0.0
  * 				if keepMpositive == 1 and tmpm < 0.0: tmpm = 0.0             # <<<<<<<<<<<<<<
@@ -14611,7 +14611,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
       }
       __pyx_L14:;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1279
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1279
  * 				if keepUpositive == 1 and tmpu < 0.0: tmpu = 0.0
  * 				if keepMpositive == 1 and tmpm < 0.0: tmpm = 0.0
  * 				U[uid,k] = tmpu             # <<<<<<<<<<<<<<
@@ -14622,7 +14622,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
       __pyx_t_18 = __pyx_v_k;
       *__Pyx_BufPtrStrided2d(__pyx_t_3svd_f32_t *, __pyx_bstruct_U.buf, __pyx_t_17, __pyx_bstride_0_U, __pyx_t_18, __pyx_bstride_1_U) = __pyx_v_tmpu;
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1280
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1280
  * 				if keepMpositive == 1 and tmpm < 0.0: tmpm = 0.0
  * 				U[uid,k] = tmpu
  * 				M[mid,k] = tmpm             # <<<<<<<<<<<<<<
@@ -14635,7 +14635,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
     }
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1282
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1282
  * 				M[mid,k] = tmpm
  * 
  * 		return             # <<<<<<<<<<<<<<
@@ -14672,7 +14672,7 @@ static PyObject *__pyx_pf_3svd_3SVD_pmf(PyObject *__pyx_self, PyObject *__pyx_ar
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":1284
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1284
  * 		return
  * 
  * 	def subsampleUsers(self, fraction=0.3):             # <<<<<<<<<<<<<<
@@ -14740,7 +14740,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
   __pyx_v_done = Py_None; Py_INCREF(Py_None);
   __pyx_v_numproberatings = Py_None; Py_INCREF(Py_None);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1290
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1290
  * 		CAUSES A SEGMENTATION FAULT AFTER THE ALLOTED NUMBER
  * 		"""
  * 		newnumusers = int(480189*fraction)             # <<<<<<<<<<<<<<
@@ -14757,7 +14757,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
   __pyx_v_newnumusers = __pyx_2;
   __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1293
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1293
  * 
  * 		# Make sure that the last user is in the probe set.
  * 		done = False             # <<<<<<<<<<<<<<
@@ -14769,7 +14769,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
   __pyx_v_done = __pyx_1;
   __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1294
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1294
  * 		# Make sure that the last user is in the probe set.
  * 		done = False
  * 		while done is False:             # <<<<<<<<<<<<<<
@@ -14782,7 +14782,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
     Py_DECREF(__pyx_2); __pyx_2 = 0;
     if (!__pyx_3) break;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1295
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1295
  * 		done = False
  * 		while done is False:
  * 			numproberatings = N.argwhere(self.td.userIDsForUsers==newnumusers)             # <<<<<<<<<<<<<<
@@ -14807,7 +14807,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
     __pyx_v_numproberatings = __pyx_1;
     __pyx_1 = 0;
 
-    /* "/home/alex/workspace/flix/src/svd.pyx":1296
+    /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1296
  * 		while done is False:
  * 			numproberatings = N.argwhere(self.td.userIDsForUsers==newnumusers)
  * 			if len(numproberatings) == 0:             # <<<<<<<<<<<<<<
@@ -14818,7 +14818,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
     __pyx_3 = (__pyx_5 == 0);
     if (__pyx_3) {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1297
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1297
  * 			numproberatings = N.argwhere(self.td.userIDsForUsers==newnumusers)
  * 			if len(numproberatings) == 0:
  * 				newnumusers += 1             # <<<<<<<<<<<<<<
@@ -14833,7 +14833,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
     }
     /*else*/ {
 
-      /* "/home/alex/workspace/flix/src/svd.pyx":1299
+      /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1299
  * 				newnumusers += 1
  * 			else:
  * 				done = True             # <<<<<<<<<<<<<<
@@ -14848,7 +14848,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
     __pyx_L8:;
   }
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1302
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1302
  * 
  * 
  * 		self.numusers = newnumusers             # <<<<<<<<<<<<<<
@@ -14857,7 +14857,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_numusers, __pyx_v_newnumusers) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1302; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1303
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1303
  * 
  * 		self.numusers = newnumusers
  * 		self.fd.numusers = newnumusers             # <<<<<<<<<<<<<<
@@ -14868,7 +14868,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
   if (PyObject_SetAttr(__pyx_1, __pyx_kp_numusers, __pyx_v_newnumusers) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1303; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1304
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1304
  * 		self.numusers = newnumusers
  * 		self.fd.numusers = newnumusers
  * 		numproberatings = numproberatings[0][0] # make it just an integer             # <<<<<<<<<<<<<<
@@ -14882,7 +14882,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
   __pyx_v_numproberatings = __pyx_4;
   __pyx_4 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1305
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1305
  * 		self.fd.numusers = newnumusers
  * 		numproberatings = numproberatings[0][0] # make it just an integer
  * 		self.td.numratings = numproberatings             # <<<<<<<<<<<<<<
@@ -14893,7 +14893,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
   if (PyObject_SetAttr(__pyx_1, __pyx_kp_numratings, __pyx_v_numproberatings) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1305; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1306
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1306
  * 		numproberatings = numproberatings[0][0] # make it just an integer
  * 		self.td.numratings = numproberatings
  * 		self.fd.numratings = self.fd.userIndex[self.numusers-1,1]             # <<<<<<<<<<<<<<
@@ -14919,7 +14919,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   Py_DECREF(__pyx_4); __pyx_4 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1307
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1307
  * 		self.td.numratings = numproberatings
  * 		self.fd.numratings = self.fd.userIndex[self.numusers-1,1]
  * 		self.numratings = self.fd.numratings             # <<<<<<<<<<<<<<
@@ -14947,7 +14947,7 @@ static PyObject *__pyx_pf_3svd_3SVD_subsampleUsers(PyObject *__pyx_self, PyObjec
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":1309
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1309
  * 		self.numratings = self.fd.numratings
  * 
  * 	def restoreFromSubsample(self):             # <<<<<<<<<<<<<<
@@ -14963,7 +14963,7 @@ static PyObject *__pyx_pf_3svd_3SVD_restoreFromSubsample(PyObject *__pyx_self, P
   PyObject *__pyx_2 = 0;
   __pyx_self = __pyx_self;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1310
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1310
  * 
  * 	def restoreFromSubsample(self):
  * 		self.numusers = 480189             # <<<<<<<<<<<<<<
@@ -14972,7 +14972,7 @@ static PyObject *__pyx_pf_3svd_3SVD_restoreFromSubsample(PyObject *__pyx_self, P
  */
   if (PyObject_SetAttr(__pyx_v_self, __pyx_kp_numusers, __pyx_int_480189) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1310; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1311
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1311
  * 	def restoreFromSubsample(self):
  * 		self.numusers = 480189
  * 		self.fd.numusers = 480189             # <<<<<<<<<<<<<<
@@ -14983,7 +14983,7 @@ static PyObject *__pyx_pf_3svd_3SVD_restoreFromSubsample(PyObject *__pyx_self, P
   if (PyObject_SetAttr(__pyx_1, __pyx_kp_numusers, __pyx_int_480189) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1311; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1312
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1312
  * 		self.numusers = 480189
  * 		self.fd.numusers = 480189
  * 		self.td.numratings = self.td.userRatings.size             # <<<<<<<<<<<<<<
@@ -15000,7 +15000,7 @@ static PyObject *__pyx_pf_3svd_3SVD_restoreFromSubsample(PyObject *__pyx_self, P
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1313
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1313
  * 		self.fd.numusers = 480189
  * 		self.td.numratings = self.td.userRatings.size
  * 		self.fd.numratings = self.fd.userRatings.size             # <<<<<<<<<<<<<<
@@ -15017,7 +15017,7 @@ static PyObject *__pyx_pf_3svd_3SVD_restoreFromSubsample(PyObject *__pyx_self, P
   Py_DECREF(__pyx_1); __pyx_1 = 0;
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1314
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1314
  * 		self.td.numratings = self.td.userRatings.size
  * 		self.fd.numratings = self.fd.userRatings.size
  * 		self.numratings = self.fd.numratings             # <<<<<<<<<<<<<<
@@ -15041,10 +15041,10 @@ static PyObject *__pyx_pf_3svd_3SVD_restoreFromSubsample(PyObject *__pyx_self, P
   return __pyx_r;
 }
 
-/* "/home/alex/workspace/flix/src/svd.pyx":1321
+/* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1321
  * # END OF SVD CLASS
  * 
- * def loadModel(modelname, loadarrays=False, resultdir='/home/alex/workspace/flix/results/'):             # <<<<<<<<<<<<<<
+ * def loadModel(modelname, loadarrays=False, resultdir='/home/playmice/ML/Projects/Netflix/netflix_prize/results/'):             # <<<<<<<<<<<<<<
  * 	"""
  * 	Make an instance of the SVD class using information from the logfile
  */
@@ -15111,7 +15111,7 @@ static PyObject *__pyx_pf_3svd_loadModel(PyObject *__pyx_self, PyObject *__pyx_a
   __pyx_v_chdir = Py_None; Py_INCREF(Py_None);
   __pyx_v_modeldir = Py_None; Py_INCREF(Py_None);
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1327
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1327
  * 	NOT DONE
  * 	"""
  * 	from os import join, chdir             # <<<<<<<<<<<<<<
@@ -15135,7 +15135,7 @@ static PyObject *__pyx_pf_3svd_loadModel(PyObject *__pyx_self, PyObject *__pyx_a
   __pyx_1 = 0;
   Py_DECREF(__pyx_2); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1328
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1328
  * 	"""
  * 	from os import join, chdir
  * 	modeldir = join(resultdir, modelname)             # <<<<<<<<<<<<<<
@@ -16769,7 +16769,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":3
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":3
  * cimport cython
  * cimport numpy as N
  * import numpy as N             # <<<<<<<<<<<<<<
@@ -16780,7 +16780,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_m, __pyx_kp_N, __pyx_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 3; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_1); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":21
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":21
  * 
  * 
  * class SVD(object):             # <<<<<<<<<<<<<<
@@ -16795,7 +16795,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   __pyx_3 = __Pyx_CreateClass(((PyObject *)__pyx_2), ((PyObject *)__pyx_1), __pyx_kp_SVD, "svd"); if (unlikely(!__pyx_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(((PyObject *)__pyx_2)); __pyx_2 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":39
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":39
  * 	"""
  * 
  * 	def __init__(self, fd, td, qd=None, modelname='untitled_model'):             # <<<<<<<<<<<<<<
@@ -16808,7 +16808,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp___init__, __pyx_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_4); __pyx_4 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":80
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":80
  * 		self.minimprovement = 0.00004 # pretty arbitrary, just thrown in to save time.
  * 
  * 	def startSVDLog(self, overwrite=True):             # <<<<<<<<<<<<<<
@@ -16824,7 +16824,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_startSVDLog, __pyx_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_5); __pyx_5 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":121
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":121
  * 		self.logfile.write('\nLog:\n')
  * 
  * 	def updateLog(self, message, displaytext=True):             # <<<<<<<<<<<<<<
@@ -16840,7 +16840,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_updateLog, __pyx_6) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_6); __pyx_6 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":135
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":135
  * 
  * 
  * 	def svd(self, havemats=False):             # <<<<<<<<<<<<<<
@@ -16856,7 +16856,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_svd, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":297
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":297
  * 
  * 
  * 	def makeProbePrediction(self, N.ndarray[i32_t, ndim=1] userIDsForUsers, N.ndarray[i16_t, ndim=1] movieIDs, predicttype='probe'):             # <<<<<<<<<<<<<<
@@ -16869,7 +16869,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_makeProbePrediction, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 297; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":335
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":335
  * 		return probeRatings
  * 
  * 	def checkError(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -16882,7 +16882,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_checkError, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 335; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":397
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":397
  * 	# ============================================================
  * 
  * 	def snmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -16895,7 +16895,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_snmf, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 397; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":506
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":506
  * 
  * 	@cython.boundscheck(False)
  * 	def nsvd0(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -16908,7 +16908,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_nsvd0, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 506; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":602
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":602
  * 
  * 	@cython.boundscheck(False)
  * 	def nsvd1(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -16921,7 +16921,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_29, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 602; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":697
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":697
  * 
  * 	@cython.boundscheck(False)
  * 	def nsvd2(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] movieRatings, \             # <<<<<<<<<<<<<<
@@ -16934,7 +16934,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_30, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 697; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":791
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":791
  * 
  * 	@cython.boundscheck(False)
  * 	def nsvd3(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] movieRatings, \             # <<<<<<<<<<<<<<
@@ -16947,7 +16947,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_31, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 791; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":880
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":880
  * 
  * 	@cython.boundscheck(False)
  * 	def hybrid(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -16960,7 +16960,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_hybrid, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 880; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":989
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":989
  * 
  * 	@cython.boundscheck(False)
  * 	def hybrid2(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] movieRatings, \             # <<<<<<<<<<<<<<
@@ -16973,7 +16973,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_32, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 989; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1098
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1098
  * 
  * 	@cython.boundscheck(False)
  * 	def rmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -16986,7 +16986,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_rmf, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1098; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1134
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1134
  * 
  * 	@cython.boundscheck(False)
  * 	def brismf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -16999,7 +16999,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_brismf, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1182
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1182
  * 
  * 	@cython.boundscheck(False)
  * 	def bpmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -17012,7 +17012,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_bpmf, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1182; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1242
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1242
  * 
  * 	@cython.boundscheck(False)
  * 	def pmf(self, N.ndarray[f32_t, ndim=2] U, N.ndarray[f32_t, ndim=2] M, N.ndarray[i8_t, ndim=1] userRatings, \             # <<<<<<<<<<<<<<
@@ -17025,7 +17025,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_pmf, __pyx_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1242; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_7); __pyx_7 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1284
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1284
  * 		return
  * 
  * 	def subsampleUsers(self, fraction=0.3):             # <<<<<<<<<<<<<<
@@ -17041,7 +17041,7 @@ PyMODINIT_FUNC PyInit_svd(void)
   if (PyObject_SetAttr(__pyx_3, __pyx_kp_subsampleUsers, __pyx_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1284; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   Py_DECREF(__pyx_8); __pyx_8 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1309
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1309
  * 		self.numratings = self.fd.numratings
  * 
  * 	def restoreFromSubsample(self):             # <<<<<<<<<<<<<<
@@ -17057,10 +17057,10 @@ PyMODINIT_FUNC PyInit_svd(void)
   Py_DECREF(__pyx_3); __pyx_3 = 0;
   Py_DECREF(((PyObject *)__pyx_1)); __pyx_1 = 0;
 
-  /* "/home/alex/workspace/flix/src/svd.pyx":1321
+  /* "/home/playmice/ML/Projects/Netflix/netflix_prize/src/svd.pyx":1321
  * # END OF SVD CLASS
  * 
- * def loadModel(modelname, loadarrays=False, resultdir='/home/alex/workspace/flix/results/'):             # <<<<<<<<<<<<<<
+ * def loadModel(modelname, loadarrays=False, resultdir='/home/playmice/ML/Projects/Netflix/netflix_prize/results/'):             # <<<<<<<<<<<<<<
  * 	"""
  * 	Make an instance of the SVD class using information from the logfile
  */

@@ -1289,7 +1289,7 @@ class SVD(object):
 
 # END OF SVD CLASS
 
-def loadModel(modelname, loadarrays=False, resultdir='/home/alex/workspace/flix/results/'):
+def loadModel(modelname, loadarrays=False, resultdir='/home/playmice/ML/Projects/Netflix/netflix_prize/results/'):
     """
     Make an instance of the SVD class using information from the logfile
 

@@ -9,7 +9,7 @@ the Netflix data.
 class FlixData(object):
     """Wrapper class for various array memory and speed tests"""
 
-    def __init__(self, arrayfolder='/home/alex/workspace/flix/data/arrays/', loaddata=True):
+    def __init__(self, arrayfolder='/home/playmice/ML/Projects/Netflix/netflix_prize/data/arrays/', loaddata=True):
         super(FlixData, self).__init__()
         self.arrayfolder = arrayfolder
         self.moviearrayfolder = self.arrayfolder + 'movie_indexed/'
@@ -300,7 +300,7 @@ class FlixData(object):
         mip = np.sort(mip)
 
         print('Creating the new probe FlixData instance...')
-        td = FlixData(arrayfolder='/home/alex/workspace/flix/data/probe10/', loaddata=False)
+        td = FlixData(arrayfolder='/home/playmice/ML/Projects/Netflix/netflix_prize/data/probe10/', loaddata=False)
         td.movieIDs = self.movieIDs[uip]
         td.movieIDsForMovies = self.movieIDsForMovies[mip]
         td.userIDs = self.userIDs[mip]
@@ -548,7 +548,7 @@ def saveMiniset(fd, index, outputdir):
 
 
 def makeMinisets(fd, numsets, index=None, setsize=5000000,
-                 probedir="/home/alex/workspace/flix/data/bin_data/arrays/minisets/"):
+                 probedir="/home/playmice/ML/Projects/Netflix/netflix_prize/data/bin_data/arrays/minisets/"):
     """
     Wrapper function for creating multiple minisets.
     """
