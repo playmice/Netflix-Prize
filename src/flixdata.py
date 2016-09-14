@@ -28,7 +28,7 @@ class FlixData(object):
         if loaddata is 'quiz':
             self.getUserInfoWithoutRatings()
 
-        # Data loading functions
+            # Data loading functions
 
     # ===========================
     def getEverythingButTheRatings(self):

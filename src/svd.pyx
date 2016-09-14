@@ -1283,8 +1283,8 @@ class SVD(object):
         self.fd.numratings = self.fd.userRatings.size
         self.numratings = self.fd.numratings
 
-    # cdef inline the update equations--
-    # they deal with non-array floats, so we could simplify factoring multiple update-types.
+        # cdef inline the update equations--
+        # they deal with non-array floats, so we could simplify factoring multiple update-types.
 
 
 # END OF SVD CLASS
