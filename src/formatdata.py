@@ -128,7 +128,7 @@ def makeQuizArrays(qualfile):
     # get the original user IDs
     origUserIDs = np.fromfile(origuserIDfile, dtype='int32')
     convert = np.r_[0:np.max(origUserIDs) + 1]
-    convert[origUserIds] = np.r_[0:480189]
+    convert[origUserIDs] = np.r_[0:480189]
     qualdata[:, 1] = convert[qualdata[:, 1]]
 
     # etc etc
